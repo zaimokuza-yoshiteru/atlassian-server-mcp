@@ -64,10 +64,29 @@ environment 中运行（required reviewers 审批后才执行）。workflow 依�
 校验 tag == package.json version → `pnpm install --frozen-lockfile` →
 `pnpm test:ci` → 校验 `release-evidence/<tag 父提交>.json` 绑定 tag 的父
 提交且 operation 门禁全绿 → 打包 tarball 并检查每个 dist 文件都有对应
-源文件 → 生成 SBOM 与 SHA256SUMS → npm 版本查重（已存在即失败）→ 按
+源文件 → 生成 SBOM 与 SHA256SUMS → npm 版本查重（幂等：版本已存在则跳过
+npm publish 并告警，workflow 仍照常公开 GitHub Release）→ 按
 fail-closed 的 dist-tag 策略（稳定版 → `latest`，`-rc.N` → `rc`，其他
 prerelease 后缀一律失败）以 `--provenance` 发布 → 把预先创建的 draft
 GitHub Release 转为公开。
+
+### 包的首发（手动 bootstrap）
+
+npm 只允许给**已存在**的包绑定 trusted publisher，因此第一次发布无法走
+workflow 的 OIDC：
+
+1. 先完成上面第 1–3 步（CI、E2E、release-check、证据 commit、tag）。
+2. 本地打包：`pnpm pack:release`（staging pack，见 3.2）。
+3. `npm login`（交互式，需 2FA），然后
+   `npm publish <tarball> --access public --tag latest`——不带
+   `--provenance`。
+4. 在 npmjs.com 绑定 trusted publisher：仓库
+   `zaimokuza-yoshiteru/atlassian-server-mcp`、workflow `release.yml`、
+   environment `npm-production`。
+5. 推送 tag。workflow 发现版本已存在会跳过 npm publish，但仍会把附件
+   挂到 GitHub Release 并公开。
+
+从第二个版本起，推送 tag 即全自动。
 
 维护者在 workflow 之外的职责：
 

@@ -84,14 +84,22 @@ jobs:
         working-directory: release-artifacts
         run: shasum -a 256 ./*.tgz sbom.json > SHA256SUMS
 
-      - name: Fail if this version is already published
+      - name: Check whether this version is already published
+        # Idempotent: an already-published version is not an error. The first
+        # release of the package is published manually (npm only allows
+        # binding a trusted publisher to an existing package), then the tag is
+        # pushed so this workflow attaches the release artifacts — publish is
+        # skipped, the Release still goes public.
+        id: npmcheck
         run: |
           VERSION=$(node -p "require('./package.json').version")
           if npm view "@zaimokuza/atlassian-server-mcp@$VERSION" version --silent 2>/dev/null; then
-            echo "::error::@zaimokuza/atlassian-server-mcp@$VERSION already exists on npm"
-            exit 1
+            echo "::warning::@zaimokuza/atlassian-server-mcp@$VERSION already exists on npm — skipping publish"
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "version $VERSION is not published yet"
+            echo "exists=false" >> "$GITHUB_OUTPUT"
           fi
-          echo "version $VERSION is not published yet"
 
       - name: Resolve the npm dist-tag (fail-closed)
         id: disttag
@@ -125,9 +133,11 @@ jobs:
         run: npm install --global npm@^11.5.1
 
       - name: Publish to npm with provenance
-        # Trusted publishing via OIDC (id-token: write); no long-lived
-        # NPM_TOKEN. The maintainer binds repo + this workflow + the
-        # npm-production environment on npmjs.com.
+        # Skipped when the version already exists on npm (idempotent re-runs
+        # and the manual first publish). Trusted publishing via OIDC
+        # (id-token: write); no long-lived NPM_TOKEN. The maintainer binds
+        # repo + this workflow + the npm-production environment on npmjs.com.
+        if: steps.npmcheck.outputs.exists != 'true'
         run: npm publish --provenance --access public --tag "${{ steps.disttag.outputs.tag }}" "release-artifacts/${{ steps.pack.outputs.tarball }}"
 
       - name: Mark the GitHub Release public

@@ -68,10 +68,29 @@ environment (required reviewers approve the run). The workflow, in order:
 verifies tag == package.json version → `pnpm install --frozen-lockfile` →
 `pnpm test:ci` → verifies `release-evidence/<tag parent>.json` binds the tag's
 parent commit with a fully green operation gate → packs the tarball and checks
-every dist file maps to a source → generates the SBOM and SHA256SUMS → fails
-if the version already exists on npm → publishes with `--provenance` under the
+every dist file maps to a source → generates the SBOM and SHA256SUMS → checks
+whether the version already exists on npm (idempotent: if it does, npm publish
+is skipped with a warning and the workflow still publishes the GitHub Release)
+→ publishes with `--provenance` under the
 fail-closed dist-tag policy (stable → `latest`, `-rc.N` → `rc`, any other
 prerelease suffix fails) → flips the pre-created draft GitHub Release public.
+
+### First release of the package (manual bootstrap)
+
+npm only allows binding a trusted publisher to a package that **already
+exists**, so the very first release cannot use the workflow's OIDC publish:
+
+1. Run steps 1–3 above (CI, E2E, release-check, evidence commit, tag).
+2. Pack locally: `pnpm pack:release` (staging pack — see step 3.2).
+3. `npm login` (interactive, 2FA), then
+   `npm publish <tarball> --access public --tag latest` — no `--provenance`.
+4. On npmjs.com, bind the trusted publisher: repository
+   `zaimokuza-yoshiteru/atlassian-server-mcp`, workflow `release.yml`,
+   environment `npm-production`.
+5. Push the tag. The workflow sees the version already exists, skips npm
+   publish, and attaches the artifacts to the GitHub Release.
+
+From the second release on, tag push is fully automated.
 
 Maintainer responsibilities around the workflow:
 
