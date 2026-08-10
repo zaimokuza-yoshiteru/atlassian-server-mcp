@@ -123,12 +123,19 @@ try {
     await readFile(join(installed, required));
   }
 
-  // The bin must run and --help must exit 0.
-  const help = await run(
-    join(consumer, "node_modules", ".bin", "atlassian-server-mcp"),
-    ["--help"],
-    { cwd: consumer, ...NPM_RUN_OPTIONS }
-  );
+  // The bin wiring must point at the packed CLI entry, and that entry must
+  // run. The .bin shim itself is not spawned: on Windows the extensionless
+  // shim is a POSIX shell script that CreateProcess cannot execute (its
+  // .cmd sibling would need shell:true). Running the bin target with the
+  // current Node binary is equivalent and cross-platform.
+  const binTarget = packageJson.bin?.["atlassian-server-mcp"];
+  if (binTarget !== "dist/cli.js") {
+    throw new Error(`packed bin wiring is ${JSON.stringify(binTarget)}, expected "dist/cli.js"`);
+  }
+  const help = await run(process.execPath, [join(installed, "dist", "cli.js"), "--help"], {
+    cwd: consumer,
+    ...NPM_RUN_OPTIONS
+  });
   if (!help.stdout.includes("atlassian-server-mcp")) throw new Error("packed CLI --help failed");
 
   // The package must import cleanly from the consumer project (this resolves
