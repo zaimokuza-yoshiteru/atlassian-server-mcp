@@ -1,3 +1,4 @@
+import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import { authorizationHeader, authMode } from "../src/auth.js";
 import { loadConfig } from "../src/config.js";
@@ -109,9 +110,11 @@ describe("configuration and authentication", () => {
       CONFLUENCE_FILE_ROOT: ""
     });
 
-    expect(config.products.jira!.fileRoot).toBe("/tmp/jira-files");
-    expect(config.products.confluence!.fileRoot).toBe("/tmp/atlassian-files");
-    expect(config.products.bitbucket!.fileRoot).toBe("/tmp/atlassian-files");
+    // loadConfig normalizes fileRoot via path.resolve — on Windows a
+    // POSIX-style input gains the current-drive prefix (D:\tmp\...).
+    expect(config.products.jira!.fileRoot).toBe(resolve("/tmp/jira-files"));
+    expect(config.products.confluence!.fileRoot).toBe(resolve("/tmp/atlassian-files"));
+    expect(config.products.bitbucket!.fileRoot).toBe(resolve("/tmp/atlassian-files"));
   });
 
   it("enables only products with configured URLs", () => {

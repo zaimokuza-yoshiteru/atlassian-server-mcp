@@ -1,6 +1,6 @@
 // File transfer: multipart uploads, binary/outputPath downloads, and the
 // file-root sandbox that keeps every read/write under the configured root.
-import { createWriteStream, realpathSync } from "node:fs";
+import { createWriteStream } from "node:fs";
 import { lstat, mkdir, readFile, realpath, stat, unlink } from "node:fs/promises";
 import { basename, dirname, extname, isAbsolute, relative, resolve, sep } from "node:path";
 import { pipeline } from "node:stream/promises";
@@ -112,7 +112,7 @@ export async function consumeBinaryResponse(
 
   const target = await safeFilePath(config.fileRoot, downloadPath, "downloadPath", true);
   const parent = await realpath(dirname(target));
-  if (!isWithinRoot(config.fileRoot, parent)) {
+  if (!(await isWithinRoot(config.fileRoot, parent))) {
     await response.body.dump();
     throw new Error("downloadPath parent escapes the configured file root");
   }
@@ -211,7 +211,7 @@ export async function buildMultipartBody(
     }
     const source = await safeFilePath(config.fileRoot, file, "file");
     const canonicalSource = await realpath(source);
-    if (!isWithinRoot(config.fileRoot, canonicalSource)) {
+    if (!(await isWithinRoot(config.fileRoot, canonicalSource))) {
       throw new Error(`${operation.operationId} file path escapes the configured file root`);
     }
     const fileStat = await lstat(canonicalSource);
@@ -261,7 +261,7 @@ export async function readSandboxedTextFile(
 ): Promise<string> {
   const source = await safeFilePath(config?.fileRoot, value, label);
   const canonicalSource = await realpath(source);
-  if (!isWithinRoot(config?.fileRoot, canonicalSource)) {
+  if (!(await isWithinRoot(config?.fileRoot, canonicalSource))) {
     throw new Error(`${label} escapes the configured file root`);
   }
   const fileStat = await lstat(canonicalSource);
@@ -294,7 +294,7 @@ export async function safeFilePath(
   for (;;) {
     try {
       const canonicalAncestor = await realpath(ancestor);
-      if (!isWithinRoot(resolvedRoot, canonicalAncestor)) {
+      if (!(await isWithinRoot(resolvedRoot, canonicalAncestor))) {
         throw new Error(`${label} must be under the configured file root`);
       }
       break;
@@ -325,7 +325,7 @@ export async function safeFilePath(
   }
   // Belt-and-braces post-check: parent after resolution is still inside root.
   const canonicalParent = await realpath(dirname(target));
-  if (!isWithinRoot(resolvedRoot, canonicalParent)) {
+  if (!(await isWithinRoot(resolvedRoot, canonicalParent))) {
     throw new Error(`${label} must be under the configured file root`);
   }
   return resolve(canonicalParent, basename(target));
@@ -338,11 +338,14 @@ function isWithinResolvedPath(root: string, target: string): boolean {
   return rel === "" || (rel !== ".." && !rel.startsWith(`..${sep}`) && !isAbsolute(rel));
 }
 
-export function isWithinRoot(root: string | undefined, target: string): boolean {
+export async function isWithinRoot(root: string | undefined, target: string): Promise<boolean> {
   if (!root) return false;
+  // Canonicalize BOTH sides with the same async realpath: on Windows the
+  // sync and async variants can disagree on 8.3 short-name/case form, and a
+  // mixed-form comparison makes relative() see an escape that is not there.
   let canonicalRoot: string;
   try {
-    canonicalRoot = realpathSync(resolve(root));
+    canonicalRoot = await realpath(resolve(root));
   } catch {
     canonicalRoot = resolve(root);
   }

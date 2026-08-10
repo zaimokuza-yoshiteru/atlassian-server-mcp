@@ -1,5 +1,7 @@
 import { createServer, type Server } from "node:http";
 import { unlinkSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import { afterEach, describe, expect, it } from "vitest";
 import { StdioMcpClient } from "../e2e/support/mcp-client.js";
 import { TOOL_DEFINITIONS } from "../../src/tools.js";
@@ -192,9 +194,10 @@ describe("built stdio MCP contract", () => {
       if (!address || typeof address === "string") throw new Error("No mock port");
       process.env[`${product.toUpperCase()}_URL`] = `http://127.0.0.1:${address.port}`;
       process.env[`${product.toUpperCase()}_TOKEN`] = "contract-token";
-      process.env.ATLASSIAN_FILE_ROOT = "/tmp";
+      const fileRoot = tmpdir();
+      process.env.ATLASSIAN_FILE_ROOT = fileRoot;
       client = await StdioMcpClient.start(product as "jira" | "confluence");
-      const downloadPath = `/tmp/mcp-contract-${product}-attachment.bin`;
+      const downloadPath = join(fileRoot, `mcp-contract-${product}-attachment.bin`);
       try {
         unlinkSync(downloadPath);
       } catch {

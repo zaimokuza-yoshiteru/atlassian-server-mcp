@@ -8,7 +8,8 @@
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import { spawnSync } from "node:child_process";
+import { execFile } from "node:child_process";
+import { promisify } from "node:util";
 import { afterEach, describe, expect, it } from "vitest";
 import { loadSpec } from "../scripts/lib/spec-loader.mjs";
 import {
@@ -18,6 +19,7 @@ import {
   validateSnapshots
 } from "../rule/fetch-api-inventory.mjs";
 
+const execFileAsync = promisify(execFile);
 const root = path.resolve(process.cwd());
 const products = ["jira", "confluence", "bitbucket"];
 const canonicalCacheDir = path.join(root, "rule", "spec-cache");
@@ -60,16 +62,34 @@ function workspaceTargets({ cacheDir, outDir }) {
   ];
 }
 
-function runInventory(workspace, ...args) {
-  return spawnSync(process.execPath, ["rule/fetch-api-inventory.mjs", ...args], {
-    cwd: root,
-    encoding: "utf8",
-    env: {
-      ...process.env,
-      ATLASSIAN_SPEC_CACHE_DIR: workspace.cacheDir,
-      ATLASSIAN_INVENTORY_OUT_DIR: workspace.outDir
-    }
-  });
+// Async spawn, never spawnSync: the child parses multi-MB specs and can run
+// for tens of seconds on a loaded CI runner; a sync spawn blocks the vitest
+// worker's event loop and trips its RPC heartbeat ("Timeout calling
+// onTaskUpdate"), failing the whole run despite green tests.
+async function runInventory(workspace, ...args) {
+  try {
+    const { stdout, stderr } = await execFileAsync(
+      process.execPath,
+      ["rule/fetch-api-inventory.mjs", ...args],
+      {
+        cwd: root,
+        encoding: "utf8",
+        maxBuffer: 32 * 1024 * 1024,
+        env: {
+          ...process.env,
+          ATLASSIAN_SPEC_CACHE_DIR: workspace.cacheDir,
+          ATLASSIAN_INVENTORY_OUT_DIR: workspace.outDir
+        }
+      }
+    );
+    return { status: 0, stdout, stderr };
+  } catch (error) {
+    return {
+      status: error.code ?? 1,
+      stdout: error.stdout ?? "",
+      stderr: `${error.stderr ?? ""}${error.message}`
+    };
+  }
 }
 
 function backup(files) {
@@ -128,29 +148,29 @@ describe.sequential("official API inventory", () => {
     expect(() => validateSnapshots(invalid, artifacts)).toThrow(/openapi\/title\/version mismatch/);
   });
 
-  it("fails partial bootstrap without writing", () => {
+  it("fails partial bootstrap without writing", async () => {
     const workspace = makeWorkspace();
     const targets = workspaceTargets(workspace);
     const missing = targets.at(-1);
     const saved = backup(targets);
     fs.renameSync(missing, `${missing}.partial-test`);
-    const result = runInventory(workspace, "--refresh", "--bootstrap", "--offline");
+    const result = await runInventory(workspace, "--refresh", "--bootstrap", "--offline");
     expect(result.status).not.toBe(0);
     for (const [file, value] of saved)
       if (file !== missing) expect(fs.readFileSync(file)).toEqual(value.bytes);
   }, 60_000);
 
-  it("same-SHA refresh does not change bytes or mtimes", () => {
+  it("same-SHA refresh does not change bytes or mtimes", async () => {
     const workspace = makeWorkspace();
     const saved = backup(workspaceTargets(workspace));
-    expect(runInventory(workspace, "--refresh", "--offline").status).toBe(0);
+    expect((await runInventory(workspace, "--refresh", "--offline")).status).toBe(0);
     for (const [file, value] of saved) {
       expect(fs.readFileSync(file)).toEqual(value.bytes);
       expect(fs.statSync(file).mtimeMs).toBe(value.mtimeMs);
     }
   }, 60_000);
 
-  it("rejects drift without accept and preserves committed files", () => {
+  it("rejects drift without accept and preserves committed files", async () => {
     const workspace = makeWorkspace();
     const targets = workspaceTargets(workspace);
     const jira = path.join(workspace.cacheDir, "jira.json");
@@ -165,13 +185,13 @@ describe.sequential("official API inventory", () => {
       `${spec.paths[firstPath][firstMethod].summary ?? ""} schema-only-test`;
     fs.writeFileSync(jira, `${JSON.stringify(spec, null, 2)}\n`);
     const beforeCommit = backup(targets.filter((file) => file !== jira));
-    const result = runInventory(workspace, "--refresh", "--offline");
+    const result = await runInventory(workspace, "--refresh", "--offline");
     expect(result.status).not.toBe(0);
     expect(`${result.stdout}${result.stderr}`).toMatch(/official spec drift detected/);
     for (const [file, value] of beforeCommit) expect(fs.readFileSync(file)).toEqual(value.bytes);
   }, 60_000);
 
-  it("accepts drift and commits a complete snapshot", () => {
+  it("accepts drift and commits a complete snapshot", async () => {
     const workspace = makeWorkspace();
     const jira = path.join(workspace.cacheDir, "jira.json");
     const spec = JSON.parse(fs.readFileSync(jira, "utf8"));
@@ -182,7 +202,9 @@ describe.sequential("official API inventory", () => {
     spec.paths[firstPath][firstMethod].summary =
       `${spec.paths[firstPath][firstMethod].summary ?? ""} accepted-drift-test`;
     fs.writeFileSync(jira, `${JSON.stringify(spec, null, 2)}\n`);
-    expect(runInventory(workspace, "--refresh", "--offline", "--accept-drift").status).toBe(0);
+    expect((await runInventory(workspace, "--refresh", "--offline", "--accept-drift")).status).toBe(
+      0
+    );
     const manifest = JSON.parse(
       fs.readFileSync(path.join(workspace.cacheDir, "manifest.json"), "utf8")
     );
@@ -198,23 +220,34 @@ describe.sequential("official API inventory", () => {
     );
   });
 
-  it("detects an interrupted/partial transaction with --check", () => {
+  it("detects an interrupted/partial transaction with --check", async () => {
     const workspace = makeWorkspace();
     const missing = workspaceTargets(workspace).find((file) =>
       file.endsWith("api-inventory-jira.json")
     );
     fs.unlinkSync(missing);
-    expect(runInventory(workspace, "--offline", "--check").status).not.toBe(0);
+    expect((await runInventory(workspace, "--offline", "--check")).status).not.toBe(0);
   }, 60_000);
 
-  it("fails generator when cache is missing without attempting network", () => {
+  it("fails generator when cache is missing without attempting network", async () => {
     const workspace = makeWorkspace();
     fs.unlinkSync(path.join(workspace.cacheDir, "jira.json"));
-    const result = spawnSync(process.execPath, ["scripts/generate-operations.mjs", "--check"], {
-      cwd: root,
-      encoding: "utf8",
-      env: { ...process.env, ATLASSIAN_SPEC_CACHE_DIR: workspace.cacheDir }
-    });
+    let result;
+    try {
+      await execFileAsync(process.execPath, ["scripts/generate-operations.mjs", "--check"], {
+        cwd: root,
+        encoding: "utf8",
+        maxBuffer: 32 * 1024 * 1024,
+        env: { ...process.env, ATLASSIAN_SPEC_CACHE_DIR: workspace.cacheDir }
+      });
+      result = { status: 0, stdout: "", stderr: "" };
+    } catch (error) {
+      result = {
+        status: error.code ?? 1,
+        stdout: error.stdout ?? "",
+        stderr: `${error.stderr ?? ""}${error.message}`
+      };
+    }
     expect(result.status).not.toBe(0);
     expect(`${result.stdout}${result.stderr}`).toMatch(/spec cache missing/);
   }, 60_000);

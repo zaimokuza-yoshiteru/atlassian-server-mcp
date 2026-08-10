@@ -206,7 +206,7 @@ export class AtlassianHttpClient {
         true
       );
       const parent = await realpath(dirname(target));
-      if (!isWithinRoot(this.#config.fileRoot, parent)) {
+      if (!(await isWithinRoot(this.#config.fileRoot, parent))) {
         await response.body.dump();
         throw new Error("outputPath parent escapes the configured file root");
       }

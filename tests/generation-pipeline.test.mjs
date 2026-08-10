@@ -1,10 +1,12 @@
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import { spawnSync } from "node:child_process";
+import { execFile } from "node:child_process";
+import { promisify } from "node:util";
 import { describe, expect, it } from "vitest";
 import { checkGeneratedArtifacts } from "../scripts/generate-operations.mjs";
 
+const execFileAsync = promisify(execFile);
 const root = process.cwd();
 
 describe("operation generation pipeline", () => {
@@ -38,12 +40,14 @@ describe("operation generation pipeline", () => {
     expect(withZh.every((operation) => CJK.test(operation.summaryZh))).toBe(true);
   });
 
-  it("checks generated TypeScript and registry without writing", () => {
-    const result = spawnSync(process.execPath, ["scripts/generate-operations.mjs", "--check"], {
-      cwd: root,
-      encoding: "utf8"
-    });
-    expect(result.status).toBe(0);
+  it("checks generated TypeScript and registry without writing", async () => {
+    // Async spawn: the generator parses multi-MB specs; a blocking spawnSync
+    // starves the vitest worker RPC heartbeat on loaded CI runners.
+    const result = await execFileAsync(
+      process.execPath,
+      ["scripts/generate-operations.mjs", "--check"],
+      { cwd: root, encoding: "utf8", maxBuffer: 32 * 1024 * 1024 }
+    );
     expect(result.stdout).toContain("deterministic");
   });
 

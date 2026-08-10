@@ -1,0 +1,5 @@
+# Force LF checkouts on every platform. Windows runners otherwise convert
+# to CRLF (core.autocrlf=true), which trips vite's hashbang handling when
+# .mjs CLI scripts are imported by tests (vitejs/vite#23034) and causes
+# platform-dependent behavior in generated-file comparisons.
+* text=auto eol=lf
