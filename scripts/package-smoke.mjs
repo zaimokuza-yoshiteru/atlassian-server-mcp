@@ -1,8 +1,10 @@
-// Package smoke test: pack the tarball, then install it into an EMPTY
-// consumer directory with npm (not pnpm) — simulating a real end user.
-// Linking the repository's own node_modules into the unpacked package (the
-// previous approach) could mask missing dependency declarations; a real
-// install fails hard when any runtime dependency is undeclared.
+// Package smoke test: pack the tarball via scripts/pack.mjs (staging pack —
+// repo-root npm pack breaks bundleDependencies under pnpm), then install it
+// into an EMPTY consumer directory with npm (not pnpm) — simulating a real
+// end user. Linking the repository's own node_modules into the unpacked
+// package (the previous approach) could mask missing dependency
+// declarations; a real install fails hard when any runtime dependency is
+// undeclared.
 import { mkdtemp, mkdir, readdir, readFile, rm, writeFile } from "node:fs/promises";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
@@ -18,24 +20,38 @@ const temp = await mkdtemp(join(tmpdir(), "atlassian-server-mcp-smoke-"));
 const NPM_RUN_OPTIONS = { maxBuffer: 16 * 1024 * 1024 };
 
 try {
-  const { stdout } = await run("npm", ["pack", "--json", "--pack-destination", temp], {
+  // Staging pack: real npm-installed node_modules, bundled deps included,
+  // dist verified against src/. Prints "OK pack: <path> (N files)".
+  await run(process.execPath, [join(root, "scripts", "pack.mjs"), "--out", temp], {
     cwd: root,
     ...NPM_RUN_OPTIONS
   });
-  // npm pack runs the prepack script, whose pnpm/tsc banners share stdout
-  // with the JSON payload — slice from the first "[" instead of parsing the
-  // whole stream.
-  const packed = JSON.parse(stdout.slice(stdout.indexOf("[")));
-  const filename = packed?.[0]?.filename;
-  if (typeof filename !== "string") throw new Error("npm pack did not return a tarball");
-  const tarball = join(temp, filename);
+  const tarballs = (await readdir(temp)).filter((file) => file.endsWith(".tgz"));
+  if (tarballs.length !== 1)
+    throw new Error(`expected exactly one tarball, got: ${tarballs.join(", ")}`);
+  const tarball = join(temp, tarballs[0]);
 
   const consumer = join(temp, "consumer");
   await mkdir(consumer, { recursive: true });
   await run("npm", ["init", "-y"], { cwd: consumer, ...NPM_RUN_OPTIONS });
+  // --offline with a fresh, empty cache is the acid test for the bundle: if
+  // any runtime byte were missing from the tarball, npm would need the
+  // registry (or a warm cache) and this install would fail.
+  const emptyCache = join(temp, "npm-cache");
   await run(
     "npm",
-    ["install", tarball, "--omit=dev", "--no-audit", "--no-fund", "--loglevel=error"],
+    [
+      "install",
+      tarball,
+      "--omit=dev",
+      "--offline",
+      "--cache",
+      emptyCache,
+      "--ignore-scripts",
+      "--no-audit",
+      "--no-fund",
+      "--loglevel=error"
+    ],
     { cwd: consumer, ...NPM_RUN_OPTIONS }
   );
 
@@ -43,6 +59,22 @@ try {
   const packageJson = JSON.parse(await readFile(join(installed, "package.json"), "utf8"));
   const version = packageJson.version;
   if (typeof version !== "string") throw new Error("packed package has no version");
+
+  // Bundle lock: the consumer must end up with exactly the pinned versions,
+  // served from the bundled bytes nested inside the package — not from a
+  // registry re-resolution. npm ls must exit 0: an UNMET transitive
+  // dependency (e.g. @modelcontextprotocol/core) fails here.
+  const rootPkg = JSON.parse(await readFile(join(root, "package.json"), "utf8"));
+  const bundledModules = join(installed, "node_modules");
+  for (const [name, pinned] of Object.entries(rootPkg.dependencies ?? {})) {
+    const depPkg = JSON.parse(await readFile(join(bundledModules, name, "package.json"), "utf8"));
+    if (depPkg.version !== pinned) {
+      throw new Error(
+        `consumer installed ${name}@${depPkg.version}, expected the pinned ${pinned} — bundleDependencies is not locking the tree`
+      );
+    }
+  }
+  await run("npm", ["ls", "--all", "--omit=dev"], { cwd: consumer, ...NPM_RUN_OPTIONS });
 
   // Dependency-declaration consistency: every bare module specifier the
   // packed runtime code imports must be declared in the packed package's
@@ -111,7 +143,7 @@ try {
   );
   await run(process.execPath, [checkScript], { cwd: consumer, ...NPM_RUN_OPTIONS });
 
-  console.log(`OK package smoke: version=${version}, tarball=${filename}`);
+  console.log(`OK package smoke: version=${version}, tarball=${tarballs[0]}`);
 } finally {
   await rm(temp, { recursive: true, force: true });
 }

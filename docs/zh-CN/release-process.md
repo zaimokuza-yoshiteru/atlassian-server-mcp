@@ -50,8 +50,10 @@ required reviewers 的 `npm-production` environment 把关）。维护者负责�
 ## 3. 版本与 tag
 
 1. 设置 `package.json` 的 `version`（如 `1.0.0`）。
-2. 校验 tarball 内容：`pnpm pack`，确认 `README.md`、`README.zh-CN.md`、
-   `LICENSE`、`dist/` 都在包内。
+2. 校验 tarball 内容：`pnpm pack:release`（staging 打包——不要在仓库根目录
+   直接 `pnpm pack`/`npm pack`，pnpm 符号链接会损坏 bundle），确认
+   `README.md`、`README.zh-CN.md`、`LICENSE`、`dist/` 与打包进去的
+   `node_modules/` 都在包内。
 3. 把 tag 打在证据 commit 上（使 tag 自带证据），并核对证据文件内的
    `gitSha` 等于 tag 的父提交。
 

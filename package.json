@@ -38,6 +38,7 @@
   "files": [
     "dist",
     "README.md",
+    "README.zh-CN.md",
     "LICENSE"
   ],
   "engines": {
@@ -46,7 +47,7 @@
   "scripts": {
     "build": "pnpm clean && tsc -p tsconfig.build.json",
     "clean": "node scripts/clean.mjs",
-    "prepack": "pnpm build && pnpm operations:check && pnpm policy:check && pnpm inventory:check",
+    "prepack": "node scripts/check-pinned-deps.mjs && pnpm build && pnpm operations:check && pnpm policy:check && pnpm inventory:check",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format:check": "prettier --check .",
@@ -57,7 +58,9 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:contract": "node node_modules/typescript/bin/tsc -p tsconfig.build.json && node node_modules/vitest/vitest.mjs run --config vitest.contract.config.ts",
-    "test:ci": "node node_modules/eslint/bin/eslint.js . && node node_modules/prettier/bin/prettier.cjs --check . && node node_modules/typescript/bin/tsc --noEmit && node scripts/clean.mjs && node node_modules/typescript/bin/tsc -p tsconfig.build.json && node node_modules/vitest/vitest.mjs run --coverage && node node_modules/vitest/vitest.mjs run --config vitest.contract.config.ts && node scripts/generate-e2e-coverage.mjs --check && node scripts/generate-operations.mjs --check && node rule/fetch-api-inventory.mjs --offline --check && node rule/build-policy.mjs --check && node scripts/check-env-docs.mjs && node scripts/package-smoke.mjs",
+    "test:ci": "node scripts/check-pinned-deps.mjs && node node_modules/eslint/bin/eslint.js . && node node_modules/prettier/bin/prettier.cjs --check . && node node_modules/typescript/bin/tsc --noEmit && node scripts/clean.mjs && node node_modules/typescript/bin/tsc -p tsconfig.build.json && node node_modules/vitest/vitest.mjs run --coverage && node node_modules/vitest/vitest.mjs run --config vitest.contract.config.ts && node scripts/generate-e2e-coverage.mjs --check && node scripts/generate-operations.mjs --check && node rule/fetch-api-inventory.mjs --offline --check && node rule/build-policy.mjs --check && node scripts/check-env-docs.mjs && node scripts/package-smoke.mjs",
+    "deps:check": "node scripts/check-pinned-deps.mjs",
+    "pack:release": "pnpm build && node scripts/pack.mjs",
     "coverage:generate": "node scripts/generate-e2e-coverage.mjs",
     "coverage:check": "node scripts/generate-e2e-coverage.mjs --check",
     "inventory:check": "node rule/fetch-api-inventory.mjs --offline --check",
@@ -74,21 +77,26 @@
     "e2e:prepare": "node scripts/e2e-prepare.mjs",
     "dc:setup": "tsx scripts/dc-setup.mjs"
   },
+  "bundleDependencies": [
+    "@modelcontextprotocol/server",
+    "undici",
+    "zod"
+  ],
   "dependencies": {
-    "@modelcontextprotocol/server": "^2.0.0",
-    "undici": "^7.16.0",
-    "zod": "^4.1.12"
+    "@modelcontextprotocol/server": "2.0.0",
+    "undici": "7.29.0",
+    "zod": "4.4.3"
   },
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "@types/node": "^22.18.0",
-    "@vitest/coverage-v8": "^3.2.7",
-    "eslint": "^10.8.1",
-    "prettier": "^3.9.6",
-    "tsx": "^4.20.6",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.66.0",
-    "vitest": "^3.2.4"
+    "@eslint/js": "10.0.1",
+    "@types/node": "22.20.1",
+    "@vitest/coverage-v8": "3.2.7",
+    "eslint": "10.8.1",
+    "prettier": "3.9.6",
+    "tsx": "4.23.1",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.66.0",
+    "vitest": "3.2.7"
   },
   "packageManager": "pnpm@10.6.5"
 }

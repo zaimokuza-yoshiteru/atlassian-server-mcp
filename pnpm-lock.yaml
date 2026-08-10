@@ -9,41 +9,41 @@ importers:
   .:
     dependencies:
       '@modelcontextprotocol/server':
-        specifier: ^2.0.0
+        specifier: 2.0.0
         version: 2.0.0
       undici:
-        specifier: ^7.16.0
+        specifier: 7.29.0
         version: 7.29.0
       zod:
-        specifier: ^4.1.12
+        specifier: 4.4.3
         version: 4.4.3
     devDependencies:
       '@eslint/js':
-        specifier: ^10.0.1
+        specifier: 10.0.1
         version: 10.0.1(eslint@10.8.1)
       '@types/node':
-        specifier: ^22.18.0
+        specifier: 22.20.1
         version: 22.20.1
       '@vitest/coverage-v8':
-        specifier: ^3.2.7
+        specifier: 3.2.7
         version: 3.2.7(vitest@3.2.7(@types/node@22.20.1)(tsx@4.23.1))
       eslint:
-        specifier: ^10.8.1
+        specifier: 10.8.1
         version: 10.8.1
       prettier:
-        specifier: ^3.9.6
+        specifier: 3.9.6
         version: 3.9.6
       tsx:
-        specifier: ^4.20.6
+        specifier: 4.23.1
         version: 4.23.1
       typescript:
-        specifier: ^5.9.3
+        specifier: 5.9.3
         version: 5.9.3
       typescript-eslint:
-        specifier: ^8.66.0
+        specifier: 8.66.0
         version: 8.66.0(eslint@10.8.1)(typescript@5.9.3)
       vitest:
-        specifier: ^3.2.4
+        specifier: 3.2.7
         version: 3.2.7(@types/node@22.20.1)(tsx@4.23.1)
 
 packages:

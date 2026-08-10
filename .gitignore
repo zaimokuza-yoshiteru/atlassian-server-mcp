@@ -12,3 +12,4 @@ data/
 scripts/.cache/
 .e2e-state/
 .claude/
+*.tgz

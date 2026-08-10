@@ -54,8 +54,10 @@ change the runtime, transport, registry, and generators):
 ## 3. Version and tag
 
 1. Set `version` in `package.json` (for example `1.0.0`).
-2. Verify the tarball contents: `pnpm pack`, then confirm `README.md`,
-   `README.zh-CN.md`, `LICENSE`, and `dist/` are inside.
+2. Verify the tarball contents: `pnpm pack:release` (staging pack — never
+   `pnpm pack`/`npm pack` from the repo root; pnpm symlinks corrupt the
+   bundle), then confirm `README.md`, `README.zh-CN.md`, `LICENSE`, `dist/`,
+   and the bundled `node_modules/` are inside.
 3. Tag the evidence commit (so the tag carries the evidence), and verify the
    evidence file's `gitSha` equals the tag's parent commit.
 

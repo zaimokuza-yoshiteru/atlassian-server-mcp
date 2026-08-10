@@ -59,9 +59,13 @@ jobs:
 
       - name: Pack the tarball
         id: pack
+        # bundleDependencies needs real (non-symlink) node_modules — pack
+        # from a staging install via scripts/pack.mjs. Never pnpm/npm pack
+        # from the repo root: pnpm's symlinks pollute the bundle with .pnpm
+        # store paths and drop transitive deps (proven locally).
         run: |
           mkdir -p release-artifacts
-          pnpm pack --pack-destination release-artifacts
+          node scripts/pack.mjs --out release-artifacts
           echo "tarball=$(basename release-artifacts/*.tgz)" >> "$GITHUB_OUTPUT"
 
       - name: Verify tarball contents

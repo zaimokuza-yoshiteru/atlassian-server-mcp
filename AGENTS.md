@@ -43,7 +43,7 @@ Success-expected calls (the default, `expectError: false`) are verified by `requ
 
 ## CI contract
 
-- `pnpm test:ci` runs: eslint → prettier format check → typecheck → build → unit tests with v8 coverage thresholds → contract tests → `coverage:check` → generated operations/inventory/policy checks → `env:check` → package smoke (real `npm install` of the packed tarball in an empty consumer directory).
+- `pnpm test:ci` runs: dependency pinning gate (`deps:check` — all deps exact-pinned, all runtime deps in `bundleDependencies`) → eslint → prettier format check → typecheck → build → unit tests with v8 coverage thresholds → contract tests → `coverage:check` → generated operations/inventory/policy checks → `env:check` → package smoke (staging pack via `scripts/pack.mjs`, then a fully `npm install --offline` of the packed tarball in an empty consumer directory — the bundle must be complete, and bundled versions must equal the pins).
 - Coverage thresholds live in `vitest.config.ts` (`coverage.thresholds`) as the single source of truth (see "Unit coverage gate" in `docs/en/test-strategy.md`); raise them as coverage improves.
 - `pnpm lint` (eslint) and `pnpm format:check` (prettier over the whole repo, excluding `.prettierignore` entries) are hard gates; both also run inside `pnpm test:ci`, and `git diff --check` runs in the CI lint job.
 - CI matrix: Node 22 + 24 × Ubuntu + Windows. Windows runs the cross-platform subset (lint, typecheck, unit, contract, package smoke); unix-only cases are marked `it.skipIf(process.platform === "win32")`, and the coverage gate is Linux-only.
