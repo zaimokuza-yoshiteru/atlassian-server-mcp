@@ -2,7 +2,7 @@
 // file-root sandbox that keeps every read/write under the configured root.
 import { createWriteStream, realpathSync } from "node:fs";
 import { lstat, mkdir, readFile, realpath, stat, unlink } from "node:fs/promises";
-import { basename, dirname, extname, isAbsolute, relative, resolve } from "node:path";
+import { basename, dirname, extname, isAbsolute, relative, resolve, sep } from "node:path";
 import { pipeline } from "node:stream/promises";
 import { Transform } from "node:stream";
 import { Blob } from "node:buffer";
@@ -333,7 +333,9 @@ export async function safeFilePath(
 
 function isWithinResolvedPath(root: string, target: string): boolean {
   const rel = relative(root, target);
-  return rel === "" || (rel !== ".." && !rel.startsWith("../") && !isAbsolute(rel));
+  // path.relative emits the platform separator ("..\\x" on Windows) — compare
+  // against `..${sep}`, not a POSIX-only "../", or containment is bypassed.
+  return rel === "" || (rel !== ".." && !rel.startsWith(`..${sep}`) && !isAbsolute(rel));
 }
 
 export function isWithinRoot(root: string | undefined, target: string): boolean {
@@ -345,5 +347,6 @@ export function isWithinRoot(root: string | undefined, target: string): boolean 
     canonicalRoot = resolve(root);
   }
   const rel = relative(canonicalRoot, resolve(target));
-  return rel === "" || (rel !== ".." && !rel.startsWith("../") && !isAbsolute(rel));
+  // See isWithinResolvedPath: `..${sep}`, never a POSIX-only "../".
+  return rel === "" || (rel !== ".." && !rel.startsWith(`..${sep}`) && !isAbsolute(rel));
 }

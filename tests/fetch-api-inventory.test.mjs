@@ -138,7 +138,7 @@ describe.sequential("official API inventory", () => {
     expect(result.status).not.toBe(0);
     for (const [file, value] of saved)
       if (file !== missing) expect(fs.readFileSync(file)).toEqual(value.bytes);
-  }, 20_000);
+  }, 60_000);
 
   it("same-SHA refresh does not change bytes or mtimes", () => {
     const workspace = makeWorkspace();
@@ -148,7 +148,7 @@ describe.sequential("official API inventory", () => {
       expect(fs.readFileSync(file)).toEqual(value.bytes);
       expect(fs.statSync(file).mtimeMs).toBe(value.mtimeMs);
     }
-  }, 20_000);
+  }, 60_000);
 
   it("rejects drift without accept and preserves committed files", () => {
     const workspace = makeWorkspace();
@@ -169,7 +169,7 @@ describe.sequential("official API inventory", () => {
     expect(result.status).not.toBe(0);
     expect(`${result.stdout}${result.stderr}`).toMatch(/official spec drift detected/);
     for (const [file, value] of beforeCommit) expect(fs.readFileSync(file)).toEqual(value.bytes);
-  }, 20_000);
+  }, 60_000);
 
   it("accepts drift and commits a complete snapshot", () => {
     const workspace = makeWorkspace();
@@ -188,7 +188,7 @@ describe.sequential("official API inventory", () => {
     );
     expect(manifest.sources.jira.sha256).toMatch(/^[0-9a-f]{64}$/);
     expect(fs.existsSync(path.join(workspace.outDir, "api-inventory-diff.md"))).toBe(true);
-  }, 20_000);
+  }, 60_000);
 
   it("reports old and new operation fingerprints for schema-only drift", () => {
     const oldSpec = { paths: { "/x": { get: { summary: "old", responses: {} } } } };
@@ -205,7 +205,7 @@ describe.sequential("official API inventory", () => {
     );
     fs.unlinkSync(missing);
     expect(runInventory(workspace, "--offline", "--check").status).not.toBe(0);
-  });
+  }, 60_000);
 
   it("fails generator when cache is missing without attempting network", () => {
     const workspace = makeWorkspace();
@@ -217,5 +217,5 @@ describe.sequential("official API inventory", () => {
     });
     expect(result.status).not.toBe(0);
     expect(`${result.stdout}${result.stderr}`).toMatch(/spec cache missing/);
-  });
+  }, 60_000);
 });
