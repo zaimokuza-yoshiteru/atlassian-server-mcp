@@ -17,6 +17,7 @@ import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { assertAllDistFilesHaveSources } from "./lib/dist-sources.mjs";
+import { npmArgs } from "./lib/npm-cli.mjs";
 
 const run = promisify(execFile);
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
@@ -90,8 +91,15 @@ try {
   // Real npm install of the exact-pinned runtime tree. --ignore-scripts: no
   // dependency executes code at install time here or downstream.
   await run(
-    "npm",
-    ["install", "--omit=dev", "--ignore-scripts", "--no-audit", "--no-fund", "--loglevel=error"],
+    process.execPath,
+    npmArgs([
+      "install",
+      "--omit=dev",
+      "--ignore-scripts",
+      "--no-audit",
+      "--no-fund",
+      "--loglevel=error"
+    ]),
     { cwd: staging, ...NPM_OPTS }
   );
 
@@ -115,8 +123,8 @@ try {
   // Pack from staging. --ignore-scripts: staging has no src/, so the prepack
   // build must not run; dist was verified above.
   const { stdout } = await run(
-    "npm",
-    ["pack", "--ignore-scripts", "--json", "--pack-destination", out],
+    process.execPath,
+    npmArgs(["pack", "--ignore-scripts", "--json", "--pack-destination", out]),
     { cwd: staging, ...NPM_OPTS }
   );
   const packed = JSON.parse(stdout.slice(stdout.indexOf("[")));

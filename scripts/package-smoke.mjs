@@ -13,6 +13,7 @@ import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { assertAllDistFilesHaveSources } from "./lib/dist-sources.mjs";
+import { npmArgs } from "./lib/npm-cli.mjs";
 
 const run = promisify(execFile);
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
@@ -33,14 +34,14 @@ try {
 
   const consumer = join(temp, "consumer");
   await mkdir(consumer, { recursive: true });
-  await run("npm", ["init", "-y"], { cwd: consumer, ...NPM_RUN_OPTIONS });
+  await run(process.execPath, npmArgs(["init", "-y"]), { cwd: consumer, ...NPM_RUN_OPTIONS });
   // --offline with a fresh, empty cache is the acid test for the bundle: if
   // any runtime byte were missing from the tarball, npm would need the
   // registry (or a warm cache) and this install would fail.
   const emptyCache = join(temp, "npm-cache");
   await run(
-    "npm",
-    [
+    process.execPath,
+    npmArgs([
       "install",
       tarball,
       "--omit=dev",
@@ -51,7 +52,7 @@ try {
       "--no-audit",
       "--no-fund",
       "--loglevel=error"
-    ],
+    ]),
     { cwd: consumer, ...NPM_RUN_OPTIONS }
   );
 
@@ -74,7 +75,10 @@ try {
       );
     }
   }
-  await run("npm", ["ls", "--all", "--omit=dev"], { cwd: consumer, ...NPM_RUN_OPTIONS });
+  await run(process.execPath, npmArgs(["ls", "--all", "--omit=dev"]), {
+    cwd: consumer,
+    ...NPM_RUN_OPTIONS
+  });
 
   // Dependency-declaration consistency: every bare module specifier the
   // packed runtime code imports must be declared in the packed package's
