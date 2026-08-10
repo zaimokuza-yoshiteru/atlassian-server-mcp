@@ -1,0 +1,1410 @@
+[
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/admin/group/{groupName}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Delete group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/admin/user/{username}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Delete user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/content/{id}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Delete content"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/content/{id}/child/attachment/{attachmentId}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Remove attachment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/content/{id}/child/attachment/{attachmentId}/version/{version}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Remove attachment version"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/content/{id}/label",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Delete label with query param"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/content/{id}/label/{label}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Delete label"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/content/{id}/property/{key}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Delete content property"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/content/{id}/version/{versionNumber}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Delete content history"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/space/{spaceKey}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Delete Space"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/space/{spaceKey}/category/{categoryName}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Remove a category from a space"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/space/{spaceKey}/property/{key}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Delete space property"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/space/{spaceKey}/trash",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Remove all trash contents"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/user/{username}/group/{groupName}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Delete user group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/user/watch/content/{contentId}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Remove content watcher"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/user/watch/space/{spaceKey}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Remove space watcher"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/webhooks/{webhookId}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Delete webhook"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/accessmode",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get access mode status"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/admin/users/list/active",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get active users"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/audit",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": ""
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/backup-restore/jobs",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Find jobs by filters"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/backup-restore/jobs/{jobId}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get job by ID"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/backup-restore/jobs/{jobId}/download",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Download backup file"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/backup-restore/restore/files",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get files in restore directory"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/cluster/nodes",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get node statuses in a cluster"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/color-scheme",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get global color scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/color-scheme/default",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get default global color scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/content",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get content"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/content/{contentId}/watchers",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Fetch users watching a given content"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/content/{id}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get content by ID"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/content/{id}/child",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get children of content"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/content/{id}/child/{type}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get children of content by type"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/content/{id}/child/attachment",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get attachment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/content/{id}/child/attachment/{attachmentId}/extractedtext",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": ""
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/content/{id}/child/comment",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get comments of content"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/content/{id}/descendant",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get Descendants"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/content/{id}/descendant/{type}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get descendants of type"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/content/{id}/history",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get history of content"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/content/{id}/history/{version}/macro/hash/{hash}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get macro body by hash"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/content/{id}/history/{version}/macro/id/{macroId}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get macro body by macro ID"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/content/{id}/label",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get labels"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/content/{id}/property",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Find all content properties"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/content/{id}/property/{key}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Find content property by key"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/content/{id}/restriction/byOperation",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get all restrictions by Operation"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/content/{id}/restriction/byOperation/{operationKey}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get all restrictions for given operation"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/content/{id}/restriction/relevantViewRestrictions",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get all view restriction both direct and inherited."
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/content/scan",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Scan content by space key"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/content/search",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Search content using CQL"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/group",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get groups"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/group/{groupName}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get group by name"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/group/{groupName}/groupancestor",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get group ancestor of a group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/group/{groupName}/groupmember",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get group members of group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/group/{groupName}/groupparent",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get group parents of a group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/group/{groupName}/member",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get members of group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/group/groupancestor",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get group ancestor of a group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/group/groupmember",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get group members of group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/group/groupparent",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get group parents of a group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/group/info",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get group by name"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/group/member",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get members of group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/index/reindex",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get reindex status"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/instance-metrics",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get instance metrics"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/label/{labelName}/related",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get related labels."
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/label/labels",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get list of labels matching the given label name, namespace, space (via space key) or owner."
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/label/popular",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get most popular labels"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/label/recent",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get recently used labels"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/longtask",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get tasks"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/longtask/{id}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get task by ID"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/permissions",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get global permissions"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/permissions/anonymous",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Gets the permissions granted to an anonymous user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/permissions/group/{groupName}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Gets global permissions granted to a group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/permissions/unlicensed",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Gets the permissions granted to an unlicensed users"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/permissions/user/{user}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Gets global permissions granted to a user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/search",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Search for entities in confluence"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/server-information",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get server information"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/space",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get spaces by key"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/space/{spaceKey}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get space"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/space/{spaceKey}/color-scheme",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get Space color scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/space/{spaceKey}/color-scheme/type",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get Space color scheme type"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/space/{spaceKey}/content",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get contents in space"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/space/{spaceKey}/content/{type}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get contents by type"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/space/{spaceKey}/labels",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Fetch all labels"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/space/{spaceKey}/labels/{labelName}/related",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get related labels"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/space/{spaceKey}/labels/popular",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get popular labels"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/space/{spaceKey}/labels/recent",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get recent labels"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/space/{spaceKey}/permissions",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get all space permissions"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/space/{spaceKey}/permissions/anonymous",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Gets the permissions granted to an anonymous user in a space"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/space/{spaceKey}/permissions/group/{groupName}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Gets the permissions granted to a group in a space"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/space/{spaceKey}/permissions/user/{userKey}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Gets the permissions granted to a user in a space"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/space/{spaceKey}/property",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get space properties"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/space/{spaceKey}/property/{key}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get space property by key"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/space/{spaceKey}/trash",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get trash contents of space"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/space/{spaceKey}/watchers",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Fetch users watching space"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/user",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/user/anonymous",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get information about anonymous user type"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/user/current",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get current user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/user/list",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get registered users"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/user/memberof",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get groups"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/user/watch/content/{contentId}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get information about content watcher"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/user/watch/space/{spaceKey}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get information about space watcher"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/webhooks",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Find webhooks"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/webhooks/{webhookId}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get webhook"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/webhooks/{webhookId}/latest",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get latest invocations"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/webhooks/{webhookId}/statistics",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get statistic"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/webhooks/{webhookId}/statistics/summary",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Get statistics summary"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/admin/group",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Create group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/admin/space/personal/{username}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Creates personal Space for a User."
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/admin/user",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Create user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/admin/user/{username}/password",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Change password"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/backup-restore/backup/site",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Create site backup job"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/backup-restore/backup/space",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Create space backup job"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/backup-restore/restore/site",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Create site restore job"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/backup-restore/restore/site/upload",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Create site restore job for upload backup file"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/backup-restore/restore/space",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Create space restore job"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/backup-restore/restore/space/upload",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Create space restore job for upload backup file"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/content",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Create content"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/content/{id}/child/attachment",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Create attachments"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/content/{id}/child/attachment/{attachmentId}/data",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Update binary data of an attachment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/content/{id}/child/attachment/{attachmentId}/move",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Move attachment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/content/{id}/label",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Add Labels"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/content/{id}/property",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Create a content property"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/content/{id}/property/{key}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": ""
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/content/blueprint/instance/{draftId}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Publish legacy draft"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/contentbody/convert/{to}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Convert body representation"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/index/reindex",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Rebuild Confluence search index"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/index/unindex",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Remove all content from search index"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/space",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Creates a new Space."
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/space/_private",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Create private space"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/space/{spaceKey}/category/{labelName}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Add a category to a space"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/space/{spaceKey}/permissions",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Set permissions to multiple users/groups/anonymous user in the given space"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/space/{spaceKey}/property",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Create a space property"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/space/{spaceKey}/property/{key}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Create a space property with a specific key"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/space/personal",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Creates the personal Space for self."
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/user/current/password",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Change password"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/user/watch/content/{contentId}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Add content watcher"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/user/watch/space/{spaceKey}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Add space watcher"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/webhooks",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Create webhook"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/webhooks/test",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Test webhook"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/admin/user/{username}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Update user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/admin/user/{username}/disable",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Disable user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/admin/user/{username}/enable",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Enable user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/backup-restore/jobs/{jobId}/cancel",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Cancel job"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/backup-restore/jobs/clear-queue",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Cancel all queued jobs"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/color-scheme",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Set global color scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/color-scheme/reset",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Reset global color scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/content/{contentId}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Update content"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/content/{id}/child/attachment/{attachmentId}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Update non-binary data of an Attachment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/content/{id}/property/{key}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Update content property"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/content/{id}/restriction",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Update restrictions"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/content/blueprint/instance/{draftId}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Publish shared draft"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/index/resetjob",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Reset reindex job status"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/permissions",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Set global permissions to multiple users/groups"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/permissions/anonymous/grant",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Grants global permissions to anonymous users"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/permissions/anonymous/revoke",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Revoke global permissions from anonymous users"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/permissions/group/{groupName}/grant",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Grants global permissions to a group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/permissions/group/{groupName}/revoke",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Revoke global permissions from a group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/permissions/unlicensed/grant",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Grants global permissions to unlicensed users"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/permissions/unlicensed/revoke",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Revoke global permissions from unlicensed users"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/permissions/user/{user}/grant",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Grants global permissions to a user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/permissions/user/{user}/revoke",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Revoke global permissions from a user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/space/{spaceKey}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Update Space"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/space/{spaceKey}/archive",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Archive space"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/space/{spaceKey}/color-scheme",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Update Space color scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/space/{spaceKey}/color-scheme/reset",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Reset Space color scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/space/{spaceKey}/color-scheme/type",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Update Space color scheme type"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/space/{spaceKey}/permissions/anonymous/grant",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Grants space permissions to anonymous user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/space/{spaceKey}/permissions/anonymous/revoke",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Revoke space permissions from anonymous user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/space/{spaceKey}/permissions/group/{groupName}/grant",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Grants space permissions to a group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/space/{spaceKey}/permissions/group/{groupName}/revoke",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Revoke space permissions from a group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/space/{spaceKey}/permissions/user/{userKey}/grant",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Grants space permissions to a user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/space/{spaceKey}/permissions/user/{userKey}/revoke",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Revoke space permissions from a user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/space/{spaceKey}/property/{key}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Update space property"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/space/{spaceKey}/restore",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Restore space"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/user/{username}/group/{groupName}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Update user group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/user/current",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Update details of the current user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/user/settings",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": "Update a user's preference settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/webhooks/{webhookId}",
+    "product": "confluence",
+    "sourceKind": "openapi",
+    "summary": " Update webhook"
+  }
+]

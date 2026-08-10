@@ -1,0 +1,3548 @@
+[
+  {
+    "inProjectBaseline": false,
+    "method": "DELETE",
+    "path": "/rest/agile/1.0/board/{boardId}",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Delete the board"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "DELETE",
+    "path": "/rest/agile/1.0/board/{boardId}/properties/{propertyKey}",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Delete a property from a board"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "DELETE",
+    "path": "/rest/agile/1.0/sprint/{sprintId}",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Delete a sprint"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "DELETE",
+    "path": "/rest/agile/1.0/sprint/{sprintId}/properties/{propertyKey}",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Delete a sprint's property"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/attachment/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete an attachment from an issue"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/cluster/node/{nodeId}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete a cluster node"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/comment/{commentId}/properties/{propertyKey}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete a property from a comment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/component/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete a project component"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/customFields",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete custom fields in bulk"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/dashboard/{dashboardId}/items/{itemId}/properties/{propertyKey}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete a property from a dashboard item"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/filter/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete a filter"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/filter/{id}/columns",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Reset columns for filter"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/filter/{id}/permission/{permission-id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Remove share permissions from filter"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/group",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete a specified group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/group/user",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Remove a user from a specified group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/issue/{issueIdOrKey}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete an issue"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/comment/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete a comment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/properties/{propertyKey}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete a property from an issue"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/remotelink",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete remote issue link"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/remotelink/{linkId}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete remote issue link by id"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/votes",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Remove vote from issue"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/watchers",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete watcher from issue"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/worklog/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete a worklog entry"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/issueLink/{linkId}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete an issue link with the specified id"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/issueLinkType/{issueLinkTypeId}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete the specified issue link type"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/issuetype/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete specified issue type and migrate associated issues"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/issuetype/{issueTypeId}/properties/{propertyKey}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete specified issue type's property"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/issuetypescheme/{schemeId}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete specified issue type scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/issuetypescheme/{schemeId}/associations",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Remove all project associations for specified scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/issuetypescheme/{schemeId}/associations/{projIdOrKey}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Remove given project association for specified scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/mypreferences",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete user preference"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/permissionscheme/{schemeId}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete a permission scheme by ID"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/permissionscheme/{schemeId}/permission/{permissionId}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete a permission grant from a scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/priorityschemes/{schemeId}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete a priority scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/project/{projectIdOrKey}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete a project"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/project/{projectIdOrKey}/avatar/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete an avatar"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/project/{projectIdOrKey}/properties/{propertyKey}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete property from project"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/project/{projectIdOrKey}/role/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete actors from project role"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/project/{projectKeyOrId}/priorityscheme/{schemeId}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Unassign project from priority scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/projectCategory/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete project category"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/role/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Deletes a role"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/role/{id}/actors",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Removes default actor from a role"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/screens/{screenId}/tabs/{tabId}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete a tab from a screen"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/screens/{screenId}/tabs/{tabId}/fields/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Remove field from tab"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/universal_avatar/type/{type}/owner/{owningObjectId}/avatar/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete avatar by ID"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/user",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/user/anonymization/unlock",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete stale user anonymization task"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/user/application",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Remove user from application"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/user/avatar/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete avatar"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/user/columns",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Reset default columns to system default"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/user/properties/{propertyKey}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete a specified user's property"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/user/session/{username}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete user session"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/version/{versionId}/remotelink",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete all remote version links for version"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/version/{versionId}/remotelink/{globalId}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete specific remote version link"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/workflowscheme/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete the specified workflow scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/workflowscheme/{id}/default",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Remove default workflow from a scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/workflowscheme/{id}/draft",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete the specified draft workflow scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/workflowscheme/{id}/draft/default",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Remove default workflow from a draft scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/workflowscheme/{id}/draft/issuetype/{issueType}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete an issue type mapping from a draft scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/workflowscheme/{id}/draft/workflow",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete a workflow mapping from a draft scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/workflowscheme/{id}/issuetype/{issueType}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete an issue type mapping from a scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/2/workflowscheme/{id}/workflow",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete a workflow mapping from a scheme"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "DELETE",
+    "path": "/rest/auth/1/session",
+    "product": "jira",
+    "scopeReason": "jira-auth-session",
+    "sourceKind": "openapi",
+    "summary": "Delete current user session"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "DELETE",
+    "path": "/rest/auth/1/websudo",
+    "product": "jira",
+    "scopeReason": "jira-auth-session",
+    "sourceKind": "openapi",
+    "summary": "Invalidate the current WebSudo session"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "GET",
+    "path": "/rest/agile/1.0/board",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Get all boards"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "GET",
+    "path": "/rest/agile/1.0/board/{boardId}",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Get a single board"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "GET",
+    "path": "/rest/agile/1.0/board/{boardId}/backlog",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Get all issues from the board's backlog"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "GET",
+    "path": "/rest/agile/1.0/board/{boardId}/configuration",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Get the board configuration"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "GET",
+    "path": "/rest/agile/1.0/board/{boardId}/epic",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Get all epics from the board"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "GET",
+    "path": "/rest/agile/1.0/board/{boardId}/epic/{epicId}/issue",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Get all issues for a specific epic"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "GET",
+    "path": "/rest/agile/1.0/board/{boardId}/epic/none/issue",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Get all issues without an epic"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "GET",
+    "path": "/rest/agile/1.0/board/{boardId}/issue",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Get all issues from a board"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "GET",
+    "path": "/rest/agile/1.0/board/{boardId}/project",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Get all projects associated with the board"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "GET",
+    "path": "/rest/agile/1.0/board/{boardId}/properties",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Get all properties keys for a board"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "GET",
+    "path": "/rest/agile/1.0/board/{boardId}/properties/{propertyKey}",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Get a property from a board"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "GET",
+    "path": "/rest/agile/1.0/board/{boardId}/settings/refined-velocity",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Get the value of the refined velocity setting"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "GET",
+    "path": "/rest/agile/1.0/board/{boardId}/sprint",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Get all sprints from a board"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "GET",
+    "path": "/rest/agile/1.0/board/{boardId}/sprint/{sprintId}/issue",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Get all issues for a sprint"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "GET",
+    "path": "/rest/agile/1.0/board/{boardId}/version",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Get all versions from a board"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "GET",
+    "path": "/rest/agile/1.0/epic/{epicIdOrKey}",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Get an epic by id or key"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "GET",
+    "path": "/rest/agile/1.0/epic/{epicIdOrKey}/issue",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Get issues for a specific epic"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "GET",
+    "path": "/rest/agile/1.0/epic/none/issue",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Get issues without an epic"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "GET",
+    "path": "/rest/agile/1.0/issue/{issueIdOrKey}",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Get a single issue with Agile fields"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "GET",
+    "path": "/rest/agile/1.0/issue/{issueIdOrKey}/estimation",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Get the estimation of an issue for a board"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "GET",
+    "path": "/rest/agile/1.0/sprint/{sprintId}",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Get sprint by id"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "GET",
+    "path": "/rest/agile/1.0/sprint/{sprintId}/issue",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Get all issues in a sprint"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "GET",
+    "path": "/rest/agile/1.0/sprint/{sprintId}/properties",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Get all properties keys for a sprint"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "GET",
+    "path": "/rest/agile/1.0/sprint/{sprintId}/properties/{propertyKey}",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Get a property for a sprint"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/application-properties",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get an application property by key"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/application-properties/advanced-settings",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all advanced settings properties"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/applicationrole",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all application roles in the system"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/applicationrole/{key}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get application role by key"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/attachment/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get the meta-data for an attachment, including the URI of the actual attached file"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/attachment/{id}/expand/human",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get human-readable attachment expansion"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/attachment/{id}/expand/raw",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get raw attachment expansion"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/attachment/meta",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get attachment capabilities"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/avatar/{type}/system",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all system avatars"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/cluster/nodes",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all cluster nodes"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/cluster/zdu/state",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get cluster upgrade state"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/comment/{commentId}/properties",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get properties keys of a comment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/comment/{commentId}/properties/{propertyKey}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get a property from a comment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/component/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get project component"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/component/{id}/relatedIssueCounts",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get component related issues"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/component/page",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get paginated components"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/configuration",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get Jira configuration details"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/customFieldOption/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get custom field option by ID"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/customFields",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get custom fields with pagination"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/customFields/{customFieldId}/options",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get custom field options"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/dashboard",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all dashboards with optional filtering"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/dashboard/{dashboardId}/items/{itemId}/properties",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all properties keys for a dashboard item"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/dashboard/{dashboardId}/items/{itemId}/properties/{propertyKey}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get a property from a dashboard item"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/dashboard/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get a single dashboard by ID"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/email-templates",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get email templates as zip file"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/email-templates/types",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get email types for templates"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/field",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all fields, both System and Custom"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/filter/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get a filter by ID"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/filter/{id}/columns",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get default columns for filter"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/filter/{id}/permission",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all share permissions of filter"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/filter/{id}/permission/{permissionId}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get a single share permission of filter"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/filter/defaultShareScope",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get default share scope"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/filter/favourite",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get favourite filters"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/group/member",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get users from a specified group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/groups/picker",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get groups matching a query"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/groupuserpicker",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get users and groups matching query with highlighting"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/index-snapshot",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get list of available index snapshots"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/index-snapshot/isRunning",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get index snapshot creation status"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/index/summary",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get index condition summary"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issue/{issueIdOrKey}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get issue for key"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/comment",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get comments for an issue"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/comment/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get a comment by id"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/editmeta",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get metadata for issue types used for editing issues"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/pinned-comments",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get pinned comments for an issue"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/properties",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get keys of all properties for an issue"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/properties/{propertyKey}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get the value of a specific property from an issue"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/remotelink",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get remote issue links for an issue"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/remotelink/{linkId}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get a remote issue link by its id"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/subtask",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get an issue's subtask list"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/subtask/move",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Check if a subtask can be moved"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/transitions",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get list of transitions possible for an issue"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/votes",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get votes for issue"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/watchers",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get list of watchers of issue"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/worklog",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get worklogs for an issue"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/worklog/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get a worklog by id"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issue/createmeta/{projectIdOrKey}/issuetypes",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get metadata for project issue types"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issue/createmeta/{projectIdOrKey}/issuetypes/{issueTypeId}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get metadata for issue types used for creating issues"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issue/picker",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get suggested issues for auto-completion"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issueLink/{linkId}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get an issue link with the specified id"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issueLinkType",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get list of available issue link types"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issueLinkType/{issueLinkTypeId}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get information about an issue link type"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issuesecurityschemes",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all issue security schemes"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issuesecurityschemes/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get specific issue security scheme by id"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issuetype",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get list of all issue types visible to user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issuetype/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get full representation of issue type by id"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issuetype/{id}/alternatives",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get list of alternative issue types for given id"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issuetype/{issueTypeId}/properties",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all properties keys for issue type"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issuetype/{issueTypeId}/properties/{propertyKey}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get value of specified issue type's property"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issuetype/page",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get paginated list of filtered issue types"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issuetypescheme",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get list of all issue type schemes visible to user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issuetypescheme/{schemeId}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get full representation of issue type scheme by id"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/issuetypescheme/{schemeId}/associations",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all of the associated projects for specified scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/jql/autocompletedata",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get auto complete data for JQL searches"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/jql/autocompletedata/suggestions",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get auto complete suggestions for JQL search"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/monitoring/app",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get App Monitoring status"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/monitoring/ipd",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get if IPD Monitoring is enabled"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/monitoring/jmx/areMetricsExposed",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Check if JMX metrics are being exposed"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/monitoring/jmx/getAvailableMetrics",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get the available JMX metrics"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/mypermissions",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get permissions for the logged in user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/mypreferences",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get user preference by key"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/myself",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get currently logged user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/notificationscheme",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get paginated notification schemes"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/notificationscheme/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get full notification scheme details"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/password/policy",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get current password policy requirements"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/permissions",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all permissions present in Jira instance"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/permissionscheme",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all permission schemes"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/permissionscheme/{permissionSchemeId}/attribute/{attributeKey}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get scheme attribute by key"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/permissionscheme/{schemeId}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get a permission scheme by ID"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/permissionscheme/{schemeId}/permission",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all permission grants of a scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/permissionscheme/{schemeId}/permission/{permissionId}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get a permission grant by ID"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/priority",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all issue priorities"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/priority/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get an issue priority by ID"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/priority/page",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get paginated issue priorities"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/priorityschemes",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all priority schemes"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/priorityschemes/{schemeId}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get a priority scheme by ID"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/project",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all visible projects"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/project/{projectIdOrKey}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get a project by ID or key"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/project/{projectIdOrKey}/avatars",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all avatars for a project"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/project/{projectIdOrKey}/components",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get project components"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/project/{projectIdOrKey}/properties",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get keys of all properties for project"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/project/{projectIdOrKey}/properties/{propertyKey}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get value of property from project"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/project/{projectIdOrKey}/role",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all roles in project"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/project/{projectIdOrKey}/role/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get details for a project role"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/project/{projectIdOrKey}/statuses",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all issue types with statuses for a project"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/project/{projectIdOrKey}/version",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get paginated project versions"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/project/{projectIdOrKey}/versions",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get project versions"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/project/{projectKeyOrId}/issuesecuritylevelscheme",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get issue security scheme for project"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/project/{projectKeyOrId}/notificationscheme",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get notification scheme associated with the project"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/project/{projectKeyOrId}/permissionscheme",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get assigned permission scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/project/{projectKeyOrId}/priorityscheme",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get assigned priority scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/project/{projectKeyOrId}/securitylevel",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all security levels for project"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/project/{projectKeyOrId}/workflowscheme",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get workflow scheme for project"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/project/type",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all project types"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/project/type/{projectTypeKey}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get project type by key"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/project/type/{projectTypeKey}/accessible",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get project type by key"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/projectCategory",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all project categories"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/projectCategory/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get project category by ID"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/projects/picker",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get projects matching query"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/projectvalidate/key",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get project key validation"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/readonly-mode",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get read-only mode status"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/reindex",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get reindex information"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/reindex/progress",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get reindex progress"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/reindex/request/{requestId}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get progress of a single reindex request"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/reindex/request/bulk",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get progress of multiple reindex requests"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/resolution",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all resolutions"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/resolution/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get a resolution by ID"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/resolution/page",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get paginated filtered resolutions"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/role",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all project roles"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/role/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get a specific project role"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/role/{id}/actors",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get default actors for a role"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/screens",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get available field screens"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/screens/{screenId}/availableFields",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get available fields for screen"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/screens/{screenId}/tabs",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all tabs for a screen"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/screens/{screenId}/tabs/{tabId}/fields",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all fields for a tab"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/search",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get issues using JQL"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/search/error/lookup",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": ""
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/searchLimits/maxAggregationBuckets",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get maximum aggregation buckets"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/searchLimits/maxResultWindow",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get maximum result window"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/securitylevel/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get a security level by ID"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/serverInfo",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get general information about the current Jira server"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/settings/columns",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get default system columns for issue navigator"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/status",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all statuses"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/status/{idOrName}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get status by ID or name"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/status/page",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get paginated filtered statuses"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/statuscategory",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all status categories"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/statuscategory/{idOrKey}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get status category by ID or key"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/terminology/entries",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all defined names for 'epic' and 'sprint'"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/terminology/entries/{originalName}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get epic or sprint name by original name"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/universal_avatar/type/{type}/owner/{owningObjectId}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all avatars for a type and owner"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/upgrade",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get result of the last upgrade task"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/user",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get user by username or key"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/user/a11y/personal-settings",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get available accessibility personal settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/user/anonymization",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get validation for user anonymization"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/user/anonymization/progress",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get user anonymization progress"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/user/anonymization/rerun",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get validation for user anonymization rerun"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/user/assignable/multiProjectSearch",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Find bulk assignable users"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/user/assignable/search",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Find assignable users by username"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/user/avatars",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all avatars for user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/user/columns",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get default columns for user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/user/duplicated/count",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get duplicated users count"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/user/duplicated/list",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get duplicated users mapping"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/user/list",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "List all users"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/user/permission/search",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Find users with all specified permissions"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/user/picker",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Find users for picker by query"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/user/properties",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get keys of all properties for a user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/user/properties/{propertyKey}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get the value of a specified user's property"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/user/search",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Find users by username"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/user/viewissue/search",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Find users with browse permission"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/version",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get paginated versions"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/version/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get version details"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/version/{id}/relatedIssueCounts",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get version related issues count"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/version/{id}/unresolvedIssueCount",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get version unresolved issues count"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/version/{versionId}/remotelink",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get remote version links by version ID"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/version/{versionId}/remotelink/{globalId}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get specific remote version link"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/version/remotelink",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get remote version links by global ID"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/workflow",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get all workflows"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/workflowscheme/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get requested workflow scheme by ID"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/workflowscheme/{id}/default",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get default workflow for a scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/workflowscheme/{id}/draft",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get requested draft workflow scheme by ID"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/workflowscheme/{id}/draft/default",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get default workflow for a draft scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/workflowscheme/{id}/draft/issuetype/{issueType}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get issue type mapping for a draft scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/workflowscheme/{id}/draft/workflow",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get draft workflow mappings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/workflowscheme/{id}/issuetype/{issueType}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get issue type mapping for a scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/workflowscheme/{id}/workflow",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get workflow mappings for a scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/worklog/deleted",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Returns worklogs deleted since given time."
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/2/worklog/updated",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Returns worklogs updated since given time."
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "GET",
+    "path": "/rest/auth/1/session",
+    "product": "jira",
+    "scopeReason": "jira-auth-session",
+    "sourceKind": "openapi",
+    "summary": "Get current user session information"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "POST",
+    "path": "/rest/agile/1.0/backlog/issue",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Update issues to move them to the backlog"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "POST",
+    "path": "/rest/agile/1.0/board",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Create a new board"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "POST",
+    "path": "/rest/agile/1.0/epic/{epicIdOrKey}",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Update an epic's details"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "POST",
+    "path": "/rest/agile/1.0/epic/{epicIdOrKey}/issue",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Move issues to a specific epic"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "POST",
+    "path": "/rest/agile/1.0/epic/none/issue",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Remove issues from any epic"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "POST",
+    "path": "/rest/agile/1.0/sprint",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Create a future sprint"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "POST",
+    "path": "/rest/agile/1.0/sprint/{sprintId}",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Partially update a sprint"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "POST",
+    "path": "/rest/agile/1.0/sprint/{sprintId}/issue",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Move issues to a sprint"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "POST",
+    "path": "/rest/agile/1.0/sprint/{sprintId}/swap",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Swap the position of two sprints"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/cluster/zdu/approve",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Approve cluster upgrade"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/cluster/zdu/cancel",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Cancel cluster upgrade"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/cluster/zdu/retryUpgrade",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Retry cluster upgrade"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/cluster/zdu/start",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Start cluster upgrade"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/component",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Create component"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/email-templates",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update email templates with zip file"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/email-templates/apply",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update email templates with previously uploaded pack"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/email-templates/revert",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update email templates to default"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/field",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Create a custom field using a definition"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/filter",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Create a new filter"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/filter/{id}/permission",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Add share permissions to filter"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/group",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Create a group with given parameters"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/group/user",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Add a user to a specified group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/index-snapshot",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Create index snapshot if not in progress"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/issue",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Create an issue or sub-task from json"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/attachments",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Add one or more attachments to an issue"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/comment",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Add a comment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/notify",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Send notification to recipients"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/remotelink",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Create or update remote issue link"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/subtask/move",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Reorder an issue's subtasks"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/transitions",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Perform a transition on an issue"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/votes",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Add vote to issue"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/watchers",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Add a user as watcher"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/worklog",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Add a worklog entry"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/issue/archive",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Archive list of issues"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/issue/bulk",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Create an issue or sub-task from json - bulk operation."
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/issue/remotelink/reciprocal",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Create reciprocal remote issue link"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/issueLink",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Create an issue link between two issues"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/issueLinkType",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Create a new issue link type"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/issuetype",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Create an issue type from JSON representation"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/issuetype/{id}/avatar",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Convert temporary avatar into a real avatar"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/issuetype/{id}/avatar/temporary",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Create temporary avatar using multipart for issue type"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/issuetypescheme",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Create an issue type scheme from JSON representation"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/issuetypescheme/{schemeId}/associations",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Add project associations to scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/licenseValidator",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Validate a Jira license"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/monitoring/app",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update App Monitoring status"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/monitoring/ipd",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update IPD Monitoring status"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/monitoring/jmx/startExposing",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Start exposing JMX metrics"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/monitoring/jmx/stopExposing",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Stop exposing JMX metrics"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/password/policy/createUser",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get reasons for password policy disallowance on user creation"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/password/policy/updateUser",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Get reasons for password policy disallowance on user password update"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/permissionscheme",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Create a new permission scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/permissionscheme/{schemeId}/permission",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Create a permission grant in a scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/priorityschemes",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Create new priority scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/project",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Create a new project"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/project/{projectIdOrKey}/avatar",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Create avatar from temporary"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/project/{projectIdOrKey}/avatar/temporary",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Store temporary avatar using multipart"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/project/{projectIdOrKey}/role/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Add actor to project role"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/projectCategory",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Create project category"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/reindex",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Start a reindex operation"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/reindex/issue",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Reindex individual issues"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/reindex/request",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Execute pending reindex requests"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/role",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Create a new project role"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/role/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Partially updates a role's name or description"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/role/{id}/actors",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Adds default actors to a role"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/screens/{screenId}/tabs",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Create tab for a screen"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/screens/{screenId}/tabs/{tabId}/fields",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Add field to a tab"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/screens/{screenId}/tabs/{tabId}/fields/{id}/move",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Move field on a tab"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/screens/{screenId}/tabs/{tabId}/move/{pos}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Move tab position"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/screens/addToDefault/{fieldId}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Add field to default screen"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/search",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Perform search with JQL"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/terminology/entries",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update epic/sprint names from original to new"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/universal_avatar/type/{type}/owner/{owningObjectId}/avatar",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Create avatar from temporary"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/universal_avatar/type/{type}/owner/{owningObjectId}/temp",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Create temporary avatar using multipart upload"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/upgrade",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Run pending upgrade tasks"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/user",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Create new user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/user/anonymization",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Schedule user anonymization"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/user/anonymization/rerun",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Schedule user anonymization rerun"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/user/application",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Add user to application"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/user/avatar",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Create avatar from temporary"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/user/avatar/temporary",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Store temporary avatar using multipart"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/version",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Create new version"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/version/{id}/move",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Modify version's sequence"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/version/{id}/removeAndSwap",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Delete version and replace values"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/version/{versionId}/remotelink",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Create or update remote version link without global ID"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/version/{versionId}/remotelink/{globalId}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Create or update remote version link with global ID"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/workflowscheme",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Create a new workflow scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/workflowscheme/{id}/createdraft",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Create a draft for a workflow scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/2/worklog/list",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Returns worklogs for given ids."
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "POST",
+    "path": "/rest/auth/1/session",
+    "product": "jira",
+    "scopeReason": "jira-auth-session",
+    "sourceKind": "openapi",
+    "summary": "Create new user session"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "PUT",
+    "path": "/rest/agile/1.0/board/{boardId}/properties/{propertyKey}",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Update a board's property"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "PUT",
+    "path": "/rest/agile/1.0/board/{boardId}/settings/refined-velocity",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Update the board's refined velocity setting"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "PUT",
+    "path": "/rest/agile/1.0/epic/{epicIdOrKey}/rank",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Rank an epic relative to another"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "PUT",
+    "path": "/rest/agile/1.0/issue/{issueIdOrKey}/estimation",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Update the estimation of an issue for a board"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "PUT",
+    "path": "/rest/agile/1.0/issue/rank",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Rank issues before or after a given issue"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "PUT",
+    "path": "/rest/agile/1.0/sprint/{sprintId}",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Update a sprint fully"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "PUT",
+    "path": "/rest/agile/1.0/sprint/{sprintId}/properties/{propertyKey}",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Update a sprint's property"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "PUT",
+    "path": "/rest/agile/1.0/sprint/unmap",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Unmap sprints from being synced"
+  },
+  {
+    "inProjectBaseline": false,
+    "method": "PUT",
+    "path": "/rest/agile/1.0/sprint/unmap-all",
+    "product": "jira",
+    "scopeReason": "jira-software-agile",
+    "sourceKind": "openapi",
+    "summary": "Unmap all sprints from being synced"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/application-properties/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update an application property"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/applicationrole",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update application roles"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/applicationrole/{key}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update application role"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/cluster/index-snapshot/{nodeId}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Request node index snapshot"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/cluster/node/{nodeId}/offline",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update node state to offline"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/comment/{commentId}/properties/{propertyKey}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Set a property on a comment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/component/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update a component"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/dashboard/{dashboardId}/items/{itemId}/properties/{propertyKey}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Set a property on a dashboard item"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/filter/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update an existing filter"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/filter/{id}/columns",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Set default columns for filter"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/filter/defaultShareScope",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Set default share scope"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/issue/{issueIdOrKey}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Edit an issue from a JSON representation"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/archive",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Archive an issue"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/assignee",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Assign an issue to a user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/comment/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update a comment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/comment/{id}/pin",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Pin a comment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/properties/{propertyKey}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update the value of a specific issue's property"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/remotelink/{linkId}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update remote issue link"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/restore",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Restore an archived issue"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/issue/{issueIdOrKey}/worklog/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update a worklog entry"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/issueLinkType/{issueLinkTypeId}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update the specified issue link type"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/issueLinkType/{issueLinkTypeId}/order",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update the order of the issue link type."
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/issueLinkType/order",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Reset the order of issue link types alphabetically."
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/issuetype/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update specified issue type from JSON representation"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/issuetype/{issueTypeId}/properties/{propertyKey}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update specified issue type's property"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/issuetypescheme/{schemeId}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update specified issue type scheme from JSON representation"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/issuetypescheme/{schemeId}/associations",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Set project associations for scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/mypreferences",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update user preference"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/myself",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update currently logged user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/myself/password",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update caller password"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/permissionscheme/{permissionSchemeId}/attribute/{key}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update or insert a scheme attribute"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/permissionscheme/{schemeId}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update a permission scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/priorityschemes/{schemeId}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update a priority scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/project/{projectIdOrKey}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update a project"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/project/{projectIdOrKey}/archive",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Archive a project"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/project/{projectIdOrKey}/avatar",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update project avatar"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/project/{projectIdOrKey}/properties/{propertyKey}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Set value of specified project's property"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/project/{projectIdOrKey}/restore",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Restore an archived project"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/project/{projectIdOrKey}/role/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update project role with actors"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/project/{projectIdOrKey}/type/{newProjectTypeKey}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update project type"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/project/{projectKeyOrId}/permissionscheme",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Assign permission scheme to project"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/project/{projectKeyOrId}/priorityscheme",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Assign project with priority scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/projectCategory/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update project category"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/readonly-mode",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update read-only mode status"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/role/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Fully updates a role's name and description"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/screens/{screenId}/tabs/{tabId}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Rename a tab on a screen"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/screens/{screenId}/tabs/{tabId}/fields/{id}/updateShowWhenEmptyIndicator/{newValue}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update 'showWhenEmptyIndicator' for a field"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/settings/baseUrl",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update base URL for Jira instance"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/settings/columns",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Set default system columns for issue navigator using form"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/user",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update user details"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/user/avatar",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update user avatar"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/user/columns",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Set default columns for user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/user/password",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update user password"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/user/properties/{propertyKey}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Set the value of a specified user's property"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/version/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update version details"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/version/{id}/mergeto/{moveIssuesTo}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Merge versions"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/workflowscheme/{id}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update a specified workflow scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/workflowscheme/{id}/default",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update default workflow for a scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/workflowscheme/{id}/draft",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update a draft workflow scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/workflowscheme/{id}/draft/default",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update default workflow for a draft scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/workflowscheme/{id}/draft/issuetype/{issueType}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Set an issue type mapping for a draft scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/workflowscheme/{id}/draft/workflow",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update a workflow mapping in a draft scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/workflowscheme/{id}/issuetype/{issueType}",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Set an issue type mapping for a scheme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/2/workflowscheme/{id}/workflow",
+    "product": "jira",
+    "sourceKind": "openapi",
+    "summary": "Update a workflow mapping in a scheme"
+  }
+]

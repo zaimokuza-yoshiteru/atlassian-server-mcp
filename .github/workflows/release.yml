@@ -1,0 +1,132 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+# Minimal permissions: contents:write to create the GitHub Release,
+# id-token:write for npm trusted publishing (OIDC provenance).
+permissions:
+  contents: write
+  id-token: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    # The maintainer configures required reviewers on this environment; it
+    # gates every publish.
+    environment: npm-production
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # The evidence check needs the tag's parent commit.
+          fetch-depth: 0
+      - uses: pnpm/action-setup@ff378ebe6b225b0680b81c1ad4498ae0d1d3a5e3 # v6.0.10
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 22
+          cache: pnpm
+          registry-url: https://registry.npmjs.org
+
+      - name: Verify the tag matches package.json version
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          if [ "$GITHUB_REF_NAME" != "v$VERSION" ]; then
+            echo "::error::tag $GITHUB_REF_NAME does not match package.json version $VERSION"
+            exit 1
+          fi
+          echo "tag/version OK: $GITHUB_REF_NAME"
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Full CI gate
+        run: pnpm test:ci
+
+      - name: Verify release evidence for the tag parent
+        # Tag convention (docs/en/release-process.md): the tag points at the
+        # evidence commit; release-evidence/<parent>.json proves the tag's
+        # PARENT commit. Raw E2E reports live in gitignored .e2e-state/ and
+        # are not available here — the committed evidence JSON carries the
+        # SHA-256 of each report/manifest. Local re-check against live state:
+        # node scripts/release-check.mjs --proven-sha <parent>.
+        run: node scripts/verify-release-evidence.mjs
+
+      - name: Pack the tarball
+        id: pack
+        run: |
+          mkdir -p release-artifacts
+          pnpm pack --pack-destination release-artifacts
+          echo "tarball=$(basename release-artifacts/*.tgz)" >> "$GITHUB_OUTPUT"
+
+      - name: Verify tarball contents
+        # Every dist file in the tarball must map back to a source under
+        # src/ — the same stale-artifact guard package-smoke applies
+        # (scripts/lib/dist-sources.mjs).
+        run: |
+          CHECK_DIR=$(mktemp -d)
+          tar -xzf "release-artifacts/${{ steps.pack.outputs.tarball }}" -C "$CHECK_DIR"
+          node scripts/check-dist-sources.mjs --dist "$CHECK_DIR/package/dist"
+
+      - name: Generate SBOM
+        run: npx --yes @cyclonedx/cdxgen -o release-artifacts/sbom.json
+
+      - name: Generate SHA256SUMS
+        working-directory: release-artifacts
+        run: shasum -a 256 ./*.tgz sbom.json > SHA256SUMS
+
+      - name: Fail if this version is already published
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          if npm view "@zaimokuza/atlassian-server-mcp@$VERSION" version --silent 2>/dev/null; then
+            echo "::error::@zaimokuza/atlassian-server-mcp@$VERSION already exists on npm"
+            exit 1
+          fi
+          echo "version $VERSION is not published yet"
+
+      - name: Resolve the npm dist-tag (fail-closed)
+        id: disttag
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          TAG=$(PACKAGE_VERSION="$VERSION" node --input-type=module -e \
+            "import { distTagForVersion } from './scripts/lib/dist-tag.mjs'; console.log(distTagForVersion(process.env.PACKAGE_VERSION))" \
+            )
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+
+      - name: Create the draft GitHub Release with artifacts
+        # Draft first: release notes are written by the maintainer on the
+        # draft (there is no CHANGELOG); the release is flipped public only
+        # after npm publish succeeds. Raw E2E reports (.e2e-state/) cannot be
+        # attached — the evidence JSON carries their SHA-256; the maintainer
+        # may upload raw reports manually (docs/en/release-process.md).
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PARENT=$(git rev-parse HEAD^)
+          gh release create "$GITHUB_REF_NAME" --draft \
+            --title "$GITHUB_REF_NAME" \
+            --notes "Draft release — maintainer fills in the notes before publishing." \
+            "release-artifacts/${{ steps.pack.outputs.tarball }}" \
+            release-artifacts/sbom.json \
+            release-artifacts/SHA256SUMS \
+            "release-evidence/$PARENT.json"
+
+      - name: Upgrade npm for trusted publishing
+        # npm OIDC trusted publishing requires npm >= 11.5.1.
+        run: npm install --global npm@^11.5.1
+
+      - name: Publish to npm with provenance
+        # Trusted publishing via OIDC (id-token: write); no long-lived
+        # NPM_TOKEN. The maintainer binds repo + this workflow + the
+        # npm-production environment on npmjs.com.
+        run: npm publish --provenance --access public --tag "${{ steps.disttag.outputs.tag }}" "release-artifacts/${{ steps.pack.outputs.tarball }}"
+
+      - name: Mark the GitHub Release public
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release edit "$GITHUB_REF_NAME" --draft=false

@@ -1,0 +1,140 @@
+name: atlassian-server-mcp
+
+services:
+  jira-db:
+    image: postgres:16-alpine
+    profiles: ["jira", "all"]
+    environment:
+      POSTGRES_DB: jira
+      POSTGRES_USER: jira
+      POSTGRES_PASSWORD: jira
+    volumes:
+      - jira-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U jira"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+
+  jira:
+    image: "atlassian/jira-software:${JIRA_VERSION:-11.3.5}"
+    profiles: ["jira", "all"]
+    depends_on:
+      jira-db:
+        condition: service_healthy
+    ports:
+      - "${JIRA_PORT:-8080}:8080"
+    environment:
+      ATL_DB_TYPE: postgresql
+      ATL_JDBC_URL: jdbc:postgresql://jira-db:5432/jira
+      ATL_JDBC_USER: jira
+      ATL_JDBC_PASSWORD: jira
+      ATL_PROXY_NAME: localhost
+      ATL_PROXY_PORT: "${JIRA_PORT:-8080}"
+      JVM_SUPPORT_RECOMMENDED_ARGS: "-Dcom.atlassian.plugins.authentication.basic.auth.filter.invalidate.session=false"
+    volumes:
+      - jira-home:/var/atlassian/application-data/jira
+    healthcheck:
+      test: ["CMD", "curl", "-fs", "http://localhost:8080/status"]
+      interval: 15s
+      timeout: 5s
+      retries: 40
+
+  mailpit:
+    image: axllent/mailpit:latest
+    profiles: ["jira", "all"]
+    ports:
+      - "${MAILPIT_SMTP_PORT:-1025}:1025"
+      - "${MAILPIT_HTTP_PORT:-8025}:8025"
+
+  confluence-db:
+    image: postgres:16-alpine
+    profiles: ["confluence", "all"]
+    environment:
+      POSTGRES_DB: confluence
+      POSTGRES_USER: confluence
+      POSTGRES_PASSWORD: confluence
+    volumes:
+      - confluence-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U confluence"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+
+  confluence:
+    image: "atlassian/confluence:${CONFLUENCE_VERSION:-10.2.11}"
+    profiles: ["confluence", "all"]
+    depends_on:
+      confluence-db:
+        condition: service_healthy
+    ports:
+      - "${CONFLUENCE_PORT:-8090}:8090"
+    environment:
+      ATL_DB_TYPE: postgresql
+      ATL_JDBC_URL: jdbc:postgresql://confluence-db:5432/confluence
+      ATL_JDBC_USER: confluence
+      ATL_JDBC_PASSWORD: confluence
+      ATL_PROXY_NAME: localhost
+      ATL_PROXY_PORT: "${CONFLUENCE_PORT:-8090}"
+    volumes:
+      - confluence-home:/var/atlassian/application-data/confluence
+    healthcheck:
+      test: ["CMD", "curl", "-fs", "http://localhost:8090/status"]
+      interval: 15s
+      timeout: 5s
+      retries: 40
+
+  bitbucket-db:
+    image: postgres:16-alpine
+    profiles: ["bitbucket", "all"]
+    environment:
+      POSTGRES_DB: bitbucket
+      POSTGRES_USER: bitbucket
+      POSTGRES_PASSWORD: bitbucket
+    volumes:
+      - bitbucket-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U bitbucket"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+
+  bitbucket:
+    image: "atlassian/bitbucket:${BITBUCKET_VERSION:-10.4.1}"
+    profiles: ["bitbucket", "all"]
+    depends_on:
+      bitbucket-db:
+        condition: service_healthy
+    ports:
+      - "${BITBUCKET_PORT:-7990}:7990"
+      - "${BITBUCKET_SSH_PORT:-7999}:7999"
+    environment:
+      JDBC_DRIVER: org.postgresql.Driver
+      JDBC_URL: jdbc:postgresql://bitbucket-db:5432/bitbucket
+      JDBC_USER: bitbucket
+      JDBC_PASSWORD: bitbucket
+    volumes:
+      - bitbucket-home:/var/atlassian/application-data/bitbucket
+    healthcheck:
+      test: ["CMD", "curl", "-fs", "http://localhost:7990/status"]
+      interval: 15s
+      timeout: 5s
+      retries: 40
+
+  webhook-sink:
+    image: node:22-alpine
+    profiles: ["bitbucket", "all"]
+    ports:
+      - "${WEBHOOK_SINK_PORT:-8026}:8026"
+    volumes:
+      - ./tests/e2e/support/webhook-sink-server.mjs:/server.mjs:ro
+    command: ["node", "/server.mjs"]
+
+volumes:
+  jira-db:
+  jira-home:
+  confluence-db:
+  confluence-home:
+  bitbucket-db:
+  bitbucket-home:

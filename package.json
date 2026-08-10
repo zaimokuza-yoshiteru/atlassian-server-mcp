@@ -1,0 +1,94 @@
+{
+  "name": "@zaimokuza/atlassian-server-mcp",
+  "version": "1.0.0",
+  "description": "Unified stdio MCP server for Jira, Confluence, and Bitbucket Data Center",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/issues"
+  },
+  "homepage": "https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp#readme",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "atlassian",
+    "jira",
+    "confluence",
+    "bitbucket",
+    "data-center"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "bin": {
+    "atlassian-server-mcp": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "pnpm clean && tsc -p tsconfig.build.json",
+    "clean": "node scripts/clean.mjs",
+    "prepack": "pnpm build && pnpm operations:check && pnpm policy:check && pnpm inventory:check",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format:check": "prettier --check .",
+    "package:smoke": "node scripts/clean.mjs && node node_modules/typescript/bin/tsc -p tsconfig.build.json && node scripts/package-smoke.mjs",
+    "dev": "tsx src/cli.ts",
+    "start": "node dist/cli.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:contract": "node node_modules/typescript/bin/tsc -p tsconfig.build.json && node node_modules/vitest/vitest.mjs run --config vitest.contract.config.ts",
+    "test:ci": "node node_modules/eslint/bin/eslint.js . && node node_modules/prettier/bin/prettier.cjs --check . && node node_modules/typescript/bin/tsc --noEmit && node scripts/clean.mjs && node node_modules/typescript/bin/tsc -p tsconfig.build.json && node node_modules/vitest/vitest.mjs run --coverage && node node_modules/vitest/vitest.mjs run --config vitest.contract.config.ts && node scripts/generate-e2e-coverage.mjs --check && node scripts/generate-operations.mjs --check && node rule/fetch-api-inventory.mjs --offline --check && node rule/build-policy.mjs --check && node scripts/check-env-docs.mjs && node scripts/package-smoke.mjs",
+    "coverage:generate": "node scripts/generate-e2e-coverage.mjs",
+    "coverage:check": "node scripts/generate-e2e-coverage.mjs --check",
+    "inventory:check": "node rule/fetch-api-inventory.mjs --offline --check",
+    "inventory:refresh": "node rule/fetch-api-inventory.mjs --refresh",
+    "env:check": "node scripts/check-env-docs.mjs",
+    "operations:generate": "node scripts/generate-operations.mjs",
+    "operations:check": "node scripts/generate-operations.mjs --check",
+    "policy:generate": "node rule/build-policy.mjs",
+    "policy:check": "node rule/build-policy.mjs --check",
+    "e2e:jira": "pnpm build && node scripts/e2e.mjs jira test",
+    "e2e:confluence": "pnpm build && node scripts/e2e.mjs confluence test",
+    "e2e:bitbucket": "pnpm build && node scripts/e2e.mjs bitbucket test",
+    "e2e:all": "pnpm build && node scripts/e2e.mjs all test",
+    "e2e:prepare": "node scripts/e2e-prepare.mjs",
+    "dc:setup": "tsx scripts/dc-setup.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.0.0",
+    "undici": "^7.16.0",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^22.18.0",
+    "@vitest/coverage-v8": "^3.2.7",
+    "eslint": "^10.8.1",
+    "prettier": "^3.9.6",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.66.0",
+    "vitest": "^3.2.4"
+  },
+  "packageManager": "pnpm@10.6.5"
+}

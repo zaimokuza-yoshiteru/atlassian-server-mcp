@@ -1,0 +1,2887 @@
+[
+  {
+    "operationId": "bitbucket.access-tokens.projects.create",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.access-tokens.projects.delete",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.access-tokens.projects.get",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.access-tokens.projects.get.projectkey",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.access-tokens.projects.repos.create",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.access-tokens.projects.repos.delete",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.access-tokens.projects.repos.get",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.access-tokens.projects.repos.get.projectkey",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.access-tokens.projects.repos.update",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.access-tokens.projects.update",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.branch-permissions.projects.repos.restrictions.create",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.branch-permissions.projects.repos.restrictions.delete",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.branch-permissions.projects.repos.restrictions.get",
+    "scope": "repository",
+    "dataKind": "capability",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.branch-permissions.projects.repos.restrictions.list",
+    "scope": "repository",
+    "dataKind": "capability",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.branch-permissions.restrictions.create",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.branch-permissions.restrictions.delete",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.branch-permissions.restrictions.get",
+    "scope": "project",
+    "dataKind": "capability",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.branch-permissions.restrictions.list",
+    "scope": "project",
+    "dataKind": "capability",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.branches.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.builds-and-deployments.projects.repos.commits.create",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.builds-and-deployments.projects.repos.commits.create.projectkey",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.builds-and-deployments.projects.repos.commits.delete",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.builds-and-deployments.projects.repos.commits.delete.projectkey",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.builds-and-deployments.projects.repos.commits.list",
+    "scope": "repository",
+    "dataKind": "metadata",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.builds-and-deployments.projects.repos.commits.list.projectkey",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.commits.get",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.commits.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.default-tasks.projects.repos.tasks.create",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.default-tasks.projects.repos.tasks.delete",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.default-tasks.projects.repos.tasks.delete.projectkey",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.default-tasks.projects.repos.tasks.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.default-tasks.projects.repos.tasks.update",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.default-tasks.tasks.create",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.default-tasks.tasks.delete",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.default-tasks.tasks.delete.projectkey",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.default-tasks.tasks.list",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.default-tasks.tasks.update",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.files.browse",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.files.raw",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.permission-management.projects.repos.delete",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.permission-management.projects.repos.groups.delete",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.permission-management.projects.repos.groups.list",
+    "scope": "repository",
+    "dataKind": "capability",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.permission-management.projects.repos.groups.none.list",
+    "scope": "repository",
+    "dataKind": "capability",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.permission-management.projects.repos.groups.update",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.permission-management.projects.repos.search.list",
+    "scope": "repository",
+    "dataKind": "capability",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.permission-management.projects.repos.users.delete",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.permission-management.projects.repos.users.list",
+    "scope": "repository",
+    "dataKind": "capability",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.permission-management.projects.repos.users.none.list",
+    "scope": "repository",
+    "dataKind": "capability",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.permission-management.projects.repos.users.update",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.permissions.users",
+    "scope": "project",
+    "dataKind": "capability",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.avatar-png.create",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.avatar-png.list",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.permissions.all.create",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.permissions.all.list",
+    "scope": "project",
+    "dataKind": "capability",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.permissions.delete",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.project.permissions.groups.delete",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.project.permissions.groups.list",
+    "scope": "project",
+    "dataKind": "capability",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.permissions.groups.none.list",
+    "scope": "project",
+    "dataKind": "capability",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.permissions.groups.update",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.permissions.search.list",
+    "scope": "project",
+    "dataKind": "capability",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.permissions.users.delete",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.project.permissions.users.none.list",
+    "scope": "project",
+    "dataKind": "capability",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.permissions.users.update",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.repos.contributing.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.repos.create",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.repos.default-branch.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.repos.default-branch.update",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.repos.forks.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.repos.readme.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.repos.recreate.create",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.repos.related.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.settings-restriction.all.list",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.settings-restriction.create",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.settings-restriction.delete",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.project.settings-restriction.list",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.settings.auto-decline.delete",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.project.settings.auto-decline.list",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.settings.auto-decline.update",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.settings.auto-merge.delete",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.project.settings.auto-merge.list",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.project.settings.auto-merge.update",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.project.settings.change-author.delete",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.project.settings.change-author.list",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.settings.change-author.update",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.settings.hooks.enabled.delete",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.project.settings.hooks.enabled.update",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.settings.hooks.get",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.settings.hooks.list",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.settings.hooks.settings.get",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.settings.hooks.settings.update",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.settings.pull-requests.create",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.settings.pull-requests.get",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.webhooks.create",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false,
+    "requestBodyTemplate": {
+      "name": "<name>",
+      "url": "https://<callback-url>",
+      "active": true,
+      "sslVerificationRequired": true,
+      "events": ["<event-key>"]
+    }
+  },
+  {
+    "operationId": "bitbucket.project.webhooks.delete",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.project.webhooks.get",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.webhooks.latest.list",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.webhooks.list",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.webhooks.statistics.list",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.webhooks.statistics.summary.get",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.webhooks.test.create",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.project.webhooks.update",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.projects.create",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.projects.delete",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.projects.get",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.projects.list",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.projects.update",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.commits.pull-requests.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.participants.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.auto-merge.create",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.auto-merge.delete",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.auto-merge.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.blocker-comments.create",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.blocker-comments.delete",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.blocker-comments.get",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.blocker-comments.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.blocker-comments.update",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.changes.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.comments.apply-suggestion.create",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.comments.get",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.comments.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.commit-message-suggestion.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.commits.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.delete",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.diff-stats-summary.get",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.diff.get",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.get",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.merge-base.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.merge.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.participants.create",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.participants.delete",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.participants.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.participants.update",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.review.delete",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.review.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.review.update",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.watch",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.watch.delete",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.settings.reviewer-groups.create",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.settings.reviewer-groups.delete",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.settings.reviewer-groups.get",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.settings.reviewer-groups.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.settings.reviewer-groups.update",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.repos.settings.reviewer-groups.users.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.settings.reviewer-groups.create",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.settings.reviewer-groups.delete",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.settings.reviewer-groups.get",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.settings.reviewer-groups.list",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pull-requests.projects.settings.reviewer-groups.update",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pullrequests.activities",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pullrequests.approve",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pullrequests.comments.add",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pullrequests.comments.delete",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.pullrequests.comments.update",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pullrequests.create",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pullrequests.decline",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pullrequests.diff",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pullrequests.get",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pullrequests.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pullrequests.merge",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pullrequests.reopen",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.pullrequests.unapprove",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.pullrequests.update",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repositories.create",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repositories.delete",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.repositories.get",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repositories.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repositories.update",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.archive.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.attachments.delete",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.attachments.get",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.attachments.metadata.delete",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.attachments.metadata.list",
+    "scope": "repository",
+    "dataKind": "metadata",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.attachments.metadata.update",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.branches.create",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.browse.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.browse.update",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.changes.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.commits.changes.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.commits.comments.delete",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.commits.comments.get",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.commits.comments.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.commits.comments.update",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.commits.diff-stats-summary.get",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.commits.diff.get",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.commits.merge-base.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.commits.watch",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.commits.watch.delete",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.compare.changes.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.compare.commits.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.compare.diff-path.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.compare.diff-stats-summary-path.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.diff.get",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.files.get",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.files.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.labels.create",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.labels.delete",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.labels.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.last-modified.get",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.last-modified.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.patch.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.ref-change-activities.branches.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.ref-change-activities.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.settings.auto-decline.delete",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.settings.auto-decline.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.settings.auto-decline.update",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.settings.auto-merge.delete",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.settings.auto-merge.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.settings.auto-merge.update",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.settings.change-author.delete",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.settings.change-author.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.settings.change-author.update",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.settings.hooks.delete",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.settings.hooks.enabled.delete",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.settings.hooks.enabled.update",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.settings.hooks.get",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.settings.hooks.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.settings.hooks.settings.get",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.settings.hooks.settings.update",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.settings.pull-requests.create",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.settings.pull-requests.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.tags.create",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.tags.get",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.tags.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.watch",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.watch.delete",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.webhooks.delete",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.webhooks.get",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.webhooks.latest.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.webhooks.search.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.webhooks.statistics.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.webhooks.statistics.summary.get",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.webhooks.test.create",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.repository.projects.repos.webhooks.update",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.server.info",
+    "scope": "global",
+    "dataKind": "metadata",
+    "destructive": false
+  },
+  {
+    "operationId": "bitbucket.webhooks.create",
+    "scope": "repository",
+    "dataKind": "mutation",
+    "destructive": false,
+    "requestBodyTemplate": {
+      "name": "<name>",
+      "url": "https://<callback-url>",
+      "active": true,
+      "sslVerificationRequired": true,
+      "events": ["<event-key>"]
+    }
+  },
+  {
+    "operationId": "bitbucket.webhooks.list",
+    "scope": "repository",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.attachments.content.child.data.create",
+    "scope": "content",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.attachments.content.child.delete",
+    "scope": "content",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "confluence.attachments.content.child.extractedtext.list",
+    "scope": "content",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.attachments.content.child.move",
+    "scope": "content",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.attachments.content.child.update",
+    "scope": "content",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.attachments.content.child.version.delete",
+    "scope": "content",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "confluence.attachments.metadata",
+    "scope": "content",
+    "dataKind": "metadata",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.attachments.upload",
+    "scope": "content",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.category.space.create",
+    "scope": "space",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.category.space.delete",
+    "scope": "space",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "confluence.child-content.get",
+    "scope": "content",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.content-descendant.get",
+    "scope": "content",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.content-descendant.list",
+    "scope": "content",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.content-labels.delete",
+    "scope": "content",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "confluence.content-property.create",
+    "scope": "content",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.content-property.create.id",
+    "scope": "content",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.content-property.delete",
+    "scope": "content",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "confluence.content-property.get",
+    "scope": "content",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.content-property.list",
+    "scope": "content",
+    "dataKind": "metadata",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.content-property.update",
+    "scope": "content",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.content-resource.history.macro.id.get",
+    "scope": "content",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.content-resource.scan.list",
+    "scope": "content",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.content-resource.search.list",
+    "scope": "content",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.content-restrictions.byoperation.get",
+    "scope": "content",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.content-restrictions.relevantviewrestrictions.list",
+    "scope": "content",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.content-version.delete",
+    "scope": "content",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "confluence.content-watchers.list",
+    "scope": "content",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.content.children.list",
+    "scope": "content",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.content.comments.list",
+    "scope": "content",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.content.create",
+    "scope": "content",
+    "dataKind": "mutation",
+    "destructive": false,
+    "requestBodyTemplate": {
+      "type": "page",
+      "title": "<title>",
+      "space": {
+        "key": "<spaceKey>"
+      },
+      "body": {
+        "storage": {
+          "value": "<p>Content</p>",
+          "representation": "storage"
+        }
+      }
+    }
+  },
+  {
+    "operationId": "confluence.content.delete",
+    "scope": "content",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "confluence.content.get",
+    "scope": "content",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.content.history",
+    "scope": "content",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.content.labels.add",
+    "scope": "content",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.content.labels.delete",
+    "scope": "content",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "confluence.content.labels.list",
+    "scope": "content",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.content.list",
+    "scope": "content",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.content.restrictions.list",
+    "scope": "content",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.content.restrictions.update",
+    "scope": "content",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.content.update",
+    "scope": "content",
+    "dataKind": "mutation",
+    "destructive": false,
+    "requestBodyTemplate": {
+      "type": "page",
+      "title": "<title>",
+      "version": {
+        "number": "<current version + 1>"
+      },
+      "body": {
+        "storage": {
+          "value": "<p>Content</p>",
+          "representation": "storage"
+        }
+      }
+    }
+  },
+  {
+    "operationId": "confluence.content.versions.list",
+    "scope": "content",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.search",
+    "scope": "global",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.server.info",
+    "scope": "global",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.space-label.list",
+    "scope": "space",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.space-label.popular.list",
+    "scope": "space",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.space-label.recent.list",
+    "scope": "space",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.space-label.related.list",
+    "scope": "space",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.space-permissions.anonymous.grant",
+    "scope": "space",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.space-permissions.anonymous.list",
+    "scope": "space",
+    "dataKind": "capability",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.space-permissions.anonymous.revoke",
+    "scope": "space",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.space-permissions.create",
+    "scope": "space",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.space-permissions.group.get",
+    "scope": "space",
+    "dataKind": "capability",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.space-permissions.group.grant",
+    "scope": "space",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.space-permissions.group.revoke",
+    "scope": "space",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.space-permissions.list",
+    "scope": "space",
+    "dataKind": "capability",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.space-permissions.user.get",
+    "scope": "space",
+    "dataKind": "capability",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.space-permissions.user.grant",
+    "scope": "space",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.space-permissions.user.revoke",
+    "scope": "space",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.space-property.create",
+    "scope": "space",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.space-property.create.spacekey",
+    "scope": "space",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.space-property.delete",
+    "scope": "space",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "confluence.space-property.get",
+    "scope": "space",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.space-property.list",
+    "scope": "space",
+    "dataKind": "metadata",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.space-property.update",
+    "scope": "space",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.space-watchers.list",
+    "scope": "space",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.space.archive",
+    "scope": "space",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.space.content.get",
+    "scope": "content",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.space.content.list",
+    "scope": "content",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.space.personal.create",
+    "scope": "space",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.space.private.create",
+    "scope": "space",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.space.restore",
+    "scope": "space",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.space.trash.delete",
+    "scope": "space",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "confluence.space.trash.list",
+    "scope": "space",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.spacecolorscheme.space.color-scheme.list",
+    "scope": "space",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.spacecolorscheme.space.color-scheme.reset",
+    "scope": "space",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.spacecolorscheme.space.color-scheme.type.list",
+    "scope": "space",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.spacecolorscheme.space.color-scheme.type.update",
+    "scope": "space",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.spacecolorscheme.space.color-scheme.update",
+    "scope": "space",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.spaces.create",
+    "scope": "space",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.spaces.delete",
+    "scope": "space",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "confluence.spaces.get",
+    "scope": "space",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.spaces.list",
+    "scope": "space",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.spaces.update",
+    "scope": "space",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.user-watch.content.create",
+    "scope": "content",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.user-watch.content.delete",
+    "scope": "content",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "confluence.user-watch.content.get",
+    "scope": "content",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.user-watch.space.create",
+    "scope": "space",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.user-watch.space.delete",
+    "scope": "space",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "confluence.user-watch.space.get",
+    "scope": "space",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.user.current.password.create",
+    "scope": "global",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.user.current.update",
+    "scope": "global",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.user.memberof.list",
+    "scope": "global",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "confluence.users.current",
+    "scope": "global",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.attachment.delete",
+    "scope": "global",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "jira.attachment.meta.list",
+    "scope": "global",
+    "dataKind": "capability",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.component.create",
+    "scope": "global",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.component.delete",
+    "scope": "global",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "jira.component.get",
+    "scope": "global",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.component.relatedissuecounts.list",
+    "scope": "global",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.component.update",
+    "scope": "global",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.custom-field-option.customfieldoption.get",
+    "scope": "global",
+    "dataKind": "metadata",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.custom-fields.customfields.list",
+    "scope": "global",
+    "dataKind": "metadata",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.custom-fields.customfields.options.list",
+    "scope": "global",
+    "dataKind": "metadata",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.dashboard.get",
+    "scope": "global",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.dashboard.items.properties.delete",
+    "scope": "global",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "jira.dashboard.items.properties.get",
+    "scope": "global",
+    "dataKind": "metadata",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.dashboard.items.properties.get.dashboardid",
+    "scope": "global",
+    "dataKind": "metadata",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.dashboard.items.properties.update",
+    "scope": "global",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.dashboard.list",
+    "scope": "global",
+    "dataKind": "metadata",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.fields.list",
+    "scope": "global",
+    "dataKind": "metadata",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.filter.columns.delete",
+    "scope": "global",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "jira.filter.columns.list",
+    "scope": "global",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.filter.columns.update",
+    "scope": "global",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.filter.create",
+    "scope": "global",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.filter.defaultsharescope.list",
+    "scope": "global",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.filter.defaultsharescope.update",
+    "scope": "global",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.filter.delete",
+    "scope": "global",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "jira.filter.favourite.list",
+    "scope": "global",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.filter.get",
+    "scope": "global",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.filter.permission.create",
+    "scope": "global",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.filter.permission.delete",
+    "scope": "global",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "jira.filter.permission.get",
+    "scope": "global",
+    "dataKind": "capability",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.filter.permission.list",
+    "scope": "global",
+    "dataKind": "capability",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.filter.update",
+    "scope": "global",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue-type.issuetype.alternatives.list",
+    "scope": "global",
+    "dataKind": "metadata",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue-type.issuetype.get",
+    "scope": "global",
+    "dataKind": "metadata",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue-type.issuetype.list",
+    "scope": "global",
+    "dataKind": "metadata",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue.archive",
+    "scope": "issue",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue.archive.issueidorkey",
+    "scope": "issue",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "jira.issue.assignee.update",
+    "scope": "issue",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue.attachments.metadata",
+    "scope": "global",
+    "dataKind": "metadata",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue.attachments.upload",
+    "scope": "issue",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue.bulk",
+    "scope": "issue",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue.comment.get",
+    "scope": "issue",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue.comment.pin",
+    "scope": "issue",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue.comments.add",
+    "scope": "issue",
+    "dataKind": "mutation",
+    "destructive": false,
+    "requestBodyTemplate": {
+      "body": "<comment text>"
+    }
+  },
+  {
+    "operationId": "jira.issue.comments.delete",
+    "scope": "issue",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "jira.issue.comments.list",
+    "scope": "issue",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue.comments.update",
+    "scope": "issue",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue.create",
+    "scope": "issue",
+    "dataKind": "mutation",
+    "destructive": false,
+    "requestBodyTemplate": {
+      "fields": {
+        "project": {
+          "key": "<projectKey>"
+        },
+        "issuetype": {
+          "id": "<from jira_get_create_metadata>"
+        },
+        "summary": "<summary>"
+      }
+    }
+  },
+  {
+    "operationId": "jira.issue.createmeta.issuetypes.get",
+    "scope": "issue",
+    "dataKind": "metadata",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue.createmeta.issuetypes.list",
+    "scope": "issue",
+    "dataKind": "metadata",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue.delete",
+    "scope": "issue",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "jira.issue.editmeta.list",
+    "scope": "issue",
+    "dataKind": "metadata",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue.get",
+    "scope": "issue",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue.notify",
+    "scope": "issue",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue.picker.list",
+    "scope": "issue",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue.pinned-comments.list",
+    "scope": "issue",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue.remotelink.create",
+    "scope": "issue",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue.remotelink.delete",
+    "scope": "issue",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "jira.issue.remotelink.delete.issueidorkey",
+    "scope": "issue",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "jira.issue.remotelink.get",
+    "scope": "issue",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue.remotelink.list",
+    "scope": "issue",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue.remotelink.update",
+    "scope": "issue",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue.restore",
+    "scope": "issue",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue.search",
+    "scope": "global",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue.subtask.list",
+    "scope": "issue",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue.subtask.move",
+    "scope": "issue",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue.subtask.move.list",
+    "scope": "issue",
+    "dataKind": "resource",
+    "destructive": true
+  },
+  {
+    "operationId": "jira.issue.transitions.list",
+    "scope": "issue",
+    "dataKind": "capability",
+    "destructive": true
+  },
+  {
+    "operationId": "jira.issue.transitions.perform",
+    "scope": "issue",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "jira.issue.update",
+    "scope": "issue",
+    "dataKind": "mutation",
+    "destructive": false,
+    "requestBodyTemplate": {
+      "fields": {
+        "<field-id-from-jira_get_edit_metadata>": "<value>"
+      }
+    }
+  },
+  {
+    "operationId": "jira.issue.votes.create",
+    "scope": "issue",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue.votes.delete",
+    "scope": "issue",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "jira.issue.votes.list",
+    "scope": "issue",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue.watchers.add",
+    "scope": "issue",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue.watchers.delete",
+    "scope": "issue",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "jira.issue.watchers.list",
+    "scope": "issue",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue.worklog.delete",
+    "scope": "issue",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "jira.issue.worklog.get",
+    "scope": "issue",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue.worklog.update",
+    "scope": "issue",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue.worklogs.add",
+    "scope": "issue",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.issue.worklogs.list",
+    "scope": "issue",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.priority.get",
+    "scope": "global",
+    "dataKind": "metadata",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.priority.list",
+    "scope": "global",
+    "dataKind": "metadata",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.priority.page.list",
+    "scope": "global",
+    "dataKind": "metadata",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.project.archive",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.project.avatar.create",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.project.avatar.delete",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "jira.project.avatar.temporary.create",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.project.avatar.update",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.project.avatars.list",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.project.components.list",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.project.issuesecuritylevelscheme.list",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.project.notificationscheme.list",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.project.permissionscheme.list",
+    "scope": "project",
+    "dataKind": "capability",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.project.permissionscheme.update",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.project.restore",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.project.role.create",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.project.role.delete",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "jira.project.role.get",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.project.role.list",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.project.role.update",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.project.securitylevel.list",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.project.statuses.list",
+    "scope": "project",
+    "dataKind": "metadata",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.project.type.accessible.list",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.project.type.get",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.project.type.list",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.project.type.update",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.project.version.list",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.project.versions.list",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.project.workflowscheme.list",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.projects.create",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.projects.delete",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "jira.projects.get",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.projects.list",
+    "scope": "project",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.projects.update",
+    "scope": "project",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.resolution.get",
+    "scope": "global",
+    "dataKind": "metadata",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.resolution.list",
+    "scope": "global",
+    "dataKind": "metadata",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.search.create",
+    "scope": "global",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.search.error.lookup.list",
+    "scope": "global",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.server.info",
+    "scope": "global",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.status-category.statuscategory.get",
+    "scope": "global",
+    "dataKind": "metadata",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.status-category.statuscategory.list",
+    "scope": "global",
+    "dataKind": "metadata",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.status.get",
+    "scope": "global",
+    "dataKind": "metadata",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.status.list",
+    "scope": "global",
+    "dataKind": "metadata",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.user.assignable.multiprojectsearch.list",
+    "scope": "global",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.user.assignable.search.list",
+    "scope": "global",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.user.viewissue.search.list",
+    "scope": "global",
+    "dataKind": "capability",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.users.search",
+    "scope": "global",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.version.create",
+    "scope": "global",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.version.get",
+    "scope": "global",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.version.mergeto.update",
+    "scope": "global",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "jira.version.move",
+    "scope": "global",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.version.relatedissuecounts.list",
+    "scope": "global",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.version.remotelink.create",
+    "scope": "global",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.version.remotelink.create.versionid",
+    "scope": "global",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.version.remotelink.delete",
+    "scope": "global",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "jira.version.remotelink.delete.versionid",
+    "scope": "global",
+    "dataKind": "mutation",
+    "destructive": true
+  },
+  {
+    "operationId": "jira.version.remotelink.get",
+    "scope": "global",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.version.remotelink.list",
+    "scope": "global",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.version.remotelink.list.versionid",
+    "scope": "global",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.version.removeandswap.create",
+    "scope": "global",
+    "dataKind": "mutation",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.version.unresolvedissuecount.list",
+    "scope": "global",
+    "dataKind": "resource",
+    "destructive": false
+  },
+  {
+    "operationId": "jira.version.update",
+    "scope": "global",
+    "dataKind": "mutation",
+    "destructive": false
+  }
+]

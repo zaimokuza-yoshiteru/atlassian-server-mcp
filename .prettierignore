@@ -1,0 +1,21 @@
+# Generated files — regenerate via their generators, never reformat.
+src/operations/**
+src/exposure-policy.json
+tests/e2e/coverage.json
+rule/spec-cache/**
+
+# Build and coverage output.
+dist
+coverage
+
+# Lockfile is pnpm-generated.
+pnpm-lock.yaml
+
+# Machine-parsed baseline: scripts/generate-operations.mjs reads this file
+# line-by-line with format-sensitive patterns; reformatting breaks parsing.
+rule/api-inventory-official.md
+
+# Local runtime artifacts (E2E state, release evidence) are produced on the
+# maintainer machine, not curated sources.
+.e2e-state/
+release-evidence/

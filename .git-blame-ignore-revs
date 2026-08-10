@@ -1,0 +1,4 @@
+# Commits that git blame should skip (pure formatting, no logic changes).
+# The Phase D repo-wide prettier/eslint --fix format pass has not been
+# committed yet; once it lands, backfill this file with that commit's SHA:
+#   <full-sha-of-format-commit>  # Phase D: repo-wide prettier + eslint --fix

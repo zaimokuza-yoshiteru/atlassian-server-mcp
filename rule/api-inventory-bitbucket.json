@@ -1,0 +1,4626 @@
+[
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/access-tokens/latest/projects/{projectKey}/{tokenId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete a HTTP token"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/access-tokens/latest/projects/{projectKey}/repos/{repositorySlug}/{tokenId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete a HTTP token"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/access-tokens/latest/users/{userSlug}/{tokenId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete a HTTP token"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/admin/banner",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete announcement banner"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/admin/default-branch",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Clear default branch"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/admin/git/mesh/nodes/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete Mesh node"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/admin/groups",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Remove group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/admin/mail-server",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete mail configuration"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/admin/mail-server/sender-address",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update mail configuration"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/admin/permissions/groups",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Revoke all global permissions for group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/admin/permissions/users",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Revoke all global permissions for user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/admin/rate-limit/settings/users/{userSlug}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete user specific rate limit settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/admin/users",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Remove user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/admin/users/captcha",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Clear CAPTCHA for user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/hook-scripts/{scriptId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete a hook script."
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete project"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/hook-scripts/{scriptId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Remove a hook script"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/permissions",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Revoke project permissions"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/permissions/groups",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Revoke group project permission"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/permissions/users",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Revoke user project permission"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete repository"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/attachments/{attachmentId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete an attachment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/attachments/{attachmentId}/metadata",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete attachment metadata"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/builds",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete a specific build status"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/comments/{commentId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete a commit comment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/deployments",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete a deployment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/watch",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Stop watching commit"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/hook-scripts/{scriptId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Remove a hook script"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/labels/{labelName}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Remove repository label"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/permissions",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Revoke all repository permissions for users and groups"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/permissions/groups",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Revoke group repository permission"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/permissions/users",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Revoke user repository permission"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete pull request"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/approve",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Unapprove pull request"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/auto-merge",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Cancel auto-merge for pull request"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/blocker-comments/{commentId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete pull request comment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/comments/{commentId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete a pull request comment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/participants",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Unassign pull request participant"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/participants/{userSlug}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Unassign pull request participant"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/review",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Discard pull request review"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/watch",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Stop watching pull request"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/allowlist/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete a repository secret scanning allowlist rule"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/exempt",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete an exempt repository"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/rules/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete a repository secret scanning rule"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/auto-decline",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete auto decline settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/auto-merge",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete pull request auto-merge settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/change-author",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete pull request change-author settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/hooks/{hookKey}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete repository hook"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/hooks/{hookKey}/enabled",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Disable repository hook"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/reviewer-groups/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete reviewer group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/watch",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Stop watching repository"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/webhooks/{webhookId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete webhook"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/secret-scanning/allowlist/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete a project secret scanning allowlist rule"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/secret-scanning/rules/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete a project secret scanning rule"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/settings-restriction",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Stop enforcing project restriction"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/settings/auto-decline",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete auto decline settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/settings/auto-merge",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete pull request auto-merge settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/settings/change-author",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete pull request change-author settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/settings/hooks/{hookKey}/enabled",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Disable repository hook"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/settings/reviewer-groups/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete reviewer group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/projects/{projectKey}/webhooks/{webhookId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete webhook"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/secret-scanning/rules/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete a global secret scanning rule"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/signing/x509-certificates/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete an X.509 certificate"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/api/latest/users/{userSlug}/avatar.png",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete user avatar"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/audit/latest/notification-settings/retention-config-review",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Dismiss retention config notification"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/authconfig/latest/idps/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete IdP configuration"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/branch-permissions/latest/projects/{projectKey}/repos/{repositorySlug}/restrictions/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete a ref restriction"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/branch-permissions/latest/projects/{projectKey}/restrictions/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete a ref restriction"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/branch-utils/latest/projects/{projectKey}/repos/{repositorySlug}/branches",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete branch"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/comment-likes/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/comments/{commentId}/reactions/{emoticon}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Remove a reaction from comment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/comment-likes/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/comments/{commentId}/reactions/{emoticon}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Remove a reaction from a PR comment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/default-reviewers/latest/projects/{projectKey}/condition/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete default reviewer condition"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/default-reviewers/latest/projects/{projectKey}/repos/{repositorySlug}/condition/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete default reviewer condition"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/default-tasks/latest/projects/{projectKey}/repos/{repositorySlug}/tasks",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Deletes all default tasks for the repository"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/default-tasks/latest/projects/{projectKey}/repos/{repositorySlug}/tasks/{taskId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete a specific default task"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/default-tasks/latest/projects/{projectKey}/tasks",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Deletes all default tasks for the project"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/default-tasks/latest/projects/{projectKey}/tasks/{taskId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete a specific default task"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/git/latest/projects/{projectKey}/repos/{repositorySlug}/tags/{name}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete tag"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/gpg/latest/keys",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete all GPG keys for user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/gpg/latest/keys/{fingerprintOrId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete a GPG key"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/insights/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/reports/{key}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete a Code Insights report"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/insights/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/reports/{key}/annotations",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete Code Insights annotations"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/jira-dev/latest/devinfo-backfill",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Stop a Jira development information backfill sync"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/keys/latest/projects/{projectKey}/repos/{repositorySlug}/ssh/{keyId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Revoke repository SSH key"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/keys/latest/projects/{projectKey}/ssh/{keyId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Revoke project SSH key"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/keys/latest/ssh/{keyId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Revoke project SSH key"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/mirroring/latest/account/settings/preferred-mirror",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Remove preferred mirror"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/mirroring/latest/mirrorServers/{mirrorId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete mirror by ID"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/mirroring/latest/requests/{mirroringRequestId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete a mirroring request"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/mirroring/latest/syncSettings/projects/{projectId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Stop mirroring project"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/required-builds/latest/projects/{projectKey}/repos/{repositorySlug}/condition/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete a required builds merge check"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/secrets/1.0/keys/inactive",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete inactive AES key(s)"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/ssh/latest/keys",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Delete all user SSH key"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/ssh/latest/keys/{keyId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Remove SSH key"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/tsv/latest/totp/unenroll",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Uneroll current user from two-step verification"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "DELETE",
+    "path": "/rest/tsv/latest/totp/unenroll/user/{userName}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Unenroll specific user from two-step verification"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/access-tokens/latest/projects/{projectKey}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get project HTTP tokens"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/access-tokens/latest/projects/{projectKey}/{tokenId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get HTTP token by ID"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/access-tokens/latest/projects/{projectKey}/repos/{repositorySlug}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get repository HTTP tokens"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/access-tokens/latest/projects/{projectKey}/repos/{repositorySlug}/{tokenId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get HTTP token by ID"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/access-tokens/latest/users/{userSlug}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get personal HTTP tokens"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/access-tokens/latest/users/{userSlug}/{tokenId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get HTTP token by ID"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/admin",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get global SSH key settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/admin/supported-key-types",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get supported SSH key algorithms and lengths"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/admin/banner",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get announcement banner"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/admin/cluster",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get cluster node information"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/admin/default-branch",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get the default branch"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/admin/git/mesh/config/control-plane.pem",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get the control plane PEM"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/admin/git/mesh/diagnostics/connectivity",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Generate Mesh connectivity report"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/admin/git/mesh/nodes",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get all registered Mesh nodes"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/admin/git/mesh/nodes/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get Mesh node"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/admin/git/mesh/support-zips",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get support zips for all Mesh nodes"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/admin/git/mesh/support-zips/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get support zip for node"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/admin/groups",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get groups"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/admin/groups/more-members",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get group members"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/admin/groups/more-non-members",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get members not in group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/admin/license",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get license details"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/admin/mail-server",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get mail configuration"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/admin/mail-server/sender-address",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get server mail address"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/admin/permissions/groups",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get groups with a global permission"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/admin/permissions/groups/none",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get groups with no global permission"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/admin/permissions/users",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get users with a global permission"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/admin/permissions/users/none",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get users with no global permission"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/admin/pull-requests/{scmId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get merge strategies"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/admin/rate-limit/history",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get rate limit history"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/admin/rate-limit/settings",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get rate limit settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/admin/rate-limit/settings/users",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get rate limit settings for user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/admin/rate-limit/settings/users/{userSlug}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get user specific rate limit settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/admin/user-directories",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get directories"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/admin/users",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get users"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/admin/users/erasure",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Check user removal"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/admin/users/more-members",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get groups for user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/admin/users/more-non-members",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Find other groups for user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/application-properties",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get application properties"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/build/capabilities",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get build capabilities"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/dashboard/pull-request-suggestions",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get pull request suggestions"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/dashboard/pull-requests",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get pull requests for a user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/deployment/capabilities",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get deployment capabilities"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/groups",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get group names"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/hook-scripts/{scriptId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get a hook script"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/hook-scripts/{scriptId}/content",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get hook script content"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/hooks/{hookKey}/avatar",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get project avatar"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/inbox/pull-requests",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get pull requests in inbox"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/inbox/pull-requests/count",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get total number of pull requests in inbox"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/labels",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get all labels"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/labels/{labelName}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get label"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/labels/{labelName}/labeled",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get labelables for label"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/logs/logger/{loggerName}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get current log level"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/logs/rootLogger",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get root log level"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/logs/settings",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get debug logging and profiling"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/migration/exports/{jobId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get export job details"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/migration/exports/{jobId}/messages",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get job messages"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/migration/imports/{jobId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get import job status"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/migration/imports/{jobId}/messages",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get import job messages"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/migration/mesh/{jobId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get Mesh migration job details"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/migration/mesh/{jobId}/messages",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get Mesh migration job messages"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/migration/mesh/{jobId}/summary",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get Mesh migration job summary"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/migration/mesh/repos",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Find repositories by Mesh migration state"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/migration/mesh/summaries",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get all Mesh migration job summaries"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/migration/mesh/summary",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get summary for Mesh migration job"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/profile/recent/repos",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get recently accessed repositories"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get projects"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get a project"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/avatar.png",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get avatar for project"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/hook-scripts",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get configured hook scripts"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/permissions/{permission}/all",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Check default project permission"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/permissions/groups",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get groups with permission to project"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/permissions/groups/none",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get groups without project permission"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/permissions/search",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Search project permissions"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/permissions/users",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get users with permission to project"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/permissions/users/none",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get users without project permission"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get repositories for project"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get repository"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/archive",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Stream archive of repository"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/attachments/{attachmentId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get an attachment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/attachments/{attachmentId}/metadata",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get attachment metadata"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/branches",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Find branches"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/branches/default",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get default branch"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/browse",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get file content at revision"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/browse/{path}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get file content"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/changes",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get changes made in commit"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get commits"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get commit by ID"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/builds",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get a specific build status"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/changes",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get changes in commit"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/comments",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Search for commit comments"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/comments/{commentId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get a commit comment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/deployments",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get a deployment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/diff-stats-summary/{path}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get diff stats summary between revisions"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/diff/{path}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get diff between revisions"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/merge-base",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get the common ancestor between two commits"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/pull-requests",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get repository pull requests containing commit"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/compare/changes",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Compare commits"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/compare/commits",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get accessible commits"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/compare/diff-stats-summary{path}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Retrieve the diff stats summary between commits"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/compare/diff{path}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get diff between commits"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/contributing",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get repository contributing guidelines"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/default-branch",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get repository default branch"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/diff",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get raw diff for path"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/diff/{path}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get raw diff for path"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/files",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get files in directory"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/files/{path}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get files in directory"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/forks",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get repository forks"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/hook-scripts",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get hook scripts"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/labels",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get repository labels"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/last-modified",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Stream files"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/last-modified/{path}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Stream files with last modified commit in path"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/license",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get repository license"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/participants",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Search pull request participants"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/patch",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get patch content at revision"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/permissions/groups",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get groups with permission to repository"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/permissions/groups/none",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get groups without repository permission"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/permissions/search",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Search repository permissions"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/permissions/users",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get users with permission to repository"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/permissions/users/none",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get users without repository permission"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get pull requests for repository"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get pull request"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}.diff",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Stream raw pull request diff"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}.patch",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Stream pull request as patch"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/activities",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get pull request activity"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/auto-merge",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get auto-merge request for pull request"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/blocker-comments",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Search pull request comments"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/blocker-comments/{commentId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get pull request comment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/changes",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Gets pull request changes"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/comments",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get pull request comments for path"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/comments/{commentId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get a pull request comment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/commit-message-suggestion",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get commit message suggestion"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/commits",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get pull request commits"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/diff-stats-summary/{path}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get diff stats summary for pull request"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/diff/{path}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Stream a diff within a pull request"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/merge",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Test if pull request can be merged"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/merge-base",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get the common ancestor between the latest commits of the source and target branches of the pull request"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/participants",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get pull request participants"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/review",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get pull request comment thread"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/raw/{path}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get raw content of a file at revision"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/readme",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get repository readme"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/ref-change-activities",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get ref change activity"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/ref-change-activities/branches",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get branches with ref change activities for repository"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/related",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get related repository"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/allowlist",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Find repository secret scanning allowlist rules"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/allowlist/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get a repository secret scanning allowlist rule"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/exempt",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get whether a repository is exempt"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/rules",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Find repository secret scanning rules"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/rules/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get a repository secret scanning rule"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/auto-decline",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get auto decline settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/auto-merge",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get pull request auto-merge settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/change-author",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get pull request change-author settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/hooks",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get repository hooks"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/hooks/{hookKey}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get repository hook"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/hooks/{hookKey}/settings",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get repository hook settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/pull-requests",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get pull request settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/reviewer-groups",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get all reviewer groups"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/reviewer-groups/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get reviewer group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/reviewer-groups/{id}/users",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get reviewer group users"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/tags",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Find tag"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/tags/{name}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get tag"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/webhooks",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Find webhooks"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/webhooks/{webhookId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get webhook"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/webhooks/{webhookId}/latest",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get last webhook invocation details"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/webhooks/{webhookId}/statistics",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get webhook statistics"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/webhooks/{webhookId}/statistics/summary",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get webhook statistics summary"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/webhooks/search",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Search webhooks"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/secret-scanning/allowlist",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Find project secret scanning allowlist rules"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/secret-scanning/allowlist/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get a project secret scanning allowlist rule"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/secret-scanning/exempt",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Find repos exempt from secret scanning for a project"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/secret-scanning/rules",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Find project secret scanning rules"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/secret-scanning/rules/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get a project secret scanning rule"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/settings-restriction",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get enforcing project setting"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/settings-restriction/all",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get all enforcing project settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/settings/auto-decline",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get auto decline settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/settings/auto-merge",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get pull request auto-merge settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/settings/change-author",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get pull request change-author settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/settings/hooks",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get repository hooks"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/settings/hooks/{hookKey}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get a repository hook"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/settings/hooks/{hookKey}/settings",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get repository hook settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/settings/pull-requests/{scmId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get merge strategy"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/settings/reviewer-groups",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get all reviewer groups"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/settings/reviewer-groups/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get reviewer group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/webhooks",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Find webhooks"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/webhooks/{webhookId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get webhook"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/webhooks/{webhookId}/latest",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get last webhook invocation details"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/webhooks/{webhookId}/statistics",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get webhook statistics"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/projects/{projectKey}/webhooks/{webhookId}/statistics/summary",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get webhook statistics summary"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/repos",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Search for repositories"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/secret-scanning/exempt",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Find all repos exempt from secret scan"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/secret-scanning/rules",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Find global secret scanning rules"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/secret-scanning/rules/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get a global secret scanning rule"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/signing/x509-certificates",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get all X.509 certificates"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/system-signing/configuration",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get system signing configuration"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/users",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get all users"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/users/{userSlug}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/api/latest/users/{userSlug}/settings",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get user settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/authconfig/latest/idps",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get all configured IdPs"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/authconfig/latest/idps/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get IdP configuration"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/authconfig/latest/jit-users",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get all JIT provisioned users"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/authconfig/latest/login-options",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get available login options"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/authconfig/latest/saml/certificate",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": ""
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/authconfig/latest/sso",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get SSO configuration"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/basicauth/latest/config",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get basic auth configuration"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/branch-permissions/latest/projects/{projectKey}/repos/{repositorySlug}/restrictions",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Search for ref restrictions"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/branch-permissions/latest/projects/{projectKey}/repos/{repositorySlug}/restrictions/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get a ref restriction"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/branch-permissions/latest/projects/{projectKey}/restrictions",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Search for ref restrictions"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/branch-permissions/latest/projects/{projectKey}/restrictions/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get a ref restriction"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/branch-utils/latest/projects/{projectKey}/repos/{repositorySlug}/branches/info/{commitId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get branch"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/build-status/latest/commits/{commitId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get build statuses for commit"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/build-status/latest/commits/stats/{commitId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get build status statistics for commit"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/default-reviewers/latest/projects/{projectKey}/conditions",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get default reviewer conditions"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/default-reviewers/latest/projects/{projectKey}/repos/{repositorySlug}/conditions",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get default reviewer conditions"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/default-reviewers/latest/projects/{projectKey}/repos/{repositorySlug}/reviewers",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get required reviewers for PR creation"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/default-tasks/latest/projects/{projectKey}/repos/{repositorySlug}/tasks",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get a page of default tasks"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/default-tasks/latest/projects/{projectKey}/tasks",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get a page of default tasks"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/git/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/rebase",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Check PR rebase precondition"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/gpg/latest/keys",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get all GPG keys"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/indexing/latest/projects/{projectKey}/repos/{repositorySlug}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get repository search indexing details."
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/indexing/latest/projects/{projectKey}/repos/{repositorySlug}/indexing-queue-details",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Retrieve detailed queue information for a repository"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/indexing/latest/projects/{projectKey}/repos/{repositorySlug}/indexing-queued-status",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Checks if a repository has been queued for indexing."
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/indexing/latest/support-info/broken-index-status-repos",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Retrieve a paged list of repositories which have exceeded the configured maximum indexing retries."
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/indexing/latest/support-info/indexing-thread-snapshot",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Retrieve a snapshot of the indexing thread details."
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/insights/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/annotations",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get Code Insights annotations for a commit"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/insights/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/reports",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get all Code Insights reports for a commit"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/insights/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/reports/{key}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get a Code Insights report"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/insights/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/reports/{key}/annotations",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get Code Insights annotations for a report"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/jira-dev/latest/devinfo-backfill/report",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get repository backfill tasks that failed and their associated errors"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/jira-dev/latest/devinfo-backfill/status",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get Jira development information backfill status"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/jira/latest/issues/{issueKey}/commits",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get changesets for issue key"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/jira/latest/projects/{projectKey}/primary-enhanced-entitylink",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get entity link"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/jira/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/issues",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get issues for a pull request"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/keys/latest/projects/{projectKey}/repos/{repositorySlug}/ssh",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get repository SSH keys"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/keys/latest/projects/{projectKey}/repos/{repositorySlug}/ssh/{keyId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get repository SSH key"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/keys/latest/projects/{projectKey}/ssh",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get SSH key"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/keys/latest/projects/{projectKey}/ssh/{keyId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get project SSH key"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/keys/latest/ssh/{keyId}/projects",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get project SSH keys"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/keys/latest/ssh/{keyId}/repos",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get repository SSH key"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/mirroring/latest/account/settings/preferred-mirror",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get preferred mirror"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/mirroring/latest/analyticsSettings",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get analytics settings from upstream"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/mirroring/latest/farmNodes",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get farm nodes"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/mirroring/latest/mirrorRepos/{externalRepositoryId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get clone URLs"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/mirroring/latest/mirrorRepos/delayed-sync",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get delayed sync repositories"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/mirroring/latest/mirrorServers",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get all mirrors"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/mirroring/latest/mirrorServers/{mirrorId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get mirror by ID"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/mirroring/latest/progress",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get synchronization progress state"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/mirroring/latest/projects/{projectId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get project"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/mirroring/latest/projects/{projectId}/repos",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get hashes for repositories in project"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/mirroring/latest/repos",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get content hashes for repositories"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/mirroring/latest/repos/{repoId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get content hash for a repository"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/mirroring/latest/repos/{repoId}/mirrors",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get mirrors for repository"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/mirroring/latest/requests",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get mirroring requests"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/mirroring/latest/requests/{mirroringRequestId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get a mirroring request"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/mirroring/latest/supportInfo/projects/{projectKey}/repos/{repositorySlug}/repo-lock-owner",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get the repository lock owner for the syncing process"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/mirroring/latest/supportInfo/projects/{projectKey}/repos/{repositorySlug}/repoSyncStatus",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Gets information about the mirrored repository"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/mirroring/latest/supportInfo/refChangesQueue",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get items in ref changes queue"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/mirroring/latest/supportInfo/refChangesQueue/count",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get total number of items in ref changes queue"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/mirroring/latest/supportInfo/repo-lock-owners",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get all the repository lock owners for the syncing process"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/mirroring/latest/supportInfo/repoSyncStatus",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get sync status of repositories"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/mirroring/latest/syncSettings",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get upstream settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/mirroring/latest/syncSettings/mode",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get mirror mode"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/mirroring/latest/syncSettings/projects",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get mirrored project IDs"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/mirroring/latest/upstreamServer",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get upstream server"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/policies/latest/admin/repos/archive",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get repository archive policy"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/policies/latest/admin/repos/delete",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get repository delete policy"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/required-builds/latest/projects/{projectKey}/repos/{repositorySlug}/conditions",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get required builds merge checks"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/secrets/1.0/keys/inactive",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Retrieve inactive AES key(s)"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/ssh/latest/keys",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get SSH keys for user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/ssh/latest/keys/{keyId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get SSH key for user by keyId"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/ssh/latest/settings",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get SSH settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/sync/latest/projects/{projectKey}/repos/{repositorySlug}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get synchronization status"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/tsv/latest/authenticate/captcha",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get CAPTCHA challenge"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/tsv/latest/elevate-permissions",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get elevated session status"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/tsv/latest/sso-management-status",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get SSO management status"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/tsv/latest/status",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get two-step verification status"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/zdu/cluster",
+    "product": "bitbucket",
+    "sourceKind": "documented-supplement",
+    "summary": "获取集群概览（状态与节点组成）"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/zdu/nodes/{nodeId}",
+    "product": "bitbucket",
+    "sourceKind": "documented-supplement",
+    "summary": "获取指定节点的信息"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "GET",
+    "path": "/rest/zdu/state",
+    "product": "bitbucket",
+    "sourceKind": "documented-supplement",
+    "summary": "获取集群状态及响应节点信息"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PATCH",
+    "path": "/rest/authconfig/latest/idps/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update IdP configuration"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PATCH",
+    "path": "/rest/authconfig/latest/sso",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update SSO configuration"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/access-tokens/latest/projects/{projectKey}/{tokenId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update HTTP token"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/access-tokens/latest/projects/{projectKey}/repos/{repositorySlug}/{tokenId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update HTTP token"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/access-tokens/latest/users/{userSlug}/{tokenId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update HTTP token"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/admin/git/mesh/nodes",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Register new Mesh node"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/admin/groups",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/admin/groups/add-user",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Add user to group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/admin/groups/add-users",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Add multiple users to group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/admin/groups/remove-user",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Remove user from group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/admin/license",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update license"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/admin/pull-requests/{scmId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update merge strategies"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/admin/rate-limit/settings/users",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Set rate limit settings for users"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/admin/users",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/admin/users/add-group",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Add user to group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/admin/users/add-groups",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Add user to groups"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/admin/users/erasure",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Erase user information"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/admin/users/remove-group",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Remove user from group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/admin/users/rename",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Rename user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/hook-scripts",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create a new hook script"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/markup/preview",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Preview markdown render"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/migration/exports",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Start export job"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/migration/exports/{jobId}/cancel",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Cancel export job"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/migration/exports/preview",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Preview export"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/migration/imports",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Start import job"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/migration/imports/{jobId}/cancel",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Cancel import job"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/migration/mesh",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Start Mesh migration job"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/migration/mesh/{jobId}/cancel",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Cancel Mesh migration job"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/migration/mesh/preview",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Preview Mesh migration"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create a new project"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/avatar.png",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update project avatar"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/permissions/{permission}/all",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Grant project permission"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/repos",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create repository"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Fork repository"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/branches",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create branch"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/builds",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Store a build status"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/comments",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Add a new commit comment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/deployments",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create or update a deployment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/watch",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Watch commit"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/labels",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Add repository label"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create pull request"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/approve",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Approve pull request"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/auto-merge",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Auto-merge pull request"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/blocker-comments",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Add new blocker comment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/comments",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Add pull request comment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/comments/{commentId}/apply-suggestion",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Apply pull request suggestion"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/decline",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Decline pull request"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/merge",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Merge pull request"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/participants",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Assign pull request participant role"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/reopen",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Re-open pull request"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/watch",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Watch pull request"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/recreate",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Retry repository creation"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/allowlist",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create repository secret scanning allowlist rule"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/rules",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create repository secret scanning rule"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/pull-requests",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update pull request settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/reviewer-groups",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create reviewer group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/tags",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create tag"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/watch",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Watch repository"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/webhooks",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create webhook"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/webhooks/test",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Test webhook"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/secret-scanning/allowlist",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create project secret scanning allowlist rule"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/secret-scanning/exempt",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Bulk exempt repos from secret scanning"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/secret-scanning/rules",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create project secret scanning rule"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/settings-restriction",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Enforce project restriction"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/settings/pull-requests/{scmId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update merge strategy"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/settings/reviewer-groups",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create reviewer group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/webhooks",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create webhook"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/projects/{projectKey}/webhooks/test",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Test webhook"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/secret-scanning/exempt",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Bulk exempt repos from secret scanning"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/secret-scanning/rules",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create global secret scanning rule"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/signing/x509-certificates",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create an X.509 certificate"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/system-signing/configuration",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update system signing configuration"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/users/{userSlug}/avatar.png",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update user avatar"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/api/latest/users/{userSlug}/settings",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update user settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/authconfig/latest/idps",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create IdP configuration"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/authconfig/latest/saml/certificate/reset",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": ""
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/branch-permissions/latest/projects/{projectKey}/repos/{repositorySlug}/restrictions",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create multiple ref restrictions"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/branch-permissions/latest/projects/{projectKey}/restrictions",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create multiple ref restrictions"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/branch-utils/latest/projects/{projectKey}/repos/{repositorySlug}/branches",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create branch"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/build-status/latest/commits/{commitId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create build status for commit"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/build-status/latest/commits/stats",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Get build status statistics for multiple commits"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/default-reviewers/latest/projects/{projectKey}/condition",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create default reviewer condition"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/default-reviewers/latest/projects/{projectKey}/repos/{repositorySlug}/condition",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create default reviewer condition"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/default-tasks/latest/projects/{projectKey}/repos/{repositorySlug}/tasks",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Add a default task"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/default-tasks/latest/projects/{projectKey}/tasks",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Add a default task"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/git/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/rebase",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Rebase pull request"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/git/latest/projects/{projectKey}/repos/{repositorySlug}/tags",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create tag"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/gpg/latest/keys",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create a GPG key"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/indexing/latest/reindex",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Re-indexes the search index of the provided list of repositories"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/indexing/latest/restart",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Restarts the search indexing worker thread"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/insights/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/reports/{key}/annotations",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Add Code Insights annotations"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/jira-dev/latest/devinfo-backfill",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Start a Jira development information backfill sync"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/jira/latest/comments/{commentId}/issues",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create Jira Issue"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/keys/latest/projects/{projectKey}/repos/{repositorySlug}/ssh",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Add repository SSH key"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/keys/latest/projects/{projectKey}/ssh",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Add project SSH key"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/mirroring/latest/account/settings/preferred-mirror",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Set preferred mirror"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/mirroring/latest/authenticate",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Authenticate on behalf of a user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/mirroring/latest/mirrorServers/{mirrorId}/events",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Publish RepositoryMirrorEvent"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/mirroring/latest/requests",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create a mirroring request"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/mirroring/latest/requests/{mirroringRequestId}/accept",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Accept a mirroring request"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/mirroring/latest/requests/{mirroringRequestId}/reject",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Reject a mirroring request"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/mirroring/latest/syncSettings/projects",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Add multiple projects to be mirrored"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/mirroring/latest/syncSettings/projects/{projectId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Add project to be mirrored"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/mirroring/latest/zdu/end",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "End ZDU upgrade on mirror farm"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/mirroring/latest/zdu/start",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Start ZDU upgrade on mirror farm"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/required-builds/latest/projects/{projectKey}/repos/{repositorySlug}/condition",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create a required builds merge check"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/secrets/1.0/keys/rotate",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Rotate the current AES key"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/ssh/latest/keys",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Add SSH key for user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/sync/latest/projects/{projectKey}/repos/{repositorySlug}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Disable synchronization"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/sync/latest/projects/{projectKey}/repos/{repositorySlug}/synchronize",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Manual synchronization"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/tsv/latest/authenticate",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Authenticate with 2SV"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/tsv/latest/authenticate/recovery-code",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Authenticate using recovery code"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/tsv/latest/authenticate/totp-code",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Authenticate using TOTP code"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/tsv/latest/elevate-permissions/password",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create elevated session with password"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/tsv/latest/elevate-permissions/recovery-code",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create elevated session with recovery code"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/tsv/latest/elevate-permissions/totp",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create elevated session with TOTP"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/tsv/latest/totp/complete-enforced-enrollment",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Complete enforced enrollment in 2SV"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/tsv/latest/totp/complete-enrollment-update",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Complete authentication app update for 2SV"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/tsv/latest/totp/complete-voluntary-enrollment",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Complete voluntary enrollment in 2SV"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/tsv/latest/totp/recovery-code/rotate",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Rotate recovery code"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/tsv/latest/totp/start-enforced-enrollment",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Start enforced enrollment in 2SV"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/tsv/latest/totp/start-enrollment-update",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Start authentication app update for 2SV"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/tsv/latest/totp/start-voluntary-enrollment",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Start voluntary enrollment in 2SV"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/zdu/approve",
+    "product": "bitbucket",
+    "sourceKind": "documented-supplement",
+    "summary": "批准并完成 ZDU 升级"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/zdu/cancel",
+    "product": "bitbucket",
+    "sourceKind": "documented-supplement",
+    "summary": "取消 ZDU 升级"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "POST",
+    "path": "/rest/zdu/start",
+    "product": "bitbucket",
+    "sourceKind": "documented-supplement",
+    "summary": "开始 ZDU 升级（允许集群异构升级）"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/access-tokens/latest/projects/{projectKey}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create project HTTP token"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/access-tokens/latest/projects/{projectKey}/repos/{repositorySlug}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create repository HTTP token"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/access-tokens/latest/users/{userSlug}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create personal HTTP token"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/admin",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update global SSH key settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/admin/banner",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update/Set announcement banner"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/admin/default-branch",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update/Set default branch"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/admin/git/mesh/nodes/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update Mesh node"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/admin/mail-server",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update mail configuration"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/admin/mail-server/sender-address",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update server mail address"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/admin/permissions/groups",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update global permission for group"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/admin/permissions/users",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update global permission for user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/admin/rate-limit/settings",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Set rate limit"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/admin/rate-limit/settings/users/{userSlug}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Set rate limit settings for user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/admin/users",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update user details"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/admin/users/credentials",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Set password for user"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/hook-scripts/{scriptId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update a hook script"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/logs/logger/{loggerName}/{levelName}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Set log level"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/logs/rootLogger/{levelName}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Set root log level"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/logs/settings",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Set debug logging and profiling"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update project"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/hook-scripts/{scriptId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create/update a hook script"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/permissions/groups",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update group project permission"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/permissions/users",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update user project permission"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update repository"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/attachments/{attachmentId}/metadata",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Save attachment metadata"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/branches/default",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update default branch"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/browse/{path}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Edit file"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/comments/{commentId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update a commit comment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/default-branch",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update default branch for repository"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/hook-scripts/{scriptId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create/update a hook script"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/permissions/groups",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update group repository permission"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/permissions/users",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update user repository permission"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update pull request metadata"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/blocker-comments/{commentId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update pull request comment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/comments/{commentId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update pull request comment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/participants/{userSlug}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Change pull request status"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/review",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Complete pull request review"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/allowlist/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Edit an existing repository secret scanning allowlist rule"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/exempt",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Exempt a repo from secret scanning"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/secret-scanning/rules/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Edit an existing repository secret scanning rule"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/auto-decline",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create auto decline settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/auto-merge",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create or update the pull request auto-merge settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/change-author",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create or update the pull request change-author settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/hooks/{hookKey}/enabled",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Enable repository hook"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/hooks/{hookKey}/settings",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update repository hook settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/reviewer-groups/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update reviewer group attributes"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/webhooks/{webhookId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update webhook"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/secret-scanning/allowlist/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Edit an existing project secret scanning allowlist rule"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/secret-scanning/rules/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Edit an existing project secret scanning rule"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/settings/auto-decline",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create/Update auto decline settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/settings/auto-merge",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create or update the pull request auto-merge settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/settings/change-author",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create or update the pull request change-author settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/settings/hooks/{hookKey}/enabled",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Enable repository hook"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/settings/hooks/{hookKey}/settings",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update repository hook settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/settings/reviewer-groups/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update reviewer group attributes"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/projects/{projectKey}/webhooks/{webhookId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update webhook"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/secret-scanning/rules/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Edit a global secret scanning rule."
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/signing/x509-certificates/crl/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update X.509 CRL entries"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/users",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update user details"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/api/latest/users/credentials",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Set password"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/basicauth/latest/config",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update basic auth configuration"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/comment-likes/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/comments/{commentId}/reactions/{emoticon}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "React to a comment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/comment-likes/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/comments/{commentId}/reactions/{emoticon}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "React to a PR comment"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/csp/latest/settings",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Change CSP strictness setting"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/default-reviewers/latest/projects/{projectKey}/condition/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update default reviewer condition"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/default-reviewers/latest/projects/{projectKey}/repos/{repositorySlug}/condition/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update default reviewer condition"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/default-tasks/latest/projects/{projectKey}/repos/{repositorySlug}/tasks/{taskId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update a default task"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/default-tasks/latest/projects/{projectKey}/tasks/{taskId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update a default task"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/indexing/latest/threads",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Sets the desired number of indexing worker threads"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/insights/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/reports/{key}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create a Code Insights report"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/insights/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/reports/{key}/annotations/{externalId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Create or replace a Code Insights annotation"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/keys/latest/projects/{projectKey}/repos/{repositorySlug}/ssh/{keyId}/permission/{permission}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update repository SSH key permission"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/keys/latest/projects/{projectKey}/ssh/{keyId}/permission/{permission}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update project SSH key permission"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/mirroring/latest/mirrorServers/{mirrorId}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Upgrade mirror server"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/mirroring/latest/syncSettings",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update upstream settings"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/mirroring/latest/syncSettings/mode",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update mirror mode"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/policies/latest/admin/repos/archive",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update repository archive policy"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/policies/latest/admin/repos/delete",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update the repository delete policy"
+  },
+  {
+    "inProjectBaseline": true,
+    "method": "PUT",
+    "path": "/rest/required-builds/latest/projects/{projectKey}/repos/{repositorySlug}/condition/{id}",
+    "product": "bitbucket",
+    "sourceKind": "openapi",
+    "summary": "Update a required builds merge check"
+  }
+]

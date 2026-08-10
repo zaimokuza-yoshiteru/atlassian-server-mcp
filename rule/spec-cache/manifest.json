@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "sources": {
+    "jira": {
+      "url": "https://developer.atlassian.com/server/jira/platform/rest/v11003/",
+      "openapi": "3.0.1",
+      "version": "11.3.8",
+      "sha256": "6aef863cf8727a436611de76f6fe1b4954b15d4b6fc371f3ccf4e0c4bd4f68c9"
+    },
+    "confluence": {
+      "url": "https://developer.atlassian.com/server/confluence/rest/v10214/",
+      "openapi": "3.0.1",
+      "version": "10.2.14",
+      "sha256": "b0b57eada455be67457b1ef86f97620e26db46ffe98fdcb95bf3e500a9b1fadf"
+    },
+    "bitbucket": {
+      "url": "https://dac-static.atlassian.com/server/bitbucket/10.4.swagger.v3.json",
+      "openapi": "3.0.1",
+      "version": "10.4",
+      "sha256": "f62722d548cd42b4312ee811ee7ea5b874a01abca83883ed0972461e36f7486e"
+    }
+  },
+  "inventories": {
+    "jira": "d5daabeaf57377c11616b740ab59411c9d6d066e6628ae68e9fd43bcc3bcbf81",
+    "confluence": "1bb67fec3863b9ce386cf71b5a42a3abc8a69596c38e098cdce3f9d550074825",
+    "bitbucket": "66c7c6f099810df32b1c608f594216775f919b1105a802cde6f587c264949594"
+  },
+  "diffSha256": "5577d2d73ca5b6070e8d6c3481192140daf8f760b1dcadeeb2c44c02f828236e",
+  "counts": {
+    "specDiscovered": {
+      "jira": 437,
+      "confluence": 176,
+      "bitbucket": 572
+    },
+    "documentedSupplements": 6,
+    "officialFull": 1191,
+    "projectBaseline": 1141,
+    "source": 1120
+  },
+  "fetchedAt": "2026-08-09T18:36:05.504Z"
+}

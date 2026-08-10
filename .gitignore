@@ -1,0 +1,14 @@
+node_modules/
+.pnpm-store/
+dist/
+coverage/
+.env
+.env.dc
+*.log
+.DS_Store
+.idea/
+.vscode/
+data/
+scripts/.cache/
+.e2e-state/
+.claude/

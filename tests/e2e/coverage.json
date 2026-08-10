@@ -1,0 +1,5004 @@
+{
+  "schemaVersion": 1,
+  "generatedFrom": "dist/operations/index.js",
+  "baseline": {
+    "jira": "atlassian/jira-software:11.3.5",
+    "confluence": "atlassian/confluence:10.2.11",
+    "bitbucket": "atlassian/bitbucket:10.4.1"
+  },
+  "counts": {
+    "automated": 499
+  },
+  "operations": [
+    {
+      "operationId": "bitbucket.access-tokens.projects.create",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/access-tokens/latest/projects/{projectKey}",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.access-tokens.projects.delete",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/access-tokens/latest/projects/{projectKey}/{tokenId}",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.access-tokens.projects.get",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/access-tokens/latest/projects/{projectKey}",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.access-tokens.projects.get.projectkey",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/access-tokens/latest/projects/{projectKey}/{tokenId}",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.access-tokens.projects.repos.create",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/access-tokens/latest/projects/{projectKey}/repos/{repositorySlug}",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.access-tokens.projects.repos.delete",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/access-tokens/latest/projects/{projectKey}/repos/{repositorySlug}/{tokenId}",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.access-tokens.projects.repos.get",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/access-tokens/latest/projects/{projectKey}/repos/{repositorySlug}",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.access-tokens.projects.repos.get.projectkey",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/access-tokens/latest/projects/{projectKey}/repos/{repositorySlug}/{tokenId}",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.access-tokens.projects.repos.update",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/access-tokens/latest/projects/{projectKey}/repos/{repositorySlug}/{tokenId}",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.access-tokens.projects.update",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/access-tokens/latest/projects/{projectKey}/{tokenId}",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.branch-permissions.projects.repos.restrictions.create",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/branch-permissions/latest/projects/{projectKey}/repos/{repositorySlug}/restrictions",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.branch-permissions.projects.repos.restrictions.delete",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/branch-permissions/latest/projects/{projectKey}/repos/{repositorySlug}/restrictions/{id}",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.branch-permissions.projects.repos.restrictions.get",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/branch-permissions/latest/projects/{projectKey}/repos/{repositorySlug}/restrictions/{id}",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.branch-permissions.projects.repos.restrictions.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/branch-permissions/latest/projects/{projectKey}/repos/{repositorySlug}/restrictions",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.branch-permissions.restrictions.create",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/branch-permissions/latest/projects/{projectKey}/restrictions",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.branch-permissions.restrictions.delete",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/branch-permissions/latest/projects/{projectKey}/restrictions/{id}",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.branch-permissions.restrictions.get",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/branch-permissions/latest/projects/{projectKey}/restrictions/{id}",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.branch-permissions.restrictions.list",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/branch-permissions/latest/projects/{projectKey}/restrictions",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.branches.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/1.0/projects/{projectKey}/repos/{repositorySlug}/branches",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.builds-and-deployments.projects.repos.commits.create",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/builds",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.builds-and-deployments.projects.repos.commits.create.projectkey",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/deployments",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.builds-and-deployments.projects.repos.commits.delete",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/builds",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.builds-and-deployments.projects.repos.commits.delete.projectkey",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/deployments",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.builds-and-deployments.projects.repos.commits.list",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/builds",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.builds-and-deployments.projects.repos.commits.list.projectkey",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/deployments",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.commits.get",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/1.0/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.commits.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/1.0/projects/{projectKey}/repos/{repositorySlug}/commits",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.default-tasks.projects.repos.tasks.create",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/default-tasks/latest/projects/{projectKey}/repos/{repositorySlug}/tasks",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.default-tasks.projects.repos.tasks.delete",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/default-tasks/latest/projects/{projectKey}/repos/{repositorySlug}/tasks",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.default-tasks.projects.repos.tasks.delete.projectkey",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/default-tasks/latest/projects/{projectKey}/repos/{repositorySlug}/tasks/{taskId}",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.default-tasks.projects.repos.tasks.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/default-tasks/latest/projects/{projectKey}/repos/{repositorySlug}/tasks",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.default-tasks.projects.repos.tasks.update",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/default-tasks/latest/projects/{projectKey}/repos/{repositorySlug}/tasks/{taskId}",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.default-tasks.tasks.create",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/default-tasks/latest/projects/{projectKey}/tasks",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.default-tasks.tasks.delete",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/default-tasks/latest/projects/{projectKey}/tasks",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.default-tasks.tasks.delete.projectkey",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/default-tasks/latest/projects/{projectKey}/tasks/{taskId}",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.default-tasks.tasks.list",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/default-tasks/latest/projects/{projectKey}/tasks",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.default-tasks.tasks.update",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/default-tasks/latest/projects/{projectKey}/tasks/{taskId}",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.files.browse",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/1.0/projects/{projectKey}/repos/{repositorySlug}/browse/{filePath}",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.files.raw",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/1.0/projects/{projectKey}/repos/{repositorySlug}/raw/{filePath}",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.permission-management.projects.repos.delete",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/permissions",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.permission-management.projects.repos.groups.delete",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/permissions/groups",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.permission-management.projects.repos.groups.list",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/permissions/groups",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.permission-management.projects.repos.groups.none.list",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/permissions/groups/none",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.permission-management.projects.repos.groups.update",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/permissions/groups",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.permission-management.projects.repos.search.list",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/permissions/search",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.permission-management.projects.repos.users.delete",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/permissions/users",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.permission-management.projects.repos.users.list",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/permissions/users",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.permission-management.projects.repos.users.none.list",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/permissions/users/none",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.permission-management.projects.repos.users.update",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/permissions/users",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.permissions.users",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/1.0/projects/{projectKey}/permissions/users",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.avatar-png.create",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/latest/projects/{projectKey}/avatar.png",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.avatar-png.list",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/avatar.png",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.permissions.all.create",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/latest/projects/{projectKey}/permissions/{permission}/all",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.permissions.all.list",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/permissions/{permission}/all",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.permissions.delete",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/latest/projects/{projectKey}/permissions",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.permissions.groups.delete",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/latest/projects/{projectKey}/permissions/groups",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.permissions.groups.list",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/permissions/groups",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.permissions.groups.none.list",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/permissions/groups/none",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.permissions.groups.update",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/latest/projects/{projectKey}/permissions/groups",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.permissions.search.list",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/permissions/search",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.permissions.users.delete",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/latest/projects/{projectKey}/permissions/users",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.permissions.users.none.list",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/permissions/users/none",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.permissions.users.update",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/latest/projects/{projectKey}/permissions/users",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.repos.contributing.list",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/contributing",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.repos.create",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.repos.default-branch.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/default-branch",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.repos.default-branch.update",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/default-branch",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.repos.forks.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/forks",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.repos.readme.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/readme",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.repos.recreate.create",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/recreate",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.repos.related.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/related",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.settings-restriction.all.list",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/settings-restriction/all",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.settings-restriction.create",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/latest/projects/{projectKey}/settings-restriction",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.settings-restriction.delete",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/latest/projects/{projectKey}/settings-restriction",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.settings-restriction.list",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/settings-restriction",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.settings.auto-decline.delete",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/latest/projects/{projectKey}/settings/auto-decline",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.settings.auto-decline.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/settings/auto-decline",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.settings.auto-decline.update",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/latest/projects/{projectKey}/settings/auto-decline",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.settings.auto-merge.delete",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/latest/projects/{projectKey}/settings/auto-merge",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.settings.auto-merge.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/settings/auto-merge",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.settings.auto-merge.update",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/latest/projects/{projectKey}/settings/auto-merge",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.settings.change-author.delete",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/latest/projects/{projectKey}/settings/change-author",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.settings.change-author.list",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/settings/change-author",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.settings.change-author.update",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/latest/projects/{projectKey}/settings/change-author",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.settings.hooks.enabled.delete",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/latest/projects/{projectKey}/settings/hooks/{hookKey}/enabled",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.settings.hooks.enabled.update",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/latest/projects/{projectKey}/settings/hooks/{hookKey}/enabled",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.settings.hooks.get",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/settings/hooks/{hookKey}",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.settings.hooks.list",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/settings/hooks",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.settings.hooks.settings.get",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/settings/hooks/{hookKey}/settings",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.settings.hooks.settings.update",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/latest/projects/{projectKey}/settings/hooks/{hookKey}/settings",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.settings.pull-requests.create",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/latest/projects/{projectKey}/settings/pull-requests/{scmId}",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.settings.pull-requests.get",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/settings/pull-requests/{scmId}",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.webhooks.create",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/latest/projects/{projectKey}/webhooks",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.webhooks.delete",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/latest/projects/{projectKey}/webhooks/{webhookId}",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.webhooks.get",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/webhooks/{webhookId}",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.webhooks.latest.list",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/webhooks/{webhookId}/latest",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.webhooks.list",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/webhooks",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.webhooks.statistics.list",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/webhooks/{webhookId}/statistics",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.webhooks.statistics.summary.get",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/webhooks/{webhookId}/statistics/summary",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.webhooks.test.create",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/latest/projects/{projectKey}/webhooks/test",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.project.webhooks.update",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/latest/projects/{projectKey}/webhooks/{webhookId}",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.projects.create",
+      "product": "bitbucket",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/api/1.0/projects",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.projects.delete",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/1.0/projects/{projectKey}",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.projects.get",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/1.0/projects/{projectKey}",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.projects.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/1.0/projects",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.projects.update",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/1.0/projects/{projectKey}",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.commits.pull-requests.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/pull-requests",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.participants.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/participants",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.auto-merge.create",
+      "product": "bitbucket",
+      "requiredTier": "risky",
+      "method": "POST",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/auto-merge",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.auto-merge.delete",
+      "product": "bitbucket",
+      "requiredTier": "risky",
+      "method": "DELETE",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/auto-merge",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.auto-merge.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/auto-merge",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.blocker-comments.create",
+      "product": "bitbucket",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/blocker-comments",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.blocker-comments.delete",
+      "product": "bitbucket",
+      "requiredTier": "risky",
+      "method": "DELETE",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/blocker-comments/{commentId}",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.blocker-comments.get",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/blocker-comments/{commentId}",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.blocker-comments.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/blocker-comments",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.blocker-comments.update",
+      "product": "bitbucket",
+      "requiredTier": "safe",
+      "method": "PUT",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/blocker-comments/{commentId}",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.changes.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/changes",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.comments.apply-suggestion.create",
+      "product": "bitbucket",
+      "requiredTier": "risky",
+      "method": "POST",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/comments/{commentId}/apply-suggestion",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.comments.get",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/comments/{commentId}",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.comments.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/comments",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.commit-message-suggestion.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/commit-message-suggestion",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.commits.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/commits",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.delete",
+      "product": "bitbucket",
+      "requiredTier": "risky",
+      "method": "DELETE",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.diff-stats-summary.get",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/diff-stats-summary/{path}",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.diff.get",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/diff/{path}",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.get",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}.patch",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.merge-base.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/merge-base",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.merge.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/merge",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.participants.create",
+      "product": "bitbucket",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/participants",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.participants.delete",
+      "product": "bitbucket",
+      "requiredTier": "risky",
+      "method": "DELETE",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/participants/{userSlug}",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.participants.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/participants",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.participants.update",
+      "product": "bitbucket",
+      "requiredTier": "safe",
+      "method": "PUT",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/participants/{userSlug}",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.review.delete",
+      "product": "bitbucket",
+      "requiredTier": "risky",
+      "method": "DELETE",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/review",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.review.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/review",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.review.update",
+      "product": "bitbucket",
+      "requiredTier": "safe",
+      "method": "PUT",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/review",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.watch",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/watch",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.pull-requests.watch.delete",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/watch",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.settings.reviewer-groups.create",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/reviewer-groups",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.settings.reviewer-groups.delete",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/reviewer-groups/{id}",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.settings.reviewer-groups.get",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/reviewer-groups/{id}",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.settings.reviewer-groups.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/reviewer-groups",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.settings.reviewer-groups.update",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/reviewer-groups/{id}",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.repos.settings.reviewer-groups.users.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/reviewer-groups/{id}/users",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.settings.reviewer-groups.create",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/latest/projects/{projectKey}/settings/reviewer-groups",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.settings.reviewer-groups.delete",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/latest/projects/{projectKey}/settings/reviewer-groups/{id}",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.settings.reviewer-groups.get",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/settings/reviewer-groups/{id}",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.settings.reviewer-groups.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/settings/reviewer-groups",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pull-requests.projects.settings.reviewer-groups.update",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/latest/projects/{projectKey}/settings/reviewer-groups/{id}",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pullrequests.activities",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/1.0/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/activities",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pullrequests.approve",
+      "product": "bitbucket",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/api/1.0/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/approve",
+      "status": "automated",
+      "scenario": "bitbucket-pr-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pullrequests.comments.add",
+      "product": "bitbucket",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/api/1.0/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/comments",
+      "status": "automated",
+      "scenario": "bitbucket-pr-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pullrequests.comments.delete",
+      "product": "bitbucket",
+      "requiredTier": "risky",
+      "method": "DELETE",
+      "path": "/rest/api/1.0/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/comments/{commentId}",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pullrequests.comments.update",
+      "product": "bitbucket",
+      "requiredTier": "safe",
+      "method": "PUT",
+      "path": "/rest/api/1.0/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/comments/{commentId}",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pullrequests.create",
+      "product": "bitbucket",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/api/1.0/projects/{projectKey}/repos/{repositorySlug}/pull-requests",
+      "status": "automated",
+      "scenario": "bitbucket-pr-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pullrequests.decline",
+      "product": "bitbucket",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/api/1.0/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/decline",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pullrequests.diff",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/1.0/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}.diff",
+      "status": "automated",
+      "scenario": "bitbucket-pr-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pullrequests.get",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/1.0/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}",
+      "status": "automated",
+      "scenario": "bitbucket-pr-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pullrequests.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/1.0/projects/{projectKey}/repos/{repositorySlug}/pull-requests",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pullrequests.merge",
+      "product": "bitbucket",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/api/1.0/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/merge",
+      "status": "automated",
+      "scenario": "bitbucket-pr-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pullrequests.reopen",
+      "product": "bitbucket",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/api/1.0/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/reopen",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pullrequests.unapprove",
+      "product": "bitbucket",
+      "requiredTier": "safe",
+      "method": "DELETE",
+      "path": "/rest/api/1.0/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}/approve",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.pullrequests.update",
+      "product": "bitbucket",
+      "requiredTier": "safe",
+      "method": "PUT",
+      "path": "/rest/api/1.0/projects/{projectKey}/repos/{repositorySlug}/pull-requests/{pullRequestId}",
+      "status": "automated",
+      "scenario": "bitbucket-pull-request-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repositories.create",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/1.0/projects/{projectKey}/repos",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repositories.delete",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/1.0/projects/{projectKey}/repos/{repositorySlug}",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repositories.get",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/1.0/projects/{projectKey}/repos/{repositorySlug}",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repositories.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/1.0/projects/{projectKey}/repos",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repositories.update",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/1.0/projects/{projectKey}/repos/{repositorySlug}",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.archive.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/archive",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.branches.create",
+      "product": "bitbucket",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/branches",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.browse.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/browse",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.browse.update",
+      "product": "bitbucket",
+      "requiredTier": "safe",
+      "method": "PUT",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/browse/{path}",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.changes.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/changes",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.commits.changes.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/changes",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.commits.comments.delete",
+      "product": "bitbucket",
+      "requiredTier": "risky",
+      "method": "DELETE",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/comments/{commentId}",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.commits.comments.get",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/comments/{commentId}",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.commits.comments.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/comments",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.commits.comments.update",
+      "product": "bitbucket",
+      "requiredTier": "safe",
+      "method": "PUT",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/comments/{commentId}",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.commits.diff-stats-summary.get",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/diff-stats-summary/{path}",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.commits.diff.get",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/diff/{path}",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.commits.merge-base.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/merge-base",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.commits.watch",
+      "product": "bitbucket",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/watch",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.commits.watch.delete",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/commits/{commitId}/watch",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.compare.changes.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/compare/changes",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.compare.commits.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/compare/commits",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.compare.diff-path.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/compare/diff{path}",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.compare.diff-stats-summary-path.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/compare/diff-stats-summary{path}",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.diff.get",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/diff/{path}",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.files.get",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/files/{path}",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.files.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/files",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.labels.create",
+      "product": "bitbucket",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/labels",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.labels.delete",
+      "product": "bitbucket",
+      "requiredTier": "risky",
+      "method": "DELETE",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/labels/{labelName}",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.labels.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/labels",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.last-modified.get",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/last-modified/{path}",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.last-modified.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/last-modified",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.patch.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/patch",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.ref-change-activities.branches.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/ref-change-activities/branches",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.ref-change-activities.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/ref-change-activities",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.settings.auto-decline.delete",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/auto-decline",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.settings.auto-decline.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/auto-decline",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.settings.auto-decline.update",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/auto-decline",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.settings.auto-merge.delete",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/auto-merge",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.settings.auto-merge.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/auto-merge",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.settings.auto-merge.update",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/auto-merge",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.settings.change-author.delete",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/change-author",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.settings.change-author.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/change-author",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.settings.change-author.update",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/change-author",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.settings.hooks.delete",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/hooks/{hookKey}",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.settings.hooks.enabled.delete",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/hooks/{hookKey}/enabled",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.settings.hooks.enabled.update",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/hooks/{hookKey}/enabled",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.settings.hooks.get",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/hooks/{hookKey}",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.settings.hooks.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/hooks",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.settings.hooks.settings.get",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/hooks/{hookKey}/settings",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.settings.hooks.settings.update",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/hooks/{hookKey}/settings",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.settings.pull-requests.create",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/pull-requests",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.settings.pull-requests.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/settings/pull-requests",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.tags.create",
+      "product": "bitbucket",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/tags",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.tags.get",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/tags/{name}",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.tags.list",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/tags",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.watch",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/watch",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.watch.delete",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/watch",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.webhooks.delete",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/webhooks/{webhookId}",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.webhooks.get",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/webhooks/{webhookId}",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.webhooks.latest.list",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/webhooks/{webhookId}/latest",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.webhooks.search.list",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/webhooks/search",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.webhooks.statistics.list",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/webhooks/{webhookId}/statistics",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.webhooks.statistics.summary.get",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/webhooks/{webhookId}/statistics/summary",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.webhooks.test.create",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/webhooks/test",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.repository.projects.repos.webhooks.update",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/latest/projects/{projectKey}/repos/{repositorySlug}/webhooks/{webhookId}",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.server.info",
+      "product": "bitbucket",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/1.0/application-properties",
+      "status": "automated",
+      "scenario": "bitbucket-project-repo-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.webhooks.create",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/1.0/projects/{projectKey}/repos/{repositorySlug}/webhooks",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "bitbucket.webhooks.list",
+      "product": "bitbucket",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/1.0/projects/{projectKey}/repos/{repositorySlug}/webhooks",
+      "status": "automated",
+      "scenario": "bitbucket-repo-content",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.attachments.content.child.data.create",
+      "product": "confluence",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/api/content/{id}/child/attachment/{attachmentId}/data",
+      "status": "automated",
+      "scenario": "confluence-attachment-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.attachments.content.child.delete",
+      "product": "confluence",
+      "requiredTier": "risky",
+      "method": "DELETE",
+      "path": "/rest/api/content/{id}/child/attachment/{attachmentId}",
+      "status": "automated",
+      "scenario": "confluence-attachment-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.attachments.content.child.extractedtext.list",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/content/{id}/child/attachment/{attachmentId}/extractedtext",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.attachments.content.child.move",
+      "product": "confluence",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/api/content/{id}/child/attachment/{attachmentId}/move",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.attachments.content.child.update",
+      "product": "confluence",
+      "requiredTier": "safe",
+      "method": "PUT",
+      "path": "/rest/api/content/{id}/child/attachment/{attachmentId}",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.attachments.content.child.version.delete",
+      "product": "confluence",
+      "requiredTier": "risky",
+      "method": "DELETE",
+      "path": "/rest/api/content/{id}/child/attachment/{attachmentId}/version/{version}",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.attachments.metadata",
+      "product": "confluence",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/content/{contentId}/child/attachment",
+      "status": "automated",
+      "scenario": "confluence-attachment-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.attachments.upload",
+      "product": "confluence",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/api/content/{contentId}/child/attachment",
+      "status": "automated",
+      "scenario": "confluence-attachment-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.category.space.create",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/space/{spaceKey}/category/{labelName}",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.category.space.delete",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/space/{spaceKey}/category/{categoryName}",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.child-content.get",
+      "product": "confluence",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/content/{id}/child/{type}",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.content-descendant.get",
+      "product": "confluence",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/content/{id}/descendant/{type}",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.content-descendant.list",
+      "product": "confluence",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/content/{id}/descendant",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.content-labels.delete",
+      "product": "confluence",
+      "requiredTier": "risky",
+      "method": "DELETE",
+      "path": "/rest/api/content/{id}/label/{label}",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.content-property.create",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/content/{id}/property",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.content-property.create.id",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/content/{id}/property/{key}",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.content-property.delete",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/content/{id}/property/{key}",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.content-property.get",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/content/{id}/property/{key}",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.content-property.list",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/content/{id}/property",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.content-property.update",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/content/{id}/property/{key}",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.content-resource.history.macro.id.get",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/content/{id}/history/{version}/macro/id/{macroId}",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.content-resource.scan.list",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/content/scan",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.content-resource.search.list",
+      "product": "confluence",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/content/search",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.content-restrictions.byoperation.get",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/content/{id}/restriction/byOperation/{operationKey}",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.content-restrictions.relevantviewrestrictions.list",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/content/{id}/restriction/relevantViewRestrictions",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.content-version.delete",
+      "product": "confluence",
+      "requiredTier": "risky",
+      "method": "DELETE",
+      "path": "/rest/api/content/{id}/version/{versionNumber}",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.content-watchers.list",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/content/{contentId}/watchers",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.content.children.list",
+      "product": "confluence",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/content/{contentId}/child",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.content.comments.list",
+      "product": "confluence",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/content/{contentId}/child/comment",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.content.create",
+      "product": "confluence",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/api/content",
+      "status": "automated",
+      "scenario": "confluence-core-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.content.delete",
+      "product": "confluence",
+      "requiredTier": "risky",
+      "method": "DELETE",
+      "path": "/rest/api/content/{contentId}",
+      "status": "automated",
+      "scenario": "confluence-core-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.content.get",
+      "product": "confluence",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/content/{contentId}",
+      "status": "automated",
+      "scenario": "confluence-core-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.content.history",
+      "product": "confluence",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/content/{contentId}/history",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.content.labels.add",
+      "product": "confluence",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/api/content/{contentId}/label",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.content.labels.delete",
+      "product": "confluence",
+      "requiredTier": "risky",
+      "method": "DELETE",
+      "path": "/rest/api/content/{contentId}/label",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.content.labels.list",
+      "product": "confluence",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/content/{contentId}/label",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.content.list",
+      "product": "confluence",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/content",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.content.restrictions.list",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/content/{contentId}/restriction/byOperation",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.content.restrictions.update",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/content/{contentId}/restriction",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.content.update",
+      "product": "confluence",
+      "requiredTier": "safe",
+      "method": "PUT",
+      "path": "/rest/api/content/{contentId}",
+      "status": "automated",
+      "scenario": "confluence-core-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.content.versions.list",
+      "product": "confluence",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/experimental/content/{id}/version",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.search",
+      "product": "confluence",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/search",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.server.info",
+      "product": "confluence",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/applinks/1.0/manifest",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.space-label.list",
+      "product": "confluence",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/space/{spaceKey}/labels",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.space-label.popular.list",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/space/{spaceKey}/labels/popular",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.space-label.recent.list",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/space/{spaceKey}/labels/recent",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.space-label.related.list",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/space/{spaceKey}/labels/{labelName}/related",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.space-permissions.anonymous.grant",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/space/{spaceKey}/permissions/anonymous/grant",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.space-permissions.anonymous.list",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/space/{spaceKey}/permissions/anonymous",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.space-permissions.anonymous.revoke",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/space/{spaceKey}/permissions/anonymous/revoke",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.space-permissions.create",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/space/{spaceKey}/permissions",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.space-permissions.group.get",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/space/{spaceKey}/permissions/group/{groupName}",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.space-permissions.group.grant",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/space/{spaceKey}/permissions/group/{groupName}/grant",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.space-permissions.group.revoke",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/space/{spaceKey}/permissions/group/{groupName}/revoke",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.space-permissions.list",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/space/{spaceKey}/permissions",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.space-permissions.user.get",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/space/{spaceKey}/permissions/user/{userKey}",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.space-permissions.user.grant",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/space/{spaceKey}/permissions/user/{userKey}/grant",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.space-permissions.user.revoke",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/space/{spaceKey}/permissions/user/{userKey}/revoke",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.space-property.create",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/space/{spaceKey}/property",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.space-property.create.spacekey",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/space/{spaceKey}/property/{key}",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.space-property.delete",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/space/{spaceKey}/property/{key}",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.space-property.get",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/space/{spaceKey}/property/{key}",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.space-property.list",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/space/{spaceKey}/property",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.space-property.update",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/space/{spaceKey}/property/{key}",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.space-watchers.list",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/space/{spaceKey}/watchers",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.space.archive",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/space/{spaceKey}/archive",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.space.content.get",
+      "product": "confluence",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/space/{spaceKey}/content/{type}",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.space.content.list",
+      "product": "confluence",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/space/{spaceKey}/content",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.space.personal.create",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/space/personal",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.space.private.create",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/space/_private",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.space.restore",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/space/{spaceKey}/restore",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.space.trash.delete",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/space/{spaceKey}/trash",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.space.trash.list",
+      "product": "confluence",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/space/{spaceKey}/trash",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.spacecolorscheme.space.color-scheme.list",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/space/{spaceKey}/color-scheme",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.spacecolorscheme.space.color-scheme.reset",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/space/{spaceKey}/color-scheme/reset",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.spacecolorscheme.space.color-scheme.type.list",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/space/{spaceKey}/color-scheme/type",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.spacecolorscheme.space.color-scheme.type.update",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/space/{spaceKey}/color-scheme/type",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.spacecolorscheme.space.color-scheme.update",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/space/{spaceKey}/color-scheme",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.spaces.create",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/space",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.spaces.delete",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/space/{spaceKey}",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.spaces.get",
+      "product": "confluence",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/space/{spaceKey}",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.spaces.list",
+      "product": "confluence",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/space",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.spaces.update",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/space/{spaceKey}",
+      "status": "automated",
+      "scenario": "confluence-space-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.user-watch.content.create",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/user/watch/content/{contentId}",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.user-watch.content.delete",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/user/watch/content/{contentId}",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.user-watch.content.get",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/user/watch/content/{contentId}",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.user-watch.space.create",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/user/watch/space/{spaceKey}",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.user-watch.space.delete",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/user/watch/space/{spaceKey}",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.user-watch.space.get",
+      "product": "confluence",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/user/watch/space/{spaceKey}",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.user.current.password.create",
+      "product": "confluence",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/api/user/current/password",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.user.current.update",
+      "product": "confluence",
+      "requiredTier": "safe",
+      "method": "PUT",
+      "path": "/rest/api/user/current",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.user.memberof.list",
+      "product": "confluence",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/user/memberof",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "confluence.users.current",
+      "product": "confluence",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/user/current",
+      "status": "automated",
+      "scenario": "confluence-content-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.backlog.issues.move",
+      "product": "jira",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/agile/1.0/backlog/issue",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.boards.backlog.list",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/agile/1.0/board/{boardId}/backlog",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.boards.configuration.get",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/agile/1.0/board/{boardId}/configuration",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.boards.create",
+      "product": "jira",
+      "requiredTier": "risky",
+      "method": "POST",
+      "path": "/rest/agile/1.0/board",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.boards.delete",
+      "product": "jira",
+      "requiredTier": "risky",
+      "method": "DELETE",
+      "path": "/rest/agile/1.0/board/{boardId}",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.boards.epics.issues.list",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/agile/1.0/board/{boardId}/epic/{epicId}/issue",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.boards.epics.list",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/agile/1.0/board/{boardId}/epic",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.boards.epics.none.issues.list",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/agile/1.0/board/{boardId}/epic/none/issue",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.boards.get",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/agile/1.0/board/{boardId}",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.boards.issues.list",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/agile/1.0/board/{boardId}/issue",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.boards.list",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/agile/1.0/board",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.boards.projects.list",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/agile/1.0/board/{boardId}/project",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.boards.properties.get",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/agile/1.0/board/{boardId}/properties/{propertyKey}",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.boards.properties.list",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/agile/1.0/board/{boardId}/properties",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.boards.settings.refined-velocity.get",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/agile/1.0/board/{boardId}/settings/refined-velocity",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.boards.sprints.issues.list",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/agile/1.0/board/{boardId}/sprint/{sprintId}/issue",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.boards.sprints.list",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/agile/1.0/board/{boardId}/sprint",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.boards.versions.list",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/agile/1.0/board/{boardId}/version",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.epics.get",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/agile/1.0/epic/{epicIdOrKey}",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.epics.issues.list",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/agile/1.0/epic/{epicIdOrKey}/issue",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.epics.issues.move",
+      "product": "jira",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/agile/1.0/epic/{epicIdOrKey}/issue",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.epics.none.issues.list",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/agile/1.0/epic/none/issue",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.epics.none.issues.move",
+      "product": "jira",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/agile/1.0/epic/none/issue",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.epics.rank",
+      "product": "jira",
+      "requiredTier": "safe",
+      "method": "PUT",
+      "path": "/rest/agile/1.0/epic/{epicIdOrKey}/rank",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.epics.update",
+      "product": "jira",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/agile/1.0/epic/{epicIdOrKey}",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.issues.estimation.get",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/agile/1.0/issue/{issueIdOrKey}/estimation",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.issues.estimation.update",
+      "product": "jira",
+      "requiredTier": "safe",
+      "method": "PUT",
+      "path": "/rest/agile/1.0/issue/{issueIdOrKey}/estimation",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.issues.get",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/agile/1.0/issue/{issueIdOrKey}",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.issues.rank",
+      "product": "jira",
+      "requiredTier": "safe",
+      "method": "PUT",
+      "path": "/rest/agile/1.0/issue/rank",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.sprints.create",
+      "product": "jira",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/agile/1.0/sprint",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.sprints.delete",
+      "product": "jira",
+      "requiredTier": "risky",
+      "method": "DELETE",
+      "path": "/rest/agile/1.0/sprint/{sprintId}",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.sprints.get",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/agile/1.0/sprint/{sprintId}",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.sprints.issues",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/agile/1.0/sprint/{sprintId}/issue",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.sprints.issues.move",
+      "product": "jira",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/agile/1.0/sprint/{sprintId}/issue",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.sprints.properties.get",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/agile/1.0/sprint/{sprintId}/properties/{propertyKey}",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.sprints.properties.list",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/agile/1.0/sprint/{sprintId}/properties",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.sprints.swap",
+      "product": "jira",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/agile/1.0/sprint/{sprintId}/swap",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.sprints.update",
+      "product": "jira",
+      "requiredTier": "risky",
+      "method": "PUT",
+      "path": "/rest/agile/1.0/sprint/{sprintId}",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.agile.sprints.update.partial",
+      "product": "jira",
+      "requiredTier": "risky",
+      "method": "POST",
+      "path": "/rest/agile/1.0/sprint/{sprintId}",
+      "status": "automated",
+      "scenario": "jira-agile-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.attachment.delete",
+      "product": "jira",
+      "requiredTier": "risky",
+      "method": "DELETE",
+      "path": "/rest/api/2/attachment/{id}",
+      "status": "automated",
+      "scenario": "jira-attachment-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.attachment.meta.list",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/attachment/meta",
+      "status": "automated",
+      "scenario": "jira-metadata-sweep",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.component.create",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/2/component",
+      "status": "automated",
+      "scenario": "jira-component-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.component.delete",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/2/component/{id}",
+      "status": "automated",
+      "scenario": "jira-component-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.component.get",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/2/component/{id}",
+      "status": "automated",
+      "scenario": "jira-component-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.component.relatedissuecounts.list",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/2/component/{id}/relatedIssueCounts",
+      "status": "automated",
+      "scenario": "jira-component-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.component.update",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/2/component/{id}",
+      "status": "automated",
+      "scenario": "jira-component-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.custom-field-option.customfieldoption.get",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/2/customFieldOption/{id}",
+      "status": "automated",
+      "scenario": "jira-metadata-sweep",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.custom-fields.customfields.list",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/2/customFields",
+      "status": "automated",
+      "scenario": "jira-metadata-sweep",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.custom-fields.customfields.options.list",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/2/customFields/{customFieldId}/options",
+      "status": "automated",
+      "scenario": "jira-metadata-sweep",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.dashboard.get",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/dashboard/{id}",
+      "status": "automated",
+      "scenario": "jira-filters-dashboards",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.dashboard.items.properties.delete",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/2/dashboard/{dashboardId}/items/{itemId}/properties/{propertyKey}",
+      "status": "automated",
+      "scenario": "jira-filters-dashboards",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.dashboard.items.properties.get",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/dashboard/{dashboardId}/items/{itemId}/properties",
+      "status": "automated",
+      "scenario": "jira-filters-dashboards",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.dashboard.items.properties.get.dashboardid",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/dashboard/{dashboardId}/items/{itemId}/properties/{propertyKey}",
+      "status": "automated",
+      "scenario": "jira-filters-dashboards",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.dashboard.items.properties.update",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/2/dashboard/{dashboardId}/items/{itemId}/properties/{propertyKey}",
+      "status": "automated",
+      "scenario": "jira-filters-dashboards",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.dashboard.list",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/dashboard",
+      "status": "automated",
+      "scenario": "jira-filters-dashboards",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.fields.list",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/field",
+      "status": "automated",
+      "scenario": "jira-metadata-sweep",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.filter.columns.delete",
+      "product": "jira",
+      "requiredTier": "risky",
+      "method": "DELETE",
+      "path": "/rest/api/2/filter/{id}/columns",
+      "status": "automated",
+      "scenario": "jira-filters-dashboards",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.filter.columns.list",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/filter/{id}/columns",
+      "status": "automated",
+      "scenario": "jira-filters-dashboards",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.filter.columns.update",
+      "product": "jira",
+      "requiredTier": "safe",
+      "method": "PUT",
+      "path": "/rest/api/2/filter/{id}/columns",
+      "status": "automated",
+      "scenario": "jira-filters-dashboards",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.filter.create",
+      "product": "jira",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/api/2/filter",
+      "status": "automated",
+      "scenario": "jira-filters-dashboards",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.filter.defaultsharescope.list",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/filter/defaultShareScope",
+      "status": "automated",
+      "scenario": "jira-filters-dashboards",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.filter.defaultsharescope.update",
+      "product": "jira",
+      "requiredTier": "safe",
+      "method": "PUT",
+      "path": "/rest/api/2/filter/defaultShareScope",
+      "status": "automated",
+      "scenario": "jira-filters-dashboards",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.filter.delete",
+      "product": "jira",
+      "requiredTier": "risky",
+      "method": "DELETE",
+      "path": "/rest/api/2/filter/{id}",
+      "status": "automated",
+      "scenario": "jira-filters-dashboards",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.filter.favourite.list",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/filter/favourite",
+      "status": "automated",
+      "scenario": "jira-filters-dashboards",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.filter.get",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/filter/{id}",
+      "status": "automated",
+      "scenario": "jira-filters-dashboards",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.filter.permission.create",
+      "product": "jira",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/api/2/filter/{id}/permission",
+      "status": "automated",
+      "scenario": "jira-filters-dashboards",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.filter.permission.delete",
+      "product": "jira",
+      "requiredTier": "risky",
+      "method": "DELETE",
+      "path": "/rest/api/2/filter/{id}/permission/{permission-id}",
+      "status": "automated",
+      "scenario": "jira-filters-dashboards",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.filter.permission.get",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/filter/{id}/permission/{permissionId}",
+      "status": "automated",
+      "scenario": "jira-filters-dashboards",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.filter.permission.list",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/filter/{id}/permission",
+      "status": "automated",
+      "scenario": "jira-filters-dashboards",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.filter.update",
+      "product": "jira",
+      "requiredTier": "safe",
+      "method": "PUT",
+      "path": "/rest/api/2/filter/{id}",
+      "status": "automated",
+      "scenario": "jira-filters-dashboards",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue-type.issuetype.get",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/issuetype/{id}",
+      "status": "automated",
+      "scenario": "jira-metadata-sweep",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue-type.issuetype.list",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/issuetype",
+      "status": "automated",
+      "scenario": "jira-metadata-sweep",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.archive",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/2/issue/archive",
+      "status": "automated",
+      "scenario": "jira-issue-structure",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.archive.issueidorkey",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/2/issue/{issueIdOrKey}/archive",
+      "status": "automated",
+      "scenario": "jira-issue-structure",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.assignee.update",
+      "product": "jira",
+      "requiredTier": "safe",
+      "method": "PUT",
+      "path": "/rest/api/2/issue/{issueIdOrKey}/assignee",
+      "status": "automated",
+      "scenario": "jira-issue-structure",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.attachments.metadata",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/2/attachment/{attachmentId}",
+      "status": "automated",
+      "scenario": "jira-attachment-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.attachments.upload",
+      "product": "jira",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/api/2/issue/{issueKey}/attachments",
+      "status": "automated",
+      "scenario": "jira-attachment-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.bulk",
+      "product": "jira",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/api/2/issue/bulk",
+      "status": "automated",
+      "scenario": "jira-issue-structure",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.comment.get",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/2/issue/{issueIdOrKey}/comment/{id}",
+      "status": "automated",
+      "scenario": "jira-issue-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.comment.pin",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/2/issue/{issueIdOrKey}/comment/{id}/pin",
+      "status": "automated",
+      "scenario": "jira-issue-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.comments.add",
+      "product": "jira",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/api/2/issue/{issueKey}/comment",
+      "status": "automated",
+      "scenario": "jira-issue-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.comments.delete",
+      "product": "jira",
+      "requiredTier": "risky",
+      "method": "DELETE",
+      "path": "/rest/api/2/issue/{issueKey}/comment/{commentId}",
+      "status": "automated",
+      "scenario": "jira-issue-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.comments.list",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/2/issue/{issueKey}/comment",
+      "status": "automated",
+      "scenario": "jira-issue-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.comments.update",
+      "product": "jira",
+      "requiredTier": "safe",
+      "method": "PUT",
+      "path": "/rest/api/2/issue/{issueKey}/comment/{commentId}",
+      "status": "automated",
+      "scenario": "jira-issue-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.create",
+      "product": "jira",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/api/2/issue",
+      "status": "automated",
+      "scenario": "jira-core-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.createmeta.issuetypes.get",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/2/issue/createmeta/{projectIdOrKey}/issuetypes/{issueTypeId}",
+      "status": "automated",
+      "scenario": "jira-issue-structure",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.createmeta.issuetypes.list",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/2/issue/createmeta/{projectIdOrKey}/issuetypes",
+      "status": "automated",
+      "scenario": "jira-core-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.delete",
+      "product": "jira",
+      "requiredTier": "risky",
+      "method": "DELETE",
+      "path": "/rest/api/2/issue/{issueKey}",
+      "status": "automated",
+      "scenario": "jira-core-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.editmeta.list",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/2/issue/{issueIdOrKey}/editmeta",
+      "status": "automated",
+      "scenario": "jira-issue-structure",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.get",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/2/issue/{issueKey}",
+      "status": "automated",
+      "scenario": "jira-core-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.notify",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/2/issue/{issueIdOrKey}/notify",
+      "status": "automated",
+      "scenario": "jira-core-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.picker.list",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/issue/picker",
+      "status": "automated",
+      "scenario": "jira-search-users",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.pinned-comments.list",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/issue/{issueIdOrKey}/pinned-comments",
+      "status": "automated",
+      "scenario": "jira-issue-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.remotelink.create",
+      "product": "jira",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/api/2/issue/{issueIdOrKey}/remotelink",
+      "status": "automated",
+      "scenario": "jira-issue-structure",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.remotelink.delete",
+      "product": "jira",
+      "requiredTier": "risky",
+      "method": "DELETE",
+      "path": "/rest/api/2/issue/{issueIdOrKey}/remotelink",
+      "status": "automated",
+      "scenario": "jira-issue-structure",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.remotelink.delete.issueidorkey",
+      "product": "jira",
+      "requiredTier": "risky",
+      "method": "DELETE",
+      "path": "/rest/api/2/issue/{issueIdOrKey}/remotelink/{linkId}",
+      "status": "automated",
+      "scenario": "jira-issue-structure",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.remotelink.get",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/2/issue/{issueIdOrKey}/remotelink/{linkId}",
+      "status": "automated",
+      "scenario": "jira-issue-structure",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.remotelink.list",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/2/issue/{issueIdOrKey}/remotelink",
+      "status": "automated",
+      "scenario": "jira-issue-structure",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.remotelink.update",
+      "product": "jira",
+      "requiredTier": "safe",
+      "method": "PUT",
+      "path": "/rest/api/2/issue/{issueIdOrKey}/remotelink/{linkId}",
+      "status": "automated",
+      "scenario": "jira-issue-structure",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.restore",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/2/issue/{issueIdOrKey}/restore",
+      "status": "automated",
+      "scenario": "jira-issue-structure",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.search",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/2/search",
+      "status": "automated",
+      "scenario": "jira-search-basic",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.subtask.list",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/2/issue/{issueIdOrKey}/subtask",
+      "status": "automated",
+      "scenario": "jira-issue-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.subtask.move",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/2/issue/{issueIdOrKey}/subtask/move",
+      "status": "automated",
+      "scenario": "jira-issue-structure",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.subtask.move.list",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/issue/{issueIdOrKey}/subtask/move",
+      "status": "automated",
+      "scenario": "jira-issue-structure",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.transitions.list",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/2/issue/{issueKey}/transitions",
+      "status": "automated",
+      "scenario": "jira-issue-structure",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.transitions.perform",
+      "product": "jira",
+      "requiredTier": "risky",
+      "method": "POST",
+      "path": "/rest/api/2/issue/{issueKey}/transitions",
+      "status": "automated",
+      "scenario": "jira-issue-structure",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.update",
+      "product": "jira",
+      "requiredTier": "safe",
+      "method": "PUT",
+      "path": "/rest/api/2/issue/{issueKey}",
+      "status": "automated",
+      "scenario": "jira-core-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.votes.create",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/2/issue/{issueIdOrKey}/votes",
+      "status": "automated",
+      "scenario": "jira-issue-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.votes.delete",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/2/issue/{issueIdOrKey}/votes",
+      "status": "automated",
+      "scenario": "jira-issue-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.votes.list",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/issue/{issueIdOrKey}/votes",
+      "status": "automated",
+      "scenario": "jira-issue-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.watchers.add",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/2/issue/{issueKey}/watchers",
+      "status": "automated",
+      "scenario": "jira-issue-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.watchers.delete",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/2/issue/{issueKey}/watchers",
+      "status": "automated",
+      "scenario": "jira-issue-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.watchers.list",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/issue/{issueKey}/watchers",
+      "status": "automated",
+      "scenario": "jira-issue-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.worklog.delete",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/2/issue/{issueIdOrKey}/worklog/{id}",
+      "status": "automated",
+      "scenario": "jira-issue-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.worklog.get",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/issue/{issueIdOrKey}/worklog/{id}",
+      "status": "automated",
+      "scenario": "jira-issue-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.worklog.update",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/2/issue/{issueIdOrKey}/worklog/{id}",
+      "status": "automated",
+      "scenario": "jira-issue-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.worklogs.add",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/2/issue/{issueKey}/worklog",
+      "status": "automated",
+      "scenario": "jira-issue-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.issue.worklogs.list",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/issue/{issueKey}/worklog",
+      "status": "automated",
+      "scenario": "jira-issue-collaboration",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.priority.get",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/priority/{id}",
+      "status": "automated",
+      "scenario": "jira-metadata-sweep",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.priority.list",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/priority",
+      "status": "automated",
+      "scenario": "jira-metadata-sweep",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.priority.page.list",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/priority/page",
+      "status": "automated",
+      "scenario": "jira-metadata-sweep",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.project.archive",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/2/project/{projectIdOrKey}/archive",
+      "status": "automated",
+      "scenario": "jira-project-mutations",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.project.components.list",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/project/{projectIdOrKey}/components",
+      "status": "automated",
+      "scenario": "jira-project-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.project.issuesecuritylevelscheme.list",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/project/{projectKeyOrId}/issuesecuritylevelscheme",
+      "status": "automated",
+      "scenario": "jira-project-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.project.notificationscheme.list",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/project/{projectKeyOrId}/notificationscheme",
+      "status": "automated",
+      "scenario": "jira-project-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.project.permissionscheme.list",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/project/{projectKeyOrId}/permissionscheme",
+      "status": "automated",
+      "scenario": "jira-project-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.project.permissionscheme.update",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/2/project/{projectKeyOrId}/permissionscheme",
+      "status": "automated",
+      "scenario": "jira-project-mutations",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.project.restore",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/2/project/{projectIdOrKey}/restore",
+      "status": "automated",
+      "scenario": "jira-project-mutations",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.project.role.create",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/2/project/{projectIdOrKey}/role/{id}",
+      "status": "automated",
+      "scenario": "jira-project-mutations",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.project.role.delete",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/2/project/{projectIdOrKey}/role/{id}",
+      "status": "automated",
+      "scenario": "jira-project-mutations",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.project.role.get",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/project/{projectIdOrKey}/role/{id}",
+      "status": "automated",
+      "scenario": "jira-project-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.project.role.list",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/project/{projectIdOrKey}/role",
+      "status": "automated",
+      "scenario": "jira-project-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.project.role.update",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/2/project/{projectIdOrKey}/role/{id}",
+      "status": "automated",
+      "scenario": "jira-project-mutations",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.project.securitylevel.list",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/project/{projectKeyOrId}/securitylevel",
+      "status": "automated",
+      "scenario": "jira-project-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.project.statuses.list",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/project/{projectIdOrKey}/statuses",
+      "status": "automated",
+      "scenario": "jira-project-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.project.type.get",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/project/type/{projectTypeKey}",
+      "status": "automated",
+      "scenario": "jira-project-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.project.type.list",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/project/type",
+      "status": "automated",
+      "scenario": "jira-project-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.project.type.update",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/2/project/{projectIdOrKey}/type/{newProjectTypeKey}",
+      "status": "automated",
+      "scenario": "jira-project-mutations",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.project.version.list",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/2/project/{projectIdOrKey}/version",
+      "status": "automated",
+      "scenario": "jira-project-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.project.versions.list",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/2/project/{projectIdOrKey}/versions",
+      "status": "automated",
+      "scenario": "jira-project-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.project.workflowscheme.list",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/project/{projectKeyOrId}/workflowscheme",
+      "status": "automated",
+      "scenario": "jira-project-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.projects.create",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/2/project",
+      "status": "automated",
+      "scenario": "jira-project-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.projects.delete",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/2/project/{projectKey}",
+      "status": "automated",
+      "scenario": "jira-project-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.projects.get",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/2/project/{projectKey}",
+      "status": "automated",
+      "scenario": "jira-project-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.projects.list",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/2/project",
+      "status": "automated",
+      "scenario": "jira-project-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.projects.update",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/2/project/{projectKey}",
+      "status": "automated",
+      "scenario": "jira-project-lifecycle",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.resolution.get",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/resolution/{id}",
+      "status": "automated",
+      "scenario": "jira-metadata-sweep",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.resolution.list",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/resolution",
+      "status": "automated",
+      "scenario": "jira-metadata-sweep",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.search.create",
+      "product": "jira",
+      "requiredTier": "safe",
+      "method": "POST",
+      "path": "/rest/api/2/search",
+      "status": "automated",
+      "scenario": "jira-search-basic",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.search.error.lookup.list",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/2/search/error/lookup",
+      "status": "automated",
+      "scenario": "jira-search-users",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.server.info",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/2/serverInfo",
+      "status": "automated",
+      "scenario": "jira-metadata-sweep",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.status-category.statuscategory.get",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/2/statuscategory/{idOrKey}",
+      "status": "automated",
+      "scenario": "jira-metadata-sweep",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.status-category.statuscategory.list",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/2/statuscategory",
+      "status": "automated",
+      "scenario": "jira-metadata-sweep",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.status.get",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/2/status/{idOrName}",
+      "status": "automated",
+      "scenario": "jira-metadata-sweep",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.status.list",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/2/status",
+      "status": "automated",
+      "scenario": "jira-metadata-sweep",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.user.assignable.multiprojectsearch.list",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/user/assignable/multiProjectSearch",
+      "status": "automated",
+      "scenario": "jira-search-users",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.user.assignable.search.list",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/user/assignable/search",
+      "status": "automated",
+      "scenario": "jira-search-users",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.user.viewissue.search.list",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/user/viewissue/search",
+      "status": "automated",
+      "scenario": "jira-search-users",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.users.get",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/2/user",
+      "status": "automated",
+      "scenario": "jira-search-users",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.users.search",
+      "product": "jira",
+      "requiredTier": "read",
+      "method": "GET",
+      "path": "/rest/api/2/user/picker",
+      "status": "automated",
+      "scenario": "jira-search-users",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.version.create",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/2/version",
+      "status": "automated",
+      "scenario": "jira-version-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.version.get",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/version/{id}",
+      "status": "automated",
+      "scenario": "jira-version-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.version.mergeto.update",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/2/version/{id}/mergeto/{moveIssuesTo}",
+      "status": "automated",
+      "scenario": "jira-version-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.version.move",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/2/version/{id}/move",
+      "status": "automated",
+      "scenario": "jira-version-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.version.relatedissuecounts.list",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/version/{id}/relatedIssueCounts",
+      "status": "automated",
+      "scenario": "jira-version-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.version.remotelink.create",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/2/version/{versionId}/remotelink",
+      "status": "automated",
+      "scenario": "jira-version-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.version.remotelink.create.versionid",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/2/version/{versionId}/remotelink/{globalId}",
+      "status": "automated",
+      "scenario": "jira-version-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.version.remotelink.delete",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/2/version/{versionId}/remotelink",
+      "status": "automated",
+      "scenario": "jira-version-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.version.remotelink.delete.versionid",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "DELETE",
+      "path": "/rest/api/2/version/{versionId}/remotelink/{globalId}",
+      "status": "automated",
+      "scenario": "jira-version-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.version.remotelink.get",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/version/{versionId}/remotelink/{globalId}",
+      "status": "automated",
+      "scenario": "jira-version-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.version.remotelink.list",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/version/remotelink",
+      "status": "automated",
+      "scenario": "jira-version-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.version.remotelink.list.versionid",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/version/{versionId}/remotelink",
+      "status": "automated",
+      "scenario": "jira-version-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.version.removeandswap.create",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "POST",
+      "path": "/rest/api/2/version/{id}/removeAndSwap",
+      "status": "automated",
+      "scenario": "jira-version-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.version.unresolvedissuecount.list",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "GET",
+      "path": "/rest/api/2/version/{id}/unresolvedIssueCount",
+      "status": "automated",
+      "scenario": "jira-version-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    },
+    {
+      "operationId": "jira.version.update",
+      "product": "jira",
+      "requiredTier": "max",
+      "method": "PUT",
+      "path": "/rest/api/2/version/{id}",
+      "status": "automated",
+      "scenario": "jira-version-admin",
+      "evidence": "real-atlassian-via-built-stdio-mcp"
+    }
+  ]
+}
