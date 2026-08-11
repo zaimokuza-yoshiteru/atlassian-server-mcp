@@ -3,7 +3,7 @@ import { resolve } from "node:path";
 import { PRODUCTS, type Product, type ProductConfig, type ServerConfig } from "./types.js";
 import { tierFromArgs, validateExposureTier, validateOperationPattern } from "./permissions.js";
 import { validatePatterns } from "./exposure-policy.js";
-import { parseStrictInteger } from "./json.js";
+import { parseStrictInteger, stripTrailingSlashes } from "./json.js";
 import { POLICY_OPERATIONS } from "./operations/index.js";
 
 const DEFAULT_MAX_OUTPUT_BYTES = 65_536;
@@ -162,7 +162,7 @@ function normalizeBaseUrl(value: string, envName: string): URL {
       `${envName} must be a plain base URL of the form scheme://host[:port][/path]; query strings and fragments are not allowed`
     );
   }
-  url.pathname = url.pathname.replace(/\/+$/, "");
+  url.pathname = stripTrailingSlashes(url.pathname);
   return url;
 }
 

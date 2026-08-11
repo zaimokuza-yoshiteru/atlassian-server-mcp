@@ -2,7 +2,7 @@ import { CursorCodec } from "./cursor.js";
 import { authMode } from "./auth.js";
 import { AtlassianHttpClient } from "./http.js";
 import { safeErrorMessage } from "./errors.js";
-import { asRecord, parseStrictInteger } from "./json.js";
+import { asRecord, parseStrictInteger, stripTrailingSlashes } from "./json.js";
 import { operationById, POLICY_OPERATIONS } from "./operations/index.js";
 import { ResponsePaginator, type ResponseOperationDescriptor } from "./pagination.js";
 import { resolveExposure } from "./exposure-policy.js";
@@ -279,7 +279,7 @@ export class AtlassianService {
       throw new Error(`${product} attachment metadata did not include a download link`);
     }
 
-    const basePath = config.baseUrl.pathname.replace(/\/+$/, "");
+    const basePath = stripTrailingSlashes(config.baseUrl.pathname);
     const allowedPathPrefixes =
       product === "jira"
         ? [`${basePath}/secure/attachment/`, `${basePath}/rest/api/2/attachment/content/`]

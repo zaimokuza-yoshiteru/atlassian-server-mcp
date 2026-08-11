@@ -7,6 +7,7 @@ import {
   parseStrictInteger,
   setByPath,
   stableStringify,
+  stripTrailingSlashes,
   utf8Bytes
 } from "../src/json.js";
 
@@ -63,6 +64,39 @@ describe("getByPath / setByPath", () => {
     expect(target).toEqual({ a: { b: 1, c: { d: 2 } } });
     setByPath(target, "a.b", 3);
     expect(target).toEqual({ a: { b: 3, c: { d: 2 } } });
+  });
+
+  it("stores __proto__ paths as own properties without polluting Object.prototype", () => {
+    const target: Record<string, unknown> = {};
+    setByPath(target, "__proto__.polluted", "yes");
+    expect(({} as Record<string, unknown>).polluted).toBeUndefined();
+    expect(Object.prototype.hasOwnProperty.call(target, "__proto__")).toBe(true);
+    expect(JSON.parse(JSON.stringify(target))).toEqual(
+      JSON.parse('{"__proto__":{"polluted":"yes"}}')
+    );
+  });
+
+  it("stores constructor/prototype paths as own properties without touching Object.prototype", () => {
+    const target: Record<string, unknown> = {};
+    setByPath(target, "constructor.prototype.polluted", "yes");
+    expect(({} as Record<string, unknown>).polluted).toBeUndefined();
+    expect(JSON.parse(JSON.stringify(target))).toEqual({
+      constructor: { prototype: { polluted: "yes" } }
+    });
+  });
+});
+
+describe("stripTrailingSlashes", () => {
+  it("removes trailing slashes in a single pass", () => {
+    expect(stripTrailingSlashes("/jira/")).toBe("/jira");
+    expect(stripTrailingSlashes("/jira///")).toBe("/jira");
+    expect(stripTrailingSlashes("/")).toBe("");
+    expect(stripTrailingSlashes("")).toBe("");
+  });
+
+  it("leaves clean and rootless paths unchanged", () => {
+    expect(stripTrailingSlashes("/jira")).toBe("/jira");
+    expect(stripTrailingSlashes("jira")).toBe("jira");
   });
 });
 

@@ -46,4 +46,22 @@ describe("response projection", () => {
       fields: { customfield_10001: { value: "selected" } }
     });
   });
+
+  it("does not pollute the prototype chain for crafted field paths", () => {
+    const data = JSON.parse(
+      '{ "id": "1", "__proto__": { "x": 1 }, "constructor": { "prototype": { "y": 2 } } }'
+    );
+    const response = projectResponse(data, "jira", "compact", [
+      "id",
+      "__proto__.x",
+      "constructor.prototype.y"
+    ]);
+    expect(({} as Record<string, unknown>).x).toBeUndefined();
+    expect(({} as Record<string, unknown>).y).toBeUndefined();
+    expect(JSON.parse(JSON.stringify(response.data))).toEqual(
+      JSON.parse(
+        '{ "id": "1", "__proto__": { "x": 1 }, "constructor": { "prototype": { "y": 2 } } }'
+      )
+    );
+  });
 });

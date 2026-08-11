@@ -13,6 +13,7 @@ import {
   safeFilePath,
   saveBodyToFile
 } from "./file-transfer.js";
+import { stripTrailingSlashes } from "./json.js";
 import { VERSION } from "./version.js";
 import type { HttpMethod, HttpResult, RegisteredOperation, ProductConfig } from "./types.js";
 
@@ -115,7 +116,7 @@ export class AtlassianHttpClient {
     // Note: baseUrl.pathname is "/" for root URLs (URL coerces the empty
     // string back), so strip trailing slashes here or the join produces a
     // scheme-relative "//rest/..." URL pointing at the wrong host.
-    const basePath = this.#config.baseUrl.pathname.replace(/\/+$/, "");
+    const basePath = stripTrailingSlashes(this.#config.baseUrl.pathname);
     const url = new URL(
       `${basePath}${renderPath(operation.path, input.path)}`,
       this.#config.baseUrl.origin

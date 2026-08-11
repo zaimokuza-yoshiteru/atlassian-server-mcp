@@ -10,18 +10,40 @@ export function getByPath(value: unknown, path: string): unknown {
   return current;
 }
 
+// Prototype-safe path setter. Path segments come from MCP client-supplied
+// field projections (see selectFields in projection.ts), so `__proto__` /
+// `constructor` / `prototype` segments must never resolve through the
+// prototype chain or trigger the __proto__ setter — that would turn a
+// crafted `fields` argument into Object.prototype pollution (CodeQL
+// js/prototype-polluting-assignment). Reads go through hasOwnProperty and
+// writes through defineProperty, which keeps legitimate fields with those
+// names working as plain own properties.
 export function setByPath(target: Record<string, unknown>, path: string, value: unknown): void {
   const segments = path.split(".");
   let current = target;
   for (const segment of segments.slice(0, -1)) {
-    const child = current[segment];
+    const child = Object.prototype.hasOwnProperty.call(current, segment)
+      ? current[segment]
+      : undefined;
     if (!child || typeof child !== "object" || Array.isArray(child)) {
-      current[segment] = {};
+      const created: Record<string, unknown> = {};
+      defineOwn(current, segment, created);
+      current = created;
+    } else {
+      current = child as Record<string, unknown>;
     }
-    current = current[segment] as Record<string, unknown>;
   }
   const last = segments.at(-1);
-  if (last) current[last] = value;
+  if (last) defineOwn(current, last, value);
+}
+
+function defineOwn(target: Record<string, unknown>, key: string, value: unknown): void {
+  Object.defineProperty(target, key, {
+    value,
+    writable: true,
+    enumerable: true,
+    configurable: true
+  });
 }
 
 export function stableStringify(value: unknown): string {
@@ -66,6 +88,16 @@ export function flattenJson(value: unknown, basePath = "$"): JsonLeaf[] {
 
 export function utf8Bytes(value: unknown): number {
   return Buffer.byteLength(JSON.stringify(value), "utf8");
+}
+
+// Single-pass trailing-slash trim for URL pathnames. Deliberately not the
+// regex /\/+$/: CodeQL js/polynomial-redos flags it as quadratic on
+// pathological input (a long run of slashes followed by a non-slash), and
+// the scan is trivial to write by hand.
+export function stripTrailingSlashes(value: string): string {
+  let end = value.length;
+  while (end > 0 && value[end - 1] === "/") end--;
+  return value.slice(0, end);
 }
 
 // Strict integer parsing for untrusted strings (env vars, CLI flags, cursor
