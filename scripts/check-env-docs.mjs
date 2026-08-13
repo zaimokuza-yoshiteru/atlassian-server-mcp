@@ -7,9 +7,9 @@
 // derived).
 //
 // Checked documents (English is authoritative and carries the full reference
-// tables):
-//   docs/wiki/en/Authentication-and-TLS.md
-//   docs/wiki/en/Client-Configuration.md
+// tables; the wiki source layout is flat, Chinese pages use a .zh-CN suffix):
+//   docs/wiki/Authentication-and-TLS.md
+//   docs/wiki/Client-Configuration.md
 //
 // Rules:
 // - A variable named in the docs but never read by the code is a hard
@@ -25,8 +25,8 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 export const CONFIG_FILE = "src/config.ts";
 export const TYPES_FILE = "src/types.ts";
 export const DOC_FILES = [
-  "docs/wiki/en/Authentication-and-TLS.md",
-  "docs/wiki/en/Client-Configuration.md"
+  "docs/wiki/Authentication-and-TLS.md",
+  "docs/wiki/Client-Configuration.md"
 ];
 
 // Product prefixes come from src/types.ts PRODUCTS ("jira" -> "JIRA").
