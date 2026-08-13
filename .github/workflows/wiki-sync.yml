@@ -36,6 +36,13 @@ jobs:
           WIKI_DIR=$(mktemp -d)
           git clone "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.wiki.git" "$WIKI_DIR"
           rsync -av --delete --exclude=".git" docs/wiki/ "$WIKI_DIR/"
+          # GitHub Wiki renders `](Page.md)` links as raw-file downloads and
+          # extensionless `](Page)` links as page navigation. Strip the .md
+          # suffix from wiki-internal links in the synced copy only — the
+          # repo source keeps .md so links work when browsing docs/wiki/ on
+          # GitHub. Absolute (https://) links are untouched.
+          find "$WIKI_DIR" -name "*.md" -exec perl -pi -e \
+            's|\]\(([A-Za-z0-9.%-]+)\.md(#[^)]*)?\)|]($1$2)|g' {} +
           git -C "$WIKI_DIR" config user.name "github-actions[bot]"
           git -C "$WIKI_DIR" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git -C "$WIKI_DIR" add -A
