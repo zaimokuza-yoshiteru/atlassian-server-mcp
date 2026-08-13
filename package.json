@@ -1,6 +1,6 @@
 {
   "name": "@zaimokuza/atlassian-server-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Unified stdio MCP server for Jira, Confluence, and Bitbucket Data Center",
   "license": "MIT",
   "repository": {
