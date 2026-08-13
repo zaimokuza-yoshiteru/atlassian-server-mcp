@@ -1,6 +1,6 @@
 # 兼容矩阵
 
-> **以英文版为准**：[English](../en/Compatibility-Matrix.md)
+> **以英文版为准**：[English](Compatibility-Matrix.md)
 
 ## 运行时
 
@@ -23,7 +23,7 @@
 
 OpenAPI 生成锁定官方 spec：Jira DC 11.3.8（v11003）、Confluence DC
 10.2.14（v10214）、Bitbucket DC 10.4（v1004）——见
-[`rule/api-inventory-official.md`](../../../rule/api-inventory-official.md)
+[`rule/api-inventory-official.md`](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/blob/main/rule/api-inventory-official.md)
 （英文）。
 
 ## API 范围
@@ -46,8 +46,8 @@ v1 范围外：
 
 项目自身在 Node 22 + 24 × Ubuntu + Windows 上测试，另有 Docker 构建
 job。这面向贡献者而非部署方；见
-[`docs/zh-CN/test-strategy.md`](../../zh-CN/test-strategy.md)（英文版为准）。
+[`docs/zh-CN/test-strategy.md`](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/blob/main/docs/zh-CN/test-strategy.md)（英文版为准）。
 
 ---
 
-[English version](../en/Compatibility-Matrix.md)（英文版为准）
+[English version](Compatibility-Matrix.md)（英文版为准）

@@ -93,4 +93,4 @@ See [Attachments and Large Results](Attachments-and-Large-Results.md) for
 
 ---
 
-[中文版](../zh-CN/Bitbucket-Workflows.md) · English is the authoritative version.
+[中文版](Bitbucket-Workflows.zh-CN.md) · English is the authoritative version.

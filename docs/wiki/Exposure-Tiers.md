@@ -87,8 +87,8 @@ unknown operations.
   execute, typed tools, downloads, and server info.
 
 For the policy source of truth and refresh workflow, see the project document
-[`docs/en/exposure-policy.md`](../../en/exposure-policy.md).
+[`docs/en/exposure-policy.md`](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/blob/main/docs/en/exposure-policy.md).
 
 ---
 
-[中文版](../zh-CN/Exposure-Tiers.md) · English is the authoritative version.
+[中文版](Exposure-Tiers.zh-CN.md) · English is the authoritative version.

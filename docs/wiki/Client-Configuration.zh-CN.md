@@ -1,6 +1,6 @@
 # 客户端配置
 
-> **以英文版为准**：[English](../en/Client-Configuration.md)
+> **以英文版为准**：[English](Client-Configuration.md)
 
 服务器是 stdio MCP server：MCP client 把它作为子进程启动，经 stdio 讲
 JSON-RPC。全部配置通过环境变量与命令行参数传入——没有配置文件。
@@ -49,17 +49,17 @@ JSON-RPC。全部配置通过环境变量与命令行参数传入——没有配
 
 ## 命令行参数
 
-| 参数                                     | 含义                                                                                               |
-| ---------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `--exposure-tier=read\|safe\|risky\|max` | 暴露的最宽层级（默认 `read`）。                                                                    |
-| `--force-include-ops=<glob>`             | 在层级之外额外暴露指定策略操作；可重复。                                                           |
-| `--force-exclude-ops=<glob>`             | 在层级之内隐藏指定操作；可重复；优先于 include。                                                   |
-| `--tls-verify` / `--no-tls-verify`       | 显式覆盖 TLS 校验（flag 优先于 env）。                                                             |
-| `--max-download-bytes=<n>`               | 下载 / `outputPath` 字节上限（默认值与最小值见[附件与大结果](Attachments-and-Large-Results.md)）。 |
-| `--max-output-bytes=<n>`                 | 每页序列化响应预算（默认 65,536）。                                                                |
-| `--cursor-ttl-seconds=<n>`               | 分页 cursor 存活时间（默认 900）。                                                                 |
-| `--skip-startup-check`                   | 完全跳过（仅告警的）启动探测。                                                                     |
-| `doctor`                                 | 子命令：严格起飞前检查，不启动服务。                                                               |
+| 参数                                     | 含义                                                                                                     |
+| ---------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `--exposure-tier=read\|safe\|risky\|max` | 暴露的最宽层级（默认 `read`）。                                                                          |
+| `--force-include-ops=<glob>`             | 在层级之外额外暴露指定策略操作；可重复。                                                                 |
+| `--force-exclude-ops=<glob>`             | 在层级之内隐藏指定操作；可重复；优先于 include。                                                         |
+| `--tls-verify` / `--no-tls-verify`       | 显式覆盖 TLS 校验（flag 优先于 env）。                                                                   |
+| `--max-download-bytes=<n>`               | 下载 / `outputPath` 字节上限（默认值与最小值见[附件与大结果](Attachments-and-Large-Results.zh-CN.md)）。 |
+| `--max-output-bytes=<n>`                 | 每页序列化响应预算（默认 65,536）。                                                                      |
+| `--cursor-ttl-seconds=<n>`               | 分页 cursor 存活时间（默认 900）。                                                                       |
+| `--skip-startup-check`                   | 完全跳过（仅告警的）启动探测。                                                                           |
+| `doctor`                                 | 子命令：严格起飞前检查，不启动服务。                                                                     |
 
 每个 flag 都有环境变量等价物（`ATLASSIAN_EXPOSURE_TIER`、
 `ATLASSIAN_FORCE_INCLUDE_OPERATIONS`、`ATLASSIAN_FORCE_EXCLUDE_OPERATIONS`、
@@ -82,8 +82,8 @@ JSON-RPC。全部配置通过环境变量与命令行参数传入——没有配
 
 接入 client 后让 agent 调 `atlassian_server_info`：返回已配置产品、版本
 与当前暴露层级。非交互检查先跑 `npx @zaimokuza/atlassian-server-mcp doctor`——见
-[安装](Installation.md)。
+[安装](Installation.zh-CN.md)。
 
 ---
 
-[English version](../en/Client-Configuration.md)（英文版为准）
+[English version](Client-Configuration.md)（英文版为准）

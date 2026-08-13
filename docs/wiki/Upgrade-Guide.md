@@ -47,4 +47,4 @@ node dist/cli.js doctor
 
 ---
 
-[中文版](../zh-CN/Upgrade-Guide.md) · English is the authoritative version.
+[中文版](Upgrade-Guide.zh-CN.md) · English is the authoritative version.

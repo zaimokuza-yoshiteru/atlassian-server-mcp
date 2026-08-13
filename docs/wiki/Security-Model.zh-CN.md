@@ -1,6 +1,6 @@
 # 安全模型
 
-> **以英文版为准**：[English](../en/Security-Model.md)
+> **以英文版为准**：[English](Security-Model.md)
 
 本服务器防什么、不防什么。一句话：它是带暴露治理、凭证卫生与传输可靠
 性的 MCP 协议适配层；授权本身永远在 Atlassian。
@@ -50,7 +50,7 @@
   符号链接解析后必须在 root 内。
 - 上传、下载、`outputPath` 与 `storageValueFile` 均有大小上限，仅限常规
   文件，读取前先校验大小，且永不覆盖已存在文件。具体限制见
-  [附件与大结果](Attachments-and-Large-Results.md)。
+  [附件与大结果](Attachments-and-Large-Results.zh-CN.md)。
 
 ## cursor 完整性
 
@@ -70,4 +70,4 @@
 
 ---
 
-[English version](../en/Security-Model.md)（英文版为准）
+[English version](Security-Model.md)（英文版为准）

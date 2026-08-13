@@ -105,4 +105,4 @@ the same parameters.
 
 ---
 
-[中文版](../zh-CN/Attachments-and-Large-Results.md) · English is the authoritative version.
+[中文版](Attachments-and-Large-Results.zh-CN.md) · English is the authoritative version.

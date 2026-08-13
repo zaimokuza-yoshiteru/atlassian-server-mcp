@@ -1,6 +1,6 @@
 # 认证与 TLS
 
-> **以英文版为准**：[English](../en/Authentication-and-TLS.md)
+> **以英文版为准**：[English](Authentication-and-TLS.md)
 
 ## 凭证模型
 
@@ -78,4 +78,4 @@ export ATLASSIAN_USER_AGENT=my-gateway-agent/1.0
 
 ---
 
-[English version](../en/Authentication-and-TLS.md)（英文版为准）
+[English version](Authentication-and-TLS.md)（英文版为准）

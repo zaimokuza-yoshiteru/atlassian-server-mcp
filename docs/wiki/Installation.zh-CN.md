@@ -1,6 +1,6 @@
 # 安装
 
-> **以英文版为准**：[English](../en/Installation.md)
+> **以英文版为准**：[English](Installation.md)
 
 ## 要求
 
@@ -47,8 +47,8 @@ export BITBUCKET_URL=https://bitbucket.example.internal
 export BITBUCKET_TOKEN=...
 ```
 
-token/Basic 规则见[认证与 TLS](Authentication-and-TLS.md)；接入 MCP
-client 见[客户端配置](Client-Configuration.md)。
+token/Basic 规则见[认证与 TLS](Authentication-and-TLS.zh-CN.md)；接入 MCP
+client 见[客户端配置](Client-Configuration.zh-CN.md)。
 
 ## 用 doctor 验证
 
@@ -70,14 +70,14 @@ node dist/cli.js doctor
 - TLS 连通性
 - `ATLASSIAN_FILE_ROOT` 存在且可写（如配置）
 
-任一 FAIL 非零退出；WARN 不阻塞。失败时见[故障排查](Troubleshooting.md)。
+任一 FAIL 非零退出；WARN 不阻塞。失败时见[故障排查](Troubleshooting.zh-CN.md)。
 
 ## 下一步
 
-- [客户端配置](Client-Configuration.md)——把服务器接进 MCP client
-- [暴露层级](Exposure-Tiers.md)——决定 agent 能看到哪些操作
-- [升级指南](Upgrade-Guide.md)——版本间迁移
+- [客户端配置](Client-Configuration.zh-CN.md)——把服务器接进 MCP client
+- [暴露层级](Exposure-Tiers.zh-CN.md)——决定 agent 能看到哪些操作
+- [升级指南](Upgrade-Guide.zh-CN.md)——版本间迁移
 
 ---
 
-[English version](../en/Installation.md)（英文版为准）
+[English version](Installation.md)（英文版为准）

@@ -1,10 +1,12 @@
 name: Wiki Sync
 
-# The user documentation wiki is authored in docs/wiki/ (en/ authoritative,
-# zh-CN/ translation) and reviewed through normal pull requests. The GitHub
-# Wiki tab is a read-only mirror: this workflow force-syncs it on every
-# change, deleting pages that no longer exist in docs/wiki/ so direct wiki
-# edits do not survive.
+# The user documentation wiki is authored in docs/wiki/ and reviewed through
+# normal pull requests. Layout is flat because GitHub Wiki page names are
+# globally unique across directories: English pages keep their bare names
+# (Installation.md, authoritative) and Chinese mirrors use the .zh-CN suffix
+# (Installation.zh-CN.md). The GitHub Wiki tab is a read-only mirror: this
+# workflow force-syncs it on every change, deleting pages that no longer
+# exist in docs/wiki/ so direct wiki edits do not survive.
 
 on:
   push:

@@ -85,4 +85,4 @@ Any FAIL exits non-zero; WARN never blocks. If `doctor` fails, see
 
 ---
 
-[中文版](../zh-CN/Installation.md) · English is the authoritative version.
+[中文版](Installation.zh-CN.md) · English is the authoritative version.

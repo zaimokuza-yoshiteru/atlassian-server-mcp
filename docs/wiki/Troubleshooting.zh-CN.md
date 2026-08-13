@@ -1,6 +1,6 @@
 # 故障排查
 
-> **以英文版为准**：[English](../en/Troubleshooting.md)
+> **以英文版为准**：[English](Troubleshooting.md)
 
 先跑严格起飞前检查——它把大多数配置问题变成可行动的一行，而不是栈
 追踪：
@@ -18,7 +18,7 @@ npx @zaimokuza/atlassian-server-mcp doctor
 
 - URL 错误、实例宕机或防火墙拦截。
 - 企业代理后设置 `ATLASSIAN_PROXY` / `HTTPS_PROXY` 并检查 `NO_PROXY`——
-  见[认证与 TLS](Authentication-and-TLS.md)。
+  见[认证与 TLS](Authentication-and-TLS.zh-CN.md)。
 
 ### 工具调用返回 401 / 403
 
@@ -51,7 +51,7 @@ query 与 fragment；PAT 放进 `*_TOKEN`。
 
 版本基线（Jira 10.3/11.3、Confluence 9.2/10.2、Bitbucket
 9.4/10.2/10.4）是生成/测试基线，不是白名单。其他版本可启动并收到警告；
-实际兼容性由目标实例的 API 行为决定。见[兼容矩阵](Compatibility-Matrix.md)。
+实际兼容性由目标实例的 API 行为决定。见[兼容矩阵](Compatibility-Matrix.zh-CN.md)。
 
 ### cursor 过期或被拒
 
@@ -73,7 +73,7 @@ query 与 fragment；PAT 放进 `*_TOKEN`。
 ### 操作找不到 / 不可发现
 
 - 操作高于你的 `--exposure-tier`、属于永久排除操作，或属于未配置产品。
-  见[暴露层级](Exposure-Tiers.md)。
+  见[暴露层级](Exposure-Tiers.zh-CN.md)。
 - 用 `atlassian_discover_operations({ query: "..." })` 查当前配置实际
   暴露了什么。
 
@@ -81,7 +81,7 @@ query 与 fragment；PAT 放进 `*_TOKEN`。
 
 `ATLASSIAN_FILE_ROOT` 未设置、路径非绝对、路径逃逸沙箱，或目标文件已
 存在（下载永不覆盖）。上传/下载的具体限制见
-[附件与大结果](Attachments-and-Large-Results.md)。
+[附件与大结果](Attachments-and-Large-Results.zh-CN.md)。
 
 ## 仍然卡住
 
@@ -91,4 +91,4 @@ query 与 fragment；PAT 放进 `*_TOKEN`。
 
 ---
 
-[English version](../en/Troubleshooting.md)（英文版为准）
+[English version](Troubleshooting.md)（英文版为准）

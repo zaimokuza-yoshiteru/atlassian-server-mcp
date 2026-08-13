@@ -1,6 +1,6 @@
 # Jira 工作流
 
-> **以英文版为准**：[English](../en/Jira-Workflows.md)
+> **以英文版为准**：[English](Jira-Workflows.md)
 
 针对 Jira Data Center 的典型 agent 任务。有 typed 工具的用 typed 工具，
 其余走通用工具（`atlassian_discover_operations` →
@@ -24,7 +24,7 @@ jira_search_issues({ jql: "project = MCP AND status = Open ORDER BY created DESC
 
 大结果集用 `cursor` / `nextCursor` 分页；`responseProfile: "compact"`
 （默认）避免自定义字段噪音，或用 `fields: ["summary", "status",
-"assignee"]` 精确选择。见[附件与大结果](Attachments-and-Large-Results.md)。
+"assignee"]` 精确选择。见[附件与大结果](Attachments-and-Large-Results.zh-CN.md)。
 
 ## 读 issue
 
@@ -78,7 +78,7 @@ atlassian_execute_operation({
 ```
 
 下载用 `jira_download_attachment`。限制与沙箱规则见
-[附件与大结果](Attachments-and-Large-Results.md)。
+[附件与大结果](Attachments-and-Large-Results.zh-CN.md)。
 
 ## Agile：board 与 sprint
 
@@ -111,4 +111,4 @@ Atlassian 错误以结构化工具错误返回，含 `status`、`operationId`、
 
 ---
 
-[English version](../en/Jira-Workflows.md)（英文版为准）
+[English version](Jira-Workflows.md)（英文版为准）

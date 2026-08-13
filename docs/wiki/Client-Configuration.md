@@ -89,4 +89,4 @@ active exposure tier. For a non-interactive check, run
 
 ---
 
-[中文版](../zh-CN/Client-Configuration.md) · English is the authoritative version.
+[中文版](Client-Configuration.zh-CN.md) · English is the authoritative version.

@@ -113,4 +113,4 @@ to repeat it.
 
 ---
 
-[中文版](../zh-CN/Jira-Workflows.md) · English is the authoritative version.
+[中文版](Jira-Workflows.zh-CN.md) · English is the authoritative version.

@@ -85,4 +85,4 @@ export ATLASSIAN_USER_AGENT=my-gateway-agent/1.0
 
 ---
 
-[中文版](../zh-CN/Authentication-and-TLS.md) · English is the authoritative version.
+[中文版](Authentication-and-TLS.zh-CN.md) · English is the authoritative version.

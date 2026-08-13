@@ -22,7 +22,7 @@ API compatibility is determined by the target instance.
 
 OpenAPI generation is pinned to official specs: Jira DC 11.3.8 (v11003),
 Confluence DC 10.2.14 (v10214), Bitbucket DC 10.4 (v1004) — see
-[`rule/api-inventory-official.md`](../../../rule/api-inventory-official.md).
+[`rule/api-inventory-official.md`](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/blob/main/rule/api-inventory-official.md).
 
 ## API scope
 
@@ -45,8 +45,8 @@ Out of scope for v1:
 
 The project itself is tested on Node 22 + 24 across Ubuntu and Windows, plus
 a Docker build job. This concerns contributors, not deployments; see
-[`docs/en/test-strategy.md`](../../en/test-strategy.md).
+[`docs/en/test-strategy.md`](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/blob/main/docs/en/test-strategy.md).
 
 ---
 
-[中文版](../zh-CN/Compatibility-Matrix.md) · English is the authoritative version.
+[中文版](Compatibility-Matrix.zh-CN.md) · English is the authoritative version.

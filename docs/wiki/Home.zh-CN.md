@@ -1,6 +1,6 @@
 # Atlassian Server MCP Wiki
 
-> **以英文版为准**：[English](../en/Home.md)
+> **以英文版为准**：[English](Home.md)
 
 一个 TypeScript MCP 2.x stdio server，把 LLM agent 连接到自托管的 **Jira、
 Confluence、Bitbucket Data Center**。它把高频 typed 工具与固定 REST
@@ -27,19 +27,19 @@ operation registry 结合，通过 4 个通用工具按需发现，避免完整 
 
 ## 页面导航
 
-- [安装](Installation.md)
-- [客户端配置](Client-Configuration.md)
-- [认证与 TLS](Authentication-and-TLS.md)
-- [暴露层级](Exposure-Tiers.md)
-- [Jira 工作流](Jira-Workflows.md)
-- [Confluence 工作流](Confluence-Workflows.md)
-- [Bitbucket 工作流](Bitbucket-Workflows.md)
-- [附件与大结果](Attachments-and-Large-Results.md)
-- [故障排查](Troubleshooting.md)
-- [兼容矩阵](Compatibility-Matrix.md)
-- [安全模型](Security-Model.md)
-- [升级指南](Upgrade-Guide.md)
+- [安装](Installation.zh-CN.md)
+- [客户端配置](Client-Configuration.zh-CN.md)
+- [认证与 TLS](Authentication-and-TLS.zh-CN.md)
+- [暴露层级](Exposure-Tiers.zh-CN.md)
+- [Jira 工作流](Jira-Workflows.zh-CN.md)
+- [Confluence 工作流](Confluence-Workflows.zh-CN.md)
+- [Bitbucket 工作流](Bitbucket-Workflows.zh-CN.md)
+- [附件与大结果](Attachments-and-Large-Results.zh-CN.md)
+- [故障排查](Troubleshooting.zh-CN.md)
+- [兼容矩阵](Compatibility-Matrix.zh-CN.md)
+- [安全模型](Security-Model.zh-CN.md)
+- [升级指南](Upgrade-Guide.zh-CN.md)
 
 ---
 
-[English version](../en/Home.md)（英文版为准）
+[English version](Home.md)（英文版为准）

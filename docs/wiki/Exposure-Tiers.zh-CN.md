@@ -1,9 +1,9 @@
 # 暴露层级（Exposure Tiers）
 
-> **以英文版为准**：[English](../en/Exposure-Tiers.md)
+> **以英文版为准**：[English](Exposure-Tiers.md)
 
 暴露层级决定 registry 操作中哪些能被 LLM agent 发现和执行。它是
-**agent 暴露边界，不是授权边界**——见[安全模型](Security-Model.md)。
+**agent 暴露边界，不是授权边界**——见[安全模型](Security-Model.zh-CN.md)。
 
 ## 四个层级
 
@@ -81,9 +81,9 @@ FORCE include 只改变暴露，永不改变操作的固有 tier 或 destructive
   授权点。
 
 策略事实来源与刷新流程见项目文档
-[`docs/zh-CN/exposure-policy.md`](../../zh-CN/exposure-policy.md)（英文版
+[`docs/zh-CN/exposure-policy.md`](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/blob/main/docs/zh-CN/exposure-policy.md)（英文版
 为准）。
 
 ---
 
-[English version](../en/Exposure-Tiers.md)（英文版为准）
+[English version](Exposure-Tiers.md)（英文版为准）

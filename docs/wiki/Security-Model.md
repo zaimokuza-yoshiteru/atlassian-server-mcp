@@ -79,4 +79,4 @@ the latest minor release line receives security fixes.
 
 ---
 
-[中文版](../zh-CN/Security-Model.md) · English is the authoritative version.
+[中文版](Security-Model.zh-CN.md) · English is the authoritative version.

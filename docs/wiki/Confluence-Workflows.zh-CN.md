@@ -1,6 +1,6 @@
 # Confluence 工作流
 
-> **以英文版为准**：[English](../en/Confluence-Workflows.md)
+> **以英文版为准**：[English](Confluence-Workflows.md)
 
 针对 Confluence Data Center 的典型 agent 任务。typed 工具覆盖常见内容
 生命周期，其余走通用工具。
@@ -56,7 +56,7 @@ confluence_create_content({
 ```
 
 文件（storage XHTML，有大小上限——见
-[附件与大结果](Attachments-and-Large-Results.md)）从
+[附件与大结果](Attachments-and-Large-Results.zh-CN.md)）从
 `ATLASSIAN_FILE_ROOT` 沙箱读取，
 成为 `body.storage.value`；`representation` 固定为 `storage`。
 `storageValueFile` 与内联 `body.storage.value` 互斥——同时传是结构化
@@ -115,4 +115,4 @@ atlassian_execute_operation({ operationId: "confluence.content.labels.list", pat
 
 ---
 
-[English version](../en/Confluence-Workflows.md)（英文版为准）
+[English version](Confluence-Workflows.md)（英文版为准）

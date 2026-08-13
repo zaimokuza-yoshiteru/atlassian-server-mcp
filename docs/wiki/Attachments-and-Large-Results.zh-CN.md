@@ -1,6 +1,6 @@
 # 附件与大结果
 
-> **以英文版为准**：[English](../en/Attachments-and-Large-Results.md)
+> **以英文版为准**：[English](Attachments-and-Large-Results.md)
 
 服务器如何在你的机器与 Atlassian 产品之间移动文件与超大载荷——以及防止
 agent 打爆内存或磁盘的限制。
@@ -98,4 +98,4 @@ MCP 协议分页不覆盖 `tools/call` 内的应用数据，所以读取使用�
 
 ---
 
-[English version](../en/Attachments-and-Large-Results.md)（英文版为准）
+[English version](Attachments-and-Large-Results.md)（英文版为准）

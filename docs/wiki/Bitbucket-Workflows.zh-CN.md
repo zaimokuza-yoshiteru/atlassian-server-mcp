@@ -1,6 +1,6 @@
 # Bitbucket 工作流
 
-> **以英文版为准**：[English](../en/Bitbucket-Workflows.md)
+> **以英文版为准**：[English](Bitbucket-Workflows.md)
 
 针对 Bitbucket Data Center 的典型 agent 任务。typed 工具覆盖 PR 生命
 周期，仓库浏览与下载走通用工具。
@@ -81,15 +81,15 @@ atlassian_execute_operation({
 ```
 
 `downloadPath` / `outputPath` 规则与限制见
-[附件与大结果](Attachments-and-Large-Results.md)。
+[附件与大结果](Attachments-and-Large-Results.zh-CN.md)。
 
 ## 备注
 
 - 仓库删除等管理操作位于更高层级或被永久排除；操作不可发现时查
-  [暴露层级](Exposure-Tiers.md)。
+  [暴露层级](Exposure-Tiers.zh-CN.md)。
 - 结构化错误含 `status`、`operationId` 与脱敏上游详情；合并返回 409
   说明版本校验失败——重新读取 PR。
 
 ---
 
-[English version](../en/Bitbucket-Workflows.md)（英文版为准）
+[English version](Bitbucket-Workflows.md)（英文版为准）

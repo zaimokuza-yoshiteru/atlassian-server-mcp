@@ -1,6 +1,6 @@
 # 升级指南
 
-> **以英文版为准**：[English](../en/Upgrade-Guide.md)
+> **以英文版为准**：[English](Upgrade-Guide.md)
 
 ## 版本策略
 
@@ -46,4 +46,4 @@ node dist/cli.js doctor
 
 ---
 
-[English version](../en/Upgrade-Guide.md)（英文版为准）
+[English version](Upgrade-Guide.md)（英文版为准）
