@@ -12,9 +12,9 @@
 [中文 README](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/blob/main/README.zh-CN.md)
 
 A single TypeScript MCP 2.x stdio server for Jira, Confluence, and Bitbucket
-Data Center. Clients see only 28 tools in `tools/list` (24 typed + 4
-generic); the 499 policy-gated REST operations are discovered and executed
-on demand through the generic tools.
+Data Center. Clients see a small set of typed tools for common workflows plus
+generic discover/describe/execute tools; the policy-gated REST operation
+registry is discovered and executed on demand through the generic tools.
 
 ## Features
 

@@ -10,7 +10,7 @@
 - `api-inventory-diff.md`：official full、project baseline、source.md 三组集合差异。
 - `api-inventory-official.md`：项目基线清单（人工审定的数据源，非文档）。`scripts/generate-operations.mjs` 与 `fetch-api-inventory.mjs` 按格式敏感模式逐行解析，已列入 `.prettierignore`，禁止重排格式。
 
-计数约定：OpenAPI 发现 Jira 437、Confluence 176、Bitbucket 572；Bitbucket 文档补录 ZDU 6 条；official full 1191，project baseline 1141，source/raw 1084。Jira 的 `/rest/agile/1.0/**` 与 `/rest/auth/1/**` 保留在 full inventory，但标记为范围外。
+计数口径：以 `node rule/fetch-api-inventory.mjs --offline --check` 的输出为准，字段为 `specDiscovered`（按产品）、`documentedSupplements`、`officialFull`、`projectBaseline`、`source`。Jira 的 `/rest/agile/1.0/**` 与 `/rest/auth/1/**` 保留在 full inventory，但标记为范围外。
 
 ## 首次建库
 

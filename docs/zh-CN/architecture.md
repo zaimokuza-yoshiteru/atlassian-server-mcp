@@ -66,4 +66,4 @@ multipart 上传与二进制下载默认禁用，除非配置了本地 `ATLASSIA
 （或产品级 `JIRA_FILE_ROOT`、`CONFLUENCE_FILE_ROOT`、`BITBUCKET_FILE_ROOT`）。
 路径必须绝对且位于该 root 之下；上传有大小上限，已有下载目标永远不会
 被覆盖（限制见
-[附件与大结果](../wiki/zh-CN/Attachments-and-Large-Results.md)）。
+[附件与大结果](../wiki/Attachments-and-Large-Results.zh-CN.md)）。

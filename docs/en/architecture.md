@@ -72,4 +72,4 @@ Multipart uploads and binary downloads are disabled unless a local
 `CONFLUENCE_FILE_ROOT`, `BITBUCKET_FILE_ROOT`) is configured. Paths must be
 absolute and remain below that root; uploads are size-capped and existing
 download targets are never overwritten (limits:
-[Attachments and Large Results](../wiki/en/Attachments-and-Large-Results.md)).
+[Attachments and Large Results](../wiki/Attachments-and-Large-Results.md)).

@@ -82,7 +82,7 @@ atlassian_execute_operation({
 
 ## Agile：board 与 sprint
 
-39 个 agile 操作是 registry 操作（`jira.agile.*`），经通用工具调用。
+agile 操作是 registry 操作（`jira.agile.*`），经通用工具调用。
 典型 sprint 流程：
 
 ```

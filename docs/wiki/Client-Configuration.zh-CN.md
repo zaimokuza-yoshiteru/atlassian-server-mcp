@@ -69,11 +69,10 @@ JSON-RPC。全部配置通过环境变量与命令行参数传入——没有配
 
 ## client 能看到什么
 
-- 4 个通用工具：`atlassian_discover_operations`、
+- 通用工具：`atlassian_discover_operations`、
   `atlassian_describe_operation`、`atlassian_execute_operation`、
   `atlassian_server_info`。
-- 24 个 typed 工具覆盖常见 Jira issue、Confluence 内容、Bitbucket PR
-  工作流（Jira 11、Confluence 6、Bitbucket 7）。
+- typed 工具覆盖常见 Jira issue、Confluence 内容、Bitbucket PR 工作流。
 - 只注册**已配置**产品的工具；通用发现也省略未配置产品。
 - 只有处于暴露层级及以下的操作能被发现和执行；未知或被排除操作
   fail-closed 拒绝。

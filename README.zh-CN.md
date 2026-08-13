@@ -12,8 +12,9 @@
 [English README](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/blob/main/README.md)（英文版为准）
 
 一个 TypeScript MCP 2.x stdio server，统一对接 Jira、Confluence、Bitbucket
-Data Center。客户端在 `tools/list` 只看到 28 个工具（24 个 typed + 4 个
-通用）；499 个策略管控的 REST operation 通过通用工具按需发现、执行。
+Data Center。客户端看到的是一小组面向常见工作流的 typed 工具，加上通用的
+discover/describe/execute 工具；策略管控的 REST operation 注册表通过通用工具
+按需发现、执行。
 
 ## 特性
 

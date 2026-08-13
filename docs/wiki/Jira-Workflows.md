@@ -82,7 +82,7 @@ Download with `jira_download_attachment`. Limits and sandbox rules: see
 
 ## Agile: boards and sprints
 
-The 39 agile operations are registry operations (`jira.agile.*`), called
+The agile operations are registry operations (`jira.agile.*`), called
 through the generic tools. Typical sprint flow:
 
 ```

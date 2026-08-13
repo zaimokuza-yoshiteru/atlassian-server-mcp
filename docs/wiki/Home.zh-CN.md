@@ -3,9 +3,9 @@
 > **以英文版为准**：[English](Home.md)
 
 一个 TypeScript MCP 2.x stdio server，把 LLM agent 连接到自托管的 **Jira、
-Confluence、Bitbucket Data Center**。客户端在 `tools/list` 只看到 28 个
-工具（24 个 typed + 4 个通用）；499 个策略管控的 REST operation 通过
-通用工具按需发现、执行。
+Confluence、Bitbucket Data Center**。客户端看到的是一小组面向常见工作流的
+typed 工具，加上通用的 discover/describe/execute 工具；策略管控的 REST
+operation 注册表通过通用工具按需发现、执行。
 
 ## 能做什么
 

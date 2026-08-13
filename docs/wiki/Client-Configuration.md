@@ -69,11 +69,11 @@ environment variables.
 
 ## What the client sees
 
-- 4 generic tools: `atlassian_discover_operations`,
+- Generic tools: `atlassian_discover_operations`,
   `atlassian_describe_operation`, `atlassian_execute_operation`,
   `atlassian_server_info`.
-- 24 typed tools for common Jira issue, Confluence content, and Bitbucket
-  pull-request workflows (11 Jira, 6 Confluence, 7 Bitbucket).
+- Typed tools for common Jira issue, Confluence content, and Bitbucket
+  pull-request workflows.
 - Only tools for **configured** products are registered, and generic discovery
   omits unconfigured products.
 - Only operations at or below your exposure tier appear in discovery and can

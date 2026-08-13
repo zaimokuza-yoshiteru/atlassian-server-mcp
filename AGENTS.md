@@ -58,7 +58,9 @@ Success-expected calls (the default, `expectError: false`) are verified by `requ
   `docs/en/tool-contracts.md`, and
   `docs/en/release-process.md` are maintained entry points. English is the
   authoritative version; `docs/zh-CN/` holds the Chinese counterparts, and
-  `docs/wiki/en|zh-CN/` holds the user-facing Wiki content source.
+  `docs/wiki/` holds the user-facing Wiki content source in a flat layout:
+  English pages use bare filenames, Chinese pages carry a `.zh-CN` suffix.
+  The Wiki is synced by `.github/workflows/wiki-sync.yml`.
 - `docs/en/test-strategy.md` is the single E2E developer document; the old
   `local-testing.md` was merged into it.
 - `rule/api-inventory-official.md` is a machine-parsed data source (read by
