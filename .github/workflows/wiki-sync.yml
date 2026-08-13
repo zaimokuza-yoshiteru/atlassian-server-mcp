@@ -1,0 +1,45 @@
+name: Wiki Sync
+
+# The user documentation wiki is authored in docs/wiki/ (en/ authoritative,
+# zh-CN/ translation) and reviewed through normal pull requests. The GitHub
+# Wiki tab is a read-only mirror: this workflow force-syncs it on every
+# change, deleting pages that no longer exist in docs/wiki/ so direct wiki
+# edits do not survive.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "docs/wiki/**"
+      - ".github/workflows/wiki-sync.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Sync docs/wiki to the GitHub Wiki
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          WIKI_DIR=$(mktemp -d)
+          git clone "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.wiki.git" "$WIKI_DIR"
+          rsync -av --delete --exclude=".git" docs/wiki/ "$WIKI_DIR/"
+          git -C "$WIKI_DIR" config user.name "github-actions[bot]"
+          git -C "$WIKI_DIR" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C "$WIKI_DIR" add -A
+          if git -C "$WIKI_DIR" diff --cached --quiet; then
+            echo "wiki already in sync"
+            exit 0
+          fi
+          git -C "$WIKI_DIR" commit -m "Sync wiki from ${GITHUB_REPOSITORY}@${GITHUB_SHA}"
+          git -C "$WIKI_DIR" push
