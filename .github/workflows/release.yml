@@ -116,17 +116,28 @@ jobs:
         # after npm publish succeeds. Raw E2E reports (.e2e-state/) cannot be
         # attached — the evidence JSON carries their SHA-256; the maintainer
         # may upload raw reports manually (docs/en/release-process.md).
+        # Idempotent: a re-run after a failed publish finds the draft (or any
+        # prior) release and re-uploads the artifacts instead of failing on
+        # "release already exists".
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           PARENT=$(git rev-parse HEAD^)
-          gh release create "$GITHUB_REF_NAME" --draft \
-            --title "$GITHUB_REF_NAME" \
-            --notes "Draft release — maintainer fills in the notes before publishing." \
-            "release-artifacts/${{ steps.pack.outputs.tarball }}" \
-            release-artifacts/sbom.json \
-            release-artifacts/SHA256SUMS \
-            "release-evidence/$PARENT.json"
+          if gh release view "$GITHUB_REF_NAME" > /dev/null 2>&1; then
+            gh release upload "$GITHUB_REF_NAME" --clobber \
+              "release-artifacts/${{ steps.pack.outputs.tarball }}" \
+              release-artifacts/sbom.json \
+              release-artifacts/SHA256SUMS \
+              "release-evidence/$PARENT.json"
+          else
+            gh release create "$GITHUB_REF_NAME" --draft \
+              --title "$GITHUB_REF_NAME" \
+              --notes "Draft release — maintainer fills in the notes before publishing." \
+              "release-artifacts/${{ steps.pack.outputs.tarball }}" \
+              release-artifacts/sbom.json \
+              release-artifacts/SHA256SUMS \
+              "release-evidence/$PARENT.json"
+          fi
 
       - name: Upgrade npm for trusted publishing
         # npm OIDC trusted publishing requires npm >= 11.5.1.
@@ -137,8 +148,11 @@ jobs:
         # and the manual first publish). Trusted publishing via OIDC
         # (id-token: write); no long-lived NPM_TOKEN. The maintainer binds
         # repo + this workflow + the npm-production environment on npmjs.com.
+        # The tarball path must be absolute: npm parses a relative
+        # "dir/name-version.tgz" argument as a GitHub shorthand package spec
+        # (dir/repo) and tries to git-ls-remote it instead of publishing.
         if: steps.npmcheck.outputs.exists != 'true'
-        run: npm publish --provenance --access public --tag "${{ steps.disttag.outputs.tag }}" "release-artifacts/${{ steps.pack.outputs.tarball }}"
+        run: npm publish --provenance --access public --tag "${{ steps.disttag.outputs.tag }}" "$PWD/release-artifacts/${{ steps.pack.outputs.tarball }}"
 
       - name: Mark the GitHub Release public
         env:
