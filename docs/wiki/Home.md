@@ -1,9 +1,9 @@
 # Atlassian Server MCP Wiki
 
 A single TypeScript MCP 2.x stdio server that connects LLM agents to **Jira,
-Confluence, and Bitbucket Data Center** (self-hosted). It combines
-high-frequency typed tools with a fixed REST operation registry discovered
-through 4 generic tools, so the full registry never floods `tools/list`.
+Confluence, and Bitbucket Data Center** (self-hosted). Clients see only 28
+tools in `tools/list` (24 typed + 4 generic); the 499 policy-gated REST
+operations are discovered and executed on demand through the generic tools.
 
 ## What you can do
 
