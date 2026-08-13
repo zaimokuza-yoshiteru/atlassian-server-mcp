@@ -90,7 +90,7 @@ never floods `tools/list`.
 - The exposure tier defaults to `read`. `--exposure-tier=safe|risky|max`
   widens what an LLM agent may invoke; it never replaces Atlassian PAT
   permissions.
-- See the Wiki [Security Model](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/blob/main/docs/wiki/en/Security-Model.md)
+- See the Wiki [Security Model](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/wiki/Security-Model)
   page for the threat model.
 
 ## Compatibility
@@ -110,15 +110,15 @@ app APIs are outside v1.
 
 ## Documentation
 
-User documentation lives in the project Wiki (content source under
-[`docs/wiki/`](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/tree/main/docs/wiki/en);
-the Wiki itself is enabled by the maintainer on deployment):
+User documentation lives in the [project Wiki](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/wiki)
+(content source under [`docs/wiki/`](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/tree/main/docs/wiki),
+synced automatically; Chinese pages carry the `.zh-CN` suffix):
 
-- [Installation](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/blob/main/docs/wiki/en/Installation.md)
-  · [Client configuration](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/blob/main/docs/wiki/en/Client-Configuration.md)
-  · [Authentication and TLS](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/blob/main/docs/wiki/en/Authentication-and-TLS.md)
-  · [Exposure tiers](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/blob/main/docs/wiki/en/Exposure-Tiers.md)
-  · [Troubleshooting](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/blob/main/docs/wiki/en/Troubleshooting.md)
+- [Installation](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/wiki/Installation)
+  · [Client configuration](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/wiki/Client-Configuration)
+  · [Authentication and TLS](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/wiki/Authentication-and-TLS)
+  · [Exposure tiers](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/wiki/Exposure-Tiers)
+  · [Troubleshooting](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/wiki/Troubleshooting)
 
 Project/developer documentation:
 
@@ -134,8 +134,8 @@ Project/developer documentation:
 - [`docs/en/release-process.md`](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/blob/main/docs/en/release-process.md)
   — maintainer release memo
 
-Chinese counterparts of every page live under `docs/zh-CN/` and
-`docs/wiki/zh-CN/`; the English version is authoritative.
+Chinese counterparts of every developer page live under `docs/zh-CN/`, and
+every Wiki page has a `.zh-CN` twin; the English version is authoritative.
 
 ## Contributing and support
 

@@ -83,7 +83,7 @@ Data Center。它把高频 typed 工具与固定 REST operation registry 结合�
   测试——否则网络中间人可以冒充你的服务器。
 - 暴露层级默认 `read`。`--exposure-tier=safe|risky|max` 会扩大 LLM
   agent 可调用的范围；它永远不替代 Atlassian PAT 权限。
-- 威胁模型见 Wiki [安全模型](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/blob/main/docs/wiki/zh-CN/Security-Model.md)
+- 威胁模型见 Wiki [安全模型](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/wiki/Security-Model.zh-CN)
   页。
 
 ## 兼容性
@@ -102,15 +102,15 @@ API 不在 v1 范围。
 
 ## 文档
 
-用户文档在项目 Wiki（内容源在
-[`docs/wiki/`](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/tree/main/docs/wiki/zh-CN)；
-Wiki 本身由维护者部署时启用）：
+用户文档在[项目 Wiki](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/wiki/Home.zh-CN)（内容源在
+[`docs/wiki/`](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/tree/main/docs/wiki)，
+自动同步；中文页面带 `.zh-CN` 后缀）：
 
-- [安装](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/blob/main/docs/wiki/zh-CN/Installation.md)
-  · [客户端配置](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/blob/main/docs/wiki/zh-CN/Client-Configuration.md)
-  · [认证与 TLS](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/blob/main/docs/wiki/zh-CN/Authentication-and-TLS.md)
-  · [暴露层级](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/blob/main/docs/wiki/zh-CN/Exposure-Tiers.md)
-  · [故障排查](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/blob/main/docs/wiki/zh-CN/Troubleshooting.md)
+- [安装](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/wiki/Installation.zh-CN)
+  · [客户端配置](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/wiki/Client-Configuration.zh-CN)
+  · [认证与 TLS](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/wiki/Authentication-and-TLS.zh-CN)
+  · [暴露层级](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/wiki/Exposure-Tiers.zh-CN)
+  · [故障排查](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/wiki/Troubleshooting.zh-CN)
 
 项目/开发者文档：
 
@@ -125,7 +125,7 @@ Wiki 本身由维护者部署时启用）：
 - [`docs/zh-CN/release-process.md`](https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp/blob/main/docs/zh-CN/release-process.md)
   — 维护者发布备忘
 
-所有页面均有英文版（`docs/en/`、`docs/wiki/en/`），**以英文版为准**。
+所有开发者文档均有英文版（`docs/en/`），Wiki 页面均有对应英文页（不带后缀），**以英文版为准**。
 
 ## 贡献与支持
 
