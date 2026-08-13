@@ -1,6 +1,6 @@
 // Error handling: sanitize upstream HTTP errors and internal failures into
 // bounded, credential-free payloads safe to return to MCP clients.
-import { AtlassianHttpError } from "./http.js";
+import { AtlassianHttpError } from "./http-error.js";
 import { asRecord } from "./json.js";
 
 export function safeErrorMessage(error: unknown): string {
@@ -54,7 +54,15 @@ export function safeErrorPayload(error: unknown, maxBytes = 16_384): Record<stri
   return payload;
 }
 
-function limitErrorDetails(value: unknown, budget: { remaining: number }, depth = 0): unknown {
+// Single implementation of the error-details redaction rules (credential-key
+// redaction plus bounded size/depth). Exported so http.ts can delegate its
+// historical sanitizeErrorDetails surface here instead of duplicating the
+// redaction regex without a budget.
+export function limitErrorDetails(
+  value: unknown,
+  budget: { remaining: number },
+  depth = 0
+): unknown {
   if (value === undefined) return undefined;
   if (budget.remaining <= 0) return "[TRUNCATED]";
   if (depth >= 6) return "[MAX_DEPTH]";

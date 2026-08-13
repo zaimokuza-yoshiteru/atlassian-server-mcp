@@ -1,10 +1,17 @@
 import { createHash } from "node:crypto";
 
+// Prototype-safe path reader, mirroring setByPath below: path segments can
+// come from MCP client-supplied field projections (selectFields in
+// projection.ts), so segments like `constructor` or `__proto__` must not
+// resolve through the prototype chain. Own properties only — which still
+// lets JSON.parse'd payloads with a legitimate own `__proto__` key read
+// through.
 export function getByPath(value: unknown, path: string): unknown {
   if (!path) return value;
   let current = value;
   for (const segment of path.split(".")) {
     if (!current || typeof current !== "object") return undefined;
+    if (!Object.prototype.hasOwnProperty.call(current, segment)) return undefined;
     current = (current as Record<string, unknown>)[segment];
   }
   return current;

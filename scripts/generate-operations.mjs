@@ -2405,7 +2405,7 @@ function buildManifest(row, specEntry, spec, product, usedIds, report) {
     responseKind: "json"
   };
 
-  Object.assign(manifest, decorateManifest({}, specEntry, spec));
+  Object.assign(manifest, decorateManifest(manifest, specEntry, spec));
 
   // Pagination (GET only)
   if (row.method === "GET") {

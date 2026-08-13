@@ -111,7 +111,8 @@ export class AtlassianService {
       requestIdentity: identity,
       upstreamOffset: offset,
       upstreamLimit: pageSize,
-      maxOutputBytes: this.#config.maxOutputBytes
+      maxOutputBytes: this.#config.maxOutputBytes,
+      ...(state.cursorPayload ? { cursorPayload: state.cursorPayload } : {})
     });
   }
 
@@ -241,7 +242,8 @@ export class AtlassianService {
       requestIdentity: identity,
       upstreamOffset: state.upstreamOffset,
       upstreamLimit: pageSize,
-      maxOutputBytes: this.#config.maxOutputBytes
+      maxOutputBytes: this.#config.maxOutputBytes,
+      ...(state.cursorPayload ? { cursorPayload: state.cursorPayload } : {})
     });
 
     if (operation.method !== "GET" && response.page.hasMore) {

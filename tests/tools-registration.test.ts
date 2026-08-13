@@ -1,7 +1,8 @@
 import { afterEach, describe, expect, it } from "vitest";
 import type { McpServer } from "@modelcontextprotocol/server";
+import * as z from "zod/v4";
 import { AtlassianService } from "../src/service.js";
-import { registerTools, TOOL_DEFINITIONS } from "../src/tools.js";
+import { registerDefinedTool, registerTools, TOOL_DEFINITIONS } from "../src/tools.js";
 import type { ServerConfig } from "../src/types.js";
 
 const services: AtlassianService[] = [];
@@ -126,6 +127,27 @@ describe("typed tool conditional registration", () => {
       expect(config.annotations).toEqual(definition.annotations);
       expect(config.inputSchema).toBeDefined();
       expect(config.outputSchema).toBe(definition.outputSchema);
+    }
+  });
+
+  it("rejects call-site metadata that belongs in TOOL_DEFINITIONS", () => {
+    const service = serviceFor("max");
+    const server = {
+      registerTool(): void {
+        throw new Error("registerTool must not be reached");
+      }
+    } as unknown as McpServer;
+    const handler = async () => ({ content: [] });
+    for (const key of ["title", "description", "annotations", "outputSchema"]) {
+      expect(() =>
+        registerDefinedTool(
+          server,
+          service,
+          "jira_search_issues",
+          { inputSchema: z.object({}), [key]: "dead call-site metadata" },
+          handler
+        )
+      ).toThrow(/must not set/);
     }
   });
 });

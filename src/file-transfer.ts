@@ -7,7 +7,7 @@ import { pipeline } from "node:stream/promises";
 import { Transform } from "node:stream";
 import { Blob } from "node:buffer";
 import { FormData, type request } from "undici";
-import { AtlassianHttpError } from "./http-error.js";
+import { AtlassianHttpError, rejectRedirectResponse } from "./http-error.js";
 import type { HttpResult, RegisteredOperation, ProductConfig } from "./types.js";
 
 // Upload limits for multipart attachment requests. Files are read fully into
@@ -67,27 +67,9 @@ export async function consumeBinaryResponse(
 ): Promise<HttpResult> {
   // Redirect guard for binary downloads: a session-expired instance may
   // redirect the request to a login page, which would otherwise write HTML
-  // to the downloadPath file.
-  if (response.statusCode >= 300 && response.statusCode < 400) {
-    await response.body.dump();
-    let safeLocation = "";
-    try {
-      const location = String(response.headers.location ?? "");
-      if (location)
-        safeLocation = new URL(location, sourceUrl).origin + new URL(location, sourceUrl).pathname;
-    } catch {
-      /* malformed location — omit it */
-    }
-    throw new AtlassianHttpError(
-      config.product,
-      operationId,
-      response.statusCode,
-      `${operationId} failed with HTTP ${response.statusCode}: upstream returned a redirect` +
-        (safeLocation ? ` to ${safeLocation}` : "") +
-        ". This usually means the session expired or the instance redirected to a login page; " +
-        "this client does not follow redirects. Check credentials and instance state."
-    );
-  }
+  // to the downloadPath file. Shared with the JSON path via
+  // rejectRedirectResponse.
+  await rejectRedirectResponse(response, config.product, operationId, sourceUrl);
   if (response.statusCode >= 400) {
     await response.body.dump();
     throw new AtlassianHttpError(

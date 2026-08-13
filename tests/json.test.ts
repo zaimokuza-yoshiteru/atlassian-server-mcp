@@ -58,6 +58,18 @@ describe("getByPath / setByPath", () => {
     expect(getByPath({ a: 1 }, "")).toEqual({ a: 1 });
   });
 
+  it("does not resolve segments through the prototype chain", () => {
+    expect(getByPath({ a: 1 }, "constructor")).toBeUndefined();
+    expect(getByPath({ a: 1 }, "__proto__")).toBeUndefined();
+    expect(getByPath({ a: { b: 1 } }, "a.constructor")).toBeUndefined();
+    expect(getByPath({ a: { b: 1 } }, "a.b")).toBe(1);
+  });
+
+  it("still reads an own __proto__ key produced by JSON.parse", () => {
+    const parsed = JSON.parse('{"__proto__":{"polluted":"yes"}}') as Record<string, unknown>;
+    expect(getByPath(parsed, "__proto__.polluted")).toBe("yes");
+  });
+
   it("creates intermediate objects when setting", () => {
     const target: Record<string, unknown> = { a: { b: 1 } };
     setByPath(target, "a.c.d", 2);

@@ -370,6 +370,16 @@ export function registerDefinedTool<InputSchema extends z.ZodType>(
 ): void {
   const definition = TOOL_DEFINITIONS[name];
   if (!definition) throw new Error(`Missing tool definition: ${name}`);
+  // Tool metadata (title/description/annotations/outputSchema) lives only in
+  // TOOL_DEFINITIONS. Reject call-site copies instead of silently overriding
+  // them, so the two sources cannot drift apart again.
+  for (const key of ["title", "description", "annotations", "outputSchema"] as const) {
+    if (key in config) {
+      throw new Error(
+        `Tool ${name} config must not set "${key}"; tool metadata lives in TOOL_DEFINITIONS`
+      );
+    }
+  }
   const enabled = new Set(service.enabledOperations.map((operation) => operation.operationId));
   if (
     definition.registration === "intersection" &&
@@ -401,17 +411,12 @@ export function registerTools(server: McpServer, service: AtlassianService): voi
     service,
     "atlassian_discover_operations",
     {
-      title: "Discover Atlassian REST operations",
-      description:
-        "Search the enabled Jira, Confluence, and Bitbucket REST operation registry. Continue with nextCursor when hasMore is true.",
       inputSchema: z.object({
         product: productSchema.optional(),
         query: z.string().optional(),
         tier: z.enum(["read", "safe", "risky", "max"]).optional(),
         ...commonResponseShape
-      }),
-      outputSchema: toolResponseSchema,
-      annotations: { readOnlyHint: true, destructiveHint: false }
+      })
     },
     async (input) => {
       try {
@@ -427,16 +432,12 @@ export function registerTools(server: McpServer, service: AtlassianService): voi
     service,
     "atlassian_describe_operation",
     {
-      title: "Describe an Atlassian REST operation",
-      description:
-        "Return method, path parameters, required exposure tier, versions, and response behavior for an enabled operationId.",
       inputSchema: z.object({
         operationId: z
           .string()
           .min(1)
           .describe("Registered operation ID, for example jira.issue.search")
-      }),
-      annotations: { readOnlyHint: true, destructiveHint: false }
+      })
     },
     async ({ operationId }) => {
       try {
@@ -452,9 +453,6 @@ export function registerTools(server: McpServer, service: AtlassianService): voi
     service,
     "atlassian_execute_operation",
     {
-      title: "Execute an Atlassian REST operation",
-      description:
-        "Execute a fixed registered operationId. It cannot target arbitrary hosts or paths. Use discover/describe first; describe may include a stable requestBodyTemplate. Before Jira field mutations, query create/edit metadata and never guess customfield IDs, required fields, or allowed values. Validation errors return fieldErrors and sanitized Atlassian details; do not automatically replay writes after timeouts or 5xx responses. Continue GET results with nextCursor. Multipart files and binary downloadPath must be under the configured file root.",
       inputSchema: z.object({
         operationId: z
           .string()
@@ -480,11 +478,7 @@ export function registerTools(server: McpServer, service: AtlassianService): voi
     service,
     "atlassian_server_info",
     {
-      title: "Atlassian server connection information",
-      description:
-        "Check reachability, detected version, authentication mode, and TLS verification state without exposing credentials.",
-      inputSchema: z.object({}),
-      annotations: { readOnlyHint: true, destructiveHint: false }
+      inputSchema: z.object({})
     },
     async () => {
       try {

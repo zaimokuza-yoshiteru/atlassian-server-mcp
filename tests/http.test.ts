@@ -1155,7 +1155,9 @@ describe("sanitizeErrorDetails", () => {
   });
 
   it("truncates long strings and passes primitives through", () => {
-    expect(sanitizeErrorDetails("x".repeat(5000))).toHaveLength(4000);
+    // The string cap comes from the shared budgeted implementation in
+    // errors.ts (limitErrorDetails): 2000 characters per string.
+    expect(sanitizeErrorDetails("x".repeat(5000))).toHaveLength(2000);
     expect(sanitizeErrorDetails(42)).toBe(42);
     expect(sanitizeErrorDetails(null)).toBeNull();
   });

@@ -5,7 +5,8 @@ import { realpath } from "node:fs/promises";
 import { dirname } from "node:path";
 import { Agent, FormData, ProxyAgent, request, type Dispatcher } from "undici";
 import { authorizationHeader } from "./auth.js";
-import { AtlassianHttpError } from "./http-error.js";
+import { AtlassianHttpError, rejectRedirectResponse } from "./http-error.js";
+import { limitErrorDetails } from "./errors.js";
 import {
   buildMultipartBody,
   consumeBinaryResponse,
@@ -169,30 +170,10 @@ export class AtlassianHttpClient {
       );
     }
 
-    // Redirect guard: explicitly reject 3xx responses BEFORE consuming the body.
-    // undici does not follow redirects by default, and a session-expired
-    // instance may 302 to a login page. This must run before outputPath
-    // so redirect HTML is never saved to disk as a "successful" result.
-    if (response.statusCode >= 300 && response.statusCode < 400) {
-      await response.body.dump();
-      let safeLocation = "";
-      try {
-        const location = String(response.headers.location ?? "");
-        if (location)
-          safeLocation = new URL(location, url).origin + new URL(location, url).pathname;
-      } catch {
-        /* malformed location — omit it */
-      }
-      throw new AtlassianHttpError(
-        operation.product,
-        operation.operationId,
-        response.statusCode,
-        `${operation.operationId} failed with HTTP ${response.statusCode}: upstream returned a redirect` +
-          (safeLocation ? ` to ${safeLocation}` : "") +
-          ". This usually means the session expired or the instance redirected to a login page; " +
-          "this client does not follow redirects. Check credentials and instance state."
-      );
-    }
+    // Redirect guard: reject 3xx responses BEFORE consuming the body and before
+    // outputPath, so redirect HTML is never saved to disk as a "successful"
+    // result. Shared with binary downloads via rejectRedirectResponse.
+    await rejectRedirectResponse(response, operation.product, operation.operationId, url);
 
     // Large-response outputPath: stream the raw upstream response body to a
     // file under the file root. Runs after 3xx rejection (redirect HTML is
@@ -333,23 +314,9 @@ export class AtlassianHttpClient {
   }
 }
 
+// Delegates to the budgeted sanitizer in errors.ts, the single implementation
+// of the redaction rules; kept under the historical name so the http.js
+// import surface (service.ts, tests) is unchanged.
 export function sanitizeErrorDetails(value: unknown): unknown {
-  if (Array.isArray(value)) {
-    return value.slice(0, 20).map(sanitizeErrorDetails);
-  }
-  if (value && typeof value === "object") {
-    const output: Record<string, unknown> = {};
-    for (const [key, child] of Object.entries(value)) {
-      if (/token|password|authorization|cookie|secret/i.test(key)) {
-        output[key] = "[REDACTED]";
-      } else {
-        output[key] = sanitizeErrorDetails(child);
-      }
-    }
-    return output;
-  }
-  if (typeof value === "string") {
-    return value.slice(0, 4000);
-  }
-  return value;
+  return limitErrorDetails(value, { remaining: 16_384 });
 }

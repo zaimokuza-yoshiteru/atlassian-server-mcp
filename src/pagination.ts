@@ -1,7 +1,13 @@
 import { CursorCodec } from "./cursor.js";
 import { flattenJson, getByPath, hashRequest, parseStrictInteger, utf8Bytes } from "./json.js";
 import { projectResponse } from "./projection.js";
-import type { CommonResponseOptions, PaginationSpec, Product, UnifiedResponse } from "./types.js";
+import type {
+  CommonResponseOptions,
+  CursorPayload,
+  PaginationSpec,
+  Product,
+  UnifiedResponse
+} from "./types.js";
 
 export interface ResponseOperationDescriptor {
   operationId: string;
@@ -17,6 +23,10 @@ interface PageInput {
   upstreamOffset: number | string;
   upstreamLimit: number;
   maxOutputBytes: number;
+  // Pre-decoded cursor from requestState, so the cursor is verified and
+  // decoded exactly once per request; paginate only decodes when called
+  // without a preceding requestState.
+  cursorPayload?: CursorPayload;
 }
 
 export interface PaginationRequestState {
@@ -24,6 +34,9 @@ export interface PaginationRequestState {
   upstreamOffset: number | string;
   localOffset: number;
   mode: "items" | "fields";
+  // The decoded cursor when one was supplied; callers hand it back to
+  // paginate via PageInput.cursorPayload to avoid a second decode.
+  cursorPayload?: CursorPayload;
 }
 
 export class ResponsePaginator {
@@ -55,7 +68,8 @@ export class ResponsePaginator {
       requestHash,
       upstreamOffset: payload.upstreamOffset,
       localOffset: payload.localOffset,
-      mode: payload.mode
+      mode: payload.mode,
+      cursorPayload: payload
     };
   }
 
@@ -66,9 +80,11 @@ export class ResponsePaginator {
       input.responseOptions.maxOutputBytes ?? input.maxOutputBytes
     );
     const requestHash = hashRequest(input.requestIdentity);
-    const cursorPayload = input.responseOptions.cursor
-      ? this.#cursorCodec.decode(input.responseOptions.cursor)
-      : undefined;
+    const cursorPayload =
+      input.cursorPayload ??
+      (input.responseOptions.cursor
+        ? this.#cursorCodec.decode(input.responseOptions.cursor)
+        : undefined);
     const localOffset = cursorPayload?.localOffset ?? 0;
 
     const pagination = input.operation.pagination;
