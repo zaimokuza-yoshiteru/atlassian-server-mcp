@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 2,
+  "gitSha": "c434629d07f7e6344f76a24443aa1a53139b1c64",
+  "createdAt": "2026-08-13T16:40:52.935Z",
+  "workspace": {
+    "dirty": false
+  },
+  "coverageSha": "c0667b120349912b160b7e2a28ca3131c883ae9b60f8e22735e314df15954fec",
+  "policySha": "6accef3c66ead8715cd5ab5f932ec0e0e670538c1ec7efd3dc7a8443c2418373",
+  "totalExpected": 499,
+  "totalPassed": 499,
+  "totalPartial": 0,
+  "totalNotRun": 0,
+  "products": {
+    "jira": {
+      "gitSha": "c434629d07f7e6344f76a24443aa1a53139b1c64",
+      "dirty": false,
+      "startedAt": "2026-08-13T16:34:55.596Z",
+      "productVersion": "11.3.5",
+      "dockerImageDigest": "atlassian/jira-software@sha256:9ef375eb5588425c30ff0feecda879e106dbb4eba8831148509cf32b5d1baa7b",
+      "coverageSha": "c0667b120349912b160b7e2a28ca3131c883ae9b60f8e22735e314df15954fec",
+      "policySha": "6accef3c66ead8715cd5ab5f932ec0e0e670538c1ec7efd3dc7a8443c2418373",
+      "expectedOperations": 175,
+      "passedOperations": 175,
+      "partialOperations": 0,
+      "notRunOperations": 0,
+      "numTotalTests": 135,
+      "numPassedTests": 63,
+      "numFailedTests": 0,
+      "runReportSha256": "7839832447b992ed848d39c249bbdbb850aa306e4035370ad62673e52611f674",
+      "runManifestSha256": "973d7276f71273952904cad3edd2b98a211c9efca7ff76cc4ba95181f4c55fee",
+      "invokedOpsSha256": "65f588d54addc16d65cf442b6d99b61c54438da12ae6929902485dc525be617a"
+    },
+    "confluence": {
+      "gitSha": "c434629d07f7e6344f76a24443aa1a53139b1c64",
+      "dirty": false,
+      "startedAt": "2026-08-13T16:37:52.840Z",
+      "productVersion": "10.2.11",
+      "dockerImageDigest": "atlassian/confluence@sha256:a0673cd2ab75166dad95e4cbd1fe4ab3cd3f8a050142cf914b4d20564cccf9f6",
+      "coverageSha": "c0667b120349912b160b7e2a28ca3131c883ae9b60f8e22735e314df15954fec",
+      "policySha": "6accef3c66ead8715cd5ab5f932ec0e0e670538c1ec7efd3dc7a8443c2418373",
+      "expectedOperations": 93,
+      "passedOperations": 93,
+      "partialOperations": 0,
+      "notRunOperations": 0,
+      "numTotalTests": 135,
+      "numPassedTests": 11,
+      "numFailedTests": 0,
+      "runReportSha256": "fa0942a51a3ffb9b72df6568b1c996726c44c2d942b1408b9592b53072b4cf21",
+      "runManifestSha256": "ec11fdfbf8f0213e64232074bf0b2569a9f24845d7a6d8f29d4d929e0951d5f3",
+      "invokedOpsSha256": "7b69e36e39ac1d2712b71e8a327bfc5ed45e37384342680fff3f85eb2d7386ca"
+    },
+    "bitbucket": {
+      "gitSha": "c434629d07f7e6344f76a24443aa1a53139b1c64",
+      "dirty": false,
+      "startedAt": "2026-08-13T16:39:48.100Z",
+      "productVersion": "10.4.1",
+      "dockerImageDigest": "atlassian/bitbucket@sha256:805befd6bd0728913598a4d095abf9c4ccd91ba6474f4c45717ecde96a74d142",
+      "coverageSha": "c0667b120349912b160b7e2a28ca3131c883ae9b60f8e22735e314df15954fec",
+      "policySha": "6accef3c66ead8715cd5ab5f932ec0e0e670538c1ec7efd3dc7a8443c2418373",
+      "expectedOperations": 231,
+      "passedOperations": 231,
+      "partialOperations": 0,
+      "notRunOperations": 0,
+      "numTotalTests": 135,
+      "numPassedTests": 61,
+      "numFailedTests": 0,
+      "runReportSha256": "c72f94792f1306486afac83f763b817ab44539364f7ad65303b90b18663c3326",
+      "runManifestSha256": "758f5bf5477f3957123fab09b4038aa47d95062e73518ef4550d85e8b17d2012",
+      "invokedOpsSha256": "46874d0d218bed86de4476f6fd9add40eae25fc4bf07a51e4a4a1e4ae42612de"
+    }
+  }
+}
